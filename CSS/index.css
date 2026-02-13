@@ -1,21 +1,26 @@
 * {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  font-family: sans-serif;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+
 }
 
-.lets-talk{
+.lets-talk {
+    color: white;
     position: fixed;
     top: 85%;
-    left: 90%;
-    padding: 20px;
+    left: 80%;
+    padding: 16px;
+    width: 160px;
+    text-align: center;
     background-color: #ed8200;
     z-index: 1000;
+    border-radius: 1px 20px 20px 10px;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -24,83 +29,91 @@ header{
 }
 
 .nav-mini {
-  display: flex;
-  text-align: center;
-  width: 100%;
-  background-color: #f2f2f2;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    background-color: #f2f2f2;
 }
 
 .mini-nav-bx {
-  display: flex;
-  width: 95%;
-  margin: auto;
-  align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 95%;
+    height: 30px;
+    align-items: center;
+    margin: auto;
+    align-items: center;
 }
 
 .mini-nav-links {
-  display: flex;
-  padding: 7px;
-  gap: 25px;
+    display: flex;
+    gap: 20px;
 }
 
 .mini-nav-links a {
-  font-size: 0.7rem;
-  text-decoration: none;
-  color: #595454;
-  position: relative;
-  display: inline-block;
+    font-size: 0.7rem;
+    text-decoration: none;
+    color: #595454;
+    padding: 2px;
+    position: relative;
+    display: inline-block;
 }
 
 .mini-nav-links a::before {
-  content: "";
-  position: absolute;
-  top: -12px;
-  left: 0;
-  width: 0%;
-  height: 3px;
-  background-color: #ed8200;
-  transition: width 0.3s ease;
+    content: "";
+    position: absolute;
+    top: -6px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #ed8200;
+    transition: width 0.3s ease;
 }
 
+
 .mini-nav-links a:hover {
-  color: #ed8200;
+    color: #ed8200;
 }
 
 .mini-nav-links a:hover::before {
-  width: 100%;
+    width: 100%;
 }
 
+.left-panel a:hover::before {
+    display: none;
+}
 
 .help {
-  font-weight: 700;
-  color: #ed8200;
+    font-weight: 700;
+    color: #ed8200;
 }
 
 .countries {
-  font-size: 0.7rem;
-  text-decoration: none;
-  color: #595454;
-  padding-left: 30%;
+    font-size: 0.7rem;
+    text-decoration: none;
+    color: #595454;
+    padding-left: 30%;
 }
 
 .countries a {
-  text-decoration: none;
-  color: #5f7287;
+    text-decoration: none;
+    color: #5f7287;
 }
 
 
-.nav-main{
+.nav-main {
+    position: relative;
     display: flex;
     align-items: center;
     gap: 30px;
 }
 
-.main-nav-links{
+.main-nav-links {
     display: flex;
     gap: 20px;
 }
 
-.main-nav-links a{
+.main-nav-links a {
     text-decoration: none;
     color: #595454;
     font-size: .80rem;
@@ -108,63 +121,176 @@ header{
 }
 
 
-.main-nav-links a::before{
+.main-nav-links a::before {
     content: "";
     background-color: #ed8200;
     position: absolute;
-    top: 30px;
+    top: 21px;
     left: 0;
     width: 0%;
     height: 3px;
     transition: width 0.3s ease;
 }
 
-.main-nav-links a:hover::before{
+.main-nav-links a:hover::before {
     width: 100%;
 }
 
-.search{
-    /* padding-left: 10%; */
+
+
+/* dropdown */
+
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 12%;
+    right: 2%;
+    width: 73.70%;
+    height: 400px;
+    background-color: #ffffff;
 }
 
+.left-panel {
+    position: relative;
+    width: 250px;
+    text-align: left;
+    padding: 20px;
+}
+
+.left-panel li {
+    margin-left: 20px;
+}
+
+.left-panel a {
+    font-size: .70rem;
+    line-height: 30px;
+    
+}
+
+.left-panel a:hover {
+    color: #ed8200;
+}
+
+.header-panel {
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+.fa-solid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: inline-flex;
+    text-align: right;
+    padding-left: 200px;
+}
+
+.main-panel-content{
+    position: absolute;
+    display: flex;
+    justify-items: left;
+    top: 20%;
+    left: 70%;
+    width: 200px;
+    text-align: right;
+}
+
+.main-panel-content p{
+    text-align: left;
+    font-size: .80rem;
+    width: 90%;
+}
+
+.access-btn a:hover::before{
+    display: none;
+}
+
+.access-btn a{
+    padding: 10px;
+    background-color: #ed8200;
+    color: white;
+}
+
+/* Hide dropdown by default */
+.dropdown-content {
+    position: absolute;
+    top: 100%;
+    left: 13%;
+    width: 900px; 
+    background: white;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+
+nav ul li:hover .dropdown-content {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.access-btn{
+    margin-top: 20px;
+    padding-right: 60%;
+}
+
+.main-panel-content img{
+    width: 200px;
+    /* clip-path: inset(0 0 0 30%); */
+}
+
+
+
+
+
 .search input{
-    padding: 19px 20px;
+    padding: 10px;
+    width: 100px;
     background-color: #f2f2f2;
     border: none;
 }
 
-.nav-main{
+.nav-main {
     width: auto;
     background-color: white;
 }
-.left-btn{
-    width: auto;
-    display: flex;
-    align-items: center;
-    padding-left: 11%;
+
+.internet-banking {
+    margin-bottom: 11px;
 }
 
-.logo-access img{
+.left-btn {
+    width: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 25.299%;
+}
+
+.logo-access img {
     width: 110px;
     margin-left: 20px;
 }
 
-.internet-banking{
-    margin-bottom: 4px;
+.internet-banking {
+    height: 10px;
 }
-.internet-banking a{
-    padding: 20px 50px;
+
+.internet-banking a {
+    width: 200px;
+    padding: 10px;
     text-decoration: none;
     color: white;
     font-size: .70rem;
     background-color: #ed8200;
 }
 
-/* .card-warpper{
-    margin-bottom: 200px;
-} */
-
-.hero-bg{
+.hero-bg {
     position: relative;
     background-image: url(/Multimedia/images/marathon26.png);
     width: 100%;
@@ -175,7 +301,7 @@ header{
     height: 600px;
 }
 
-.hero-card{
+.hero-card {
     position: absolute;
     display: flex;
     width: 90%;
@@ -187,33 +313,33 @@ header{
     clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
 }
 
-.hero-card h3{
+.hero-card h3 {
     width: 100%;
 }
 
-.hero-card p{
+.hero-card p {
     font-size: .80rem;
     width: 100%;
 }
 
-.create-an-account{
+.create-an-account {
     padding: 25px;
     border-right: 1px solid white;
     line-height: 22px;
 }
 
-.create-an-account img{
+.create-an-account img {
     width: 35px;
 }
 
-.hero-card a{
+.hero-card a {
     color: black;
     text-decoration: none;
 }
 
 
-.main-content{
-  width: 100%;  
-  height: 800px;
-background-color: #ededed;
+.main-content {
+    width: 100%;
+    height: 800px;
+    background-color: #ededed;
 }
