@@ -1,0 +1,219 @@
+* {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.lets-talk{
+    position: fixed;
+    top: 85%;
+    left: 90%;
+    padding: 20px;
+    background-color: #ed8200;
+    z-index: 1000;
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.nav-mini {
+  display: flex;
+  text-align: center;
+  width: 100%;
+  background-color: #f2f2f2;
+}
+
+.mini-nav-bx {
+  display: flex;
+  width: 95%;
+  margin: auto;
+  align-items: center;
+}
+
+.mini-nav-links {
+  display: flex;
+  padding: 7px;
+  gap: 25px;
+}
+
+.mini-nav-links a {
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: #595454;
+  position: relative;
+  display: inline-block;
+}
+
+.mini-nav-links a::before {
+  content: "";
+  position: absolute;
+  top: -12px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #ed8200;
+  transition: width 0.3s ease;
+}
+
+.mini-nav-links a:hover {
+  color: #ed8200;
+}
+
+.mini-nav-links a:hover::before {
+  width: 100%;
+}
+
+
+.help {
+  font-weight: 700;
+  color: #ed8200;
+}
+
+.countries {
+  font-size: 0.7rem;
+  text-decoration: none;
+  color: #595454;
+  padding-left: 30%;
+}
+
+.countries a {
+  text-decoration: none;
+  color: #5f7287;
+}
+
+
+.nav-main{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.main-nav-links{
+    display: flex;
+    gap: 20px;
+}
+
+.main-nav-links a{
+    text-decoration: none;
+    color: #595454;
+    font-size: .80rem;
+    position: relative;
+}
+
+
+.main-nav-links a::before{
+    content: "";
+    background-color: #ed8200;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    transition: width 0.3s ease;
+}
+
+.main-nav-links a:hover::before{
+    width: 100%;
+}
+
+.search{
+    /* padding-left: 10%; */
+}
+
+.search input{
+    padding: 19px 20px;
+    background-color: #f2f2f2;
+    border: none;
+}
+
+.nav-main{
+    width: auto;
+    background-color: white;
+}
+.left-btn{
+    width: auto;
+    display: flex;
+    align-items: center;
+    padding-left: 11%;
+}
+
+.logo-access img{
+    width: 110px;
+    margin-left: 20px;
+}
+
+.internet-banking{
+    margin-bottom: 4px;
+}
+.internet-banking a{
+    padding: 20px 50px;
+    text-decoration: none;
+    color: white;
+    font-size: .70rem;
+    background-color: #ed8200;
+}
+
+/* .card-warpper{
+    margin-bottom: 200px;
+} */
+
+.hero-bg{
+    position: relative;
+    background-image: url(/Multimedia/images/marathon26.png);
+    width: 100%;
+    margin-top: 60px;
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    height: 600px;
+}
+
+.hero-card{
+    position: absolute;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    top: 100%;
+    left: 5%;
+    margin-top: 60px;
+    background-color: #a2c41a;
+    clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
+}
+
+.hero-card h3{
+    width: 100%;
+}
+
+.hero-card p{
+    font-size: .80rem;
+    width: 100%;
+}
+
+.create-an-account{
+    padding: 25px;
+    border-right: 1px solid white;
+    line-height: 22px;
+}
+
+.create-an-account img{
+    width: 35px;
+}
+
+.hero-card a{
+    color: black;
+    text-decoration: none;
+}
+
+
+.main-content{
+  width: 100%;  
+  height: 800px;
+background-color: #ededed;
+}
