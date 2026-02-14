@@ -292,7 +292,7 @@ nav ul li:hover .dropdown-content {
 
 .hero-bg {
     position: relative;
-    background-image: url(/Multimedia/images/marathon26.png);
+    background-image: url(..Multimedia/images/marathon26.png);
     width: 100%;
     margin-top: 60px;
     background-size: cover;
