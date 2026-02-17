@@ -142,16 +142,13 @@ header {
   width: 80%;
   height: 400px;
   background: white;
-  visibility: hidden;
-  opacity: 1;
+  display: none;
   transition: all 0.3s ease;
   z-index: 1000;
 }
 
-nav ul li:hover .dropdown-content {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.personal:hover .dropdown-content {
+  display: block;
 }
 
 .left-panel {
@@ -174,9 +171,19 @@ nav ul li:hover .dropdown-content {
   color: #ed8200;
 }
 
-.content {
-  padding: 0;
-  margin: 0;
+.left-panel-content {
+  height: 250px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.left-panel-content::-webkit-scrollbar {
+  width: 2px;
+}
+
+.left-panel-content::-webkit-scrollbar-thumb {
+  background: #ed7e00;
 }
 
 .header-panel {
@@ -190,6 +197,7 @@ nav ul li:hover .dropdown-content {
   top: 0;
   left: 0;
   right: 0;
+  font-size: 0.5rem;
   display: inline-flex;
   text-align: right;
   padding-left: 150px;
@@ -197,7 +205,8 @@ nav ul li:hover .dropdown-content {
 
 .content {
   top: 15%;
-  left: 30%;
+  /* left: 30%;   */
+  margin-left: 302px;
   position: absolute;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
   background-color: white;
@@ -210,8 +219,6 @@ nav ul li:hover .dropdown-content {
   top: 5%;
   left: 70%;
   width: 200px;
-  padding: 0px;
-  margin: 0px;
 }
 
 .main-panel-left-img {
@@ -245,17 +252,43 @@ nav ul li:hover .dropdown-content {
   color: white;
 }
 
+/* contents */
+
+/*start-bank-assure */
+.bank-as {
+  position: absolute;
+  z-index: 1000;
+  width: 200px;
+  color: black;
+  width: 100%;
+  top: 8%;
+  left: 0;
+  right: -100%;
+  margin-left: 560px;
+  display: none;
+  font-size: 1rem;
+}
+
+.txt-bank-as {
+  color: #ed8200;
+  font-size: 2rem;
+}
+
+.bank-assure:hover .bank-as {
+  display: block;
+}
+/* end-bank-assure */
+
+/* start borrow */
 .borrow {
   position: absolute;
   display: flex;
   width: 100%;
   top: 8%;
-  right: -100%;
-  padding-left: 70px;
+  left: 50%;
+  padding-left: 200px;
   z-index: 1000;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s ease;
+  display: none;
   height: 100%;
 }
 
@@ -280,31 +313,12 @@ nav ul li:hover .dropdown-content {
 .loan-list::-webkit-scrollbar-thumb {
   background: #ed7e00;
   padding-right: 20px;
-  /* border-radius: 10px; */
-}
-
-.left-panel-content {
-  /* position: relative; */
-  height: 250px;
-  width: 100%;
-  overflow: hidden;
-  overflow-y: auto;
-  overflow-x: hidden;
-  /* max-height: 89vh; */
-}
-
-.left-panel-content::-webkit-scrollbar {
-  width: 2px;
-}
-
-.left-panel-content::-webkit-scrollbar-thumb {
-  background: #ed7e00;
 }
 
 .txt-br {
   position: absolute;
   width: 200px;
-  color: black;
+  color: rgb(17, 15, 15);
   margin-left: 260px;
 }
 
@@ -313,89 +327,176 @@ nav ul li:hover .dropdown-content {
   font-size: 2rem;
 }
 
-.diaspora{
- position: absolute;
+.borrow-sec:hover .borrow {
+  display: block;
+}
+
+/* end-borrow */
+
+/* diaspora */
+.diaspora {
+  position: absolute;
   display: flex;
-  visibility: hidden;
-  opacity: 1;
   width: 100%;
   top: 8%;
-  right: -100%;
-  padding-left: 70px;
+  left: 50%;
+  padding-left: 200px;
   z-index: 1000;
-  transition: all 0.3s ease;
+  display: none;
   height: 100%;
 }
 
-.dia-list{
+.dia-list {
   position: absolute;
   width: 100%;
 }
 
-.dia-br{
+.dia-br {
   position: absolute;
   width: 200px;
-  color: black;
+  color: rgb(14, 13, 13);
   margin-left: 260px;
 }
 
-.dia-br-h{
+.dia-br-h {
   color: #ed8200;
   font-size: 2rem;
 }
 
-.left-panel ul li:hover .borrow {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+.dial:hover .diaspora {
+  display: block;
 }
 
-.bank-as {
+/* end-diaspora */
+
+/* start-every */
+.every {
   position: absolute;
-  z-index: 1000;
-  width: 200px;
-  color: black;
+  display: flex;
   width: 100%;
   top: 8%;
-  left: 0;
-  right: -100%;
-  margin-left: 560px;
-  visibility: hidden;
-  opacity: 0;
-  transition: all 0.3s ease;
+  left: 50%;
+  padding-left: 200px;
+  z-index: 1000;
+  display: none;
+  height: 100%;
 }
-
-.txt-bank-as {
-  color: #ed8200;
-  font-size: 2rem;
+.every-list {
+  position: absolute;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 300px;
+  max-height: 40vh;
 }
-
-.left-panel ul li:hover .bank-as{
-  visibility: visible;
-  opacity: 1;
-}
-
-.left-panel ul li:hover .diaspora{
-  visibility: visible;
-  opacity: 1;
-}
-
-.every-list{
-overflow-x: hidden;
-overflow-y: auto;
-max-height: 60vh;
-height: 240px;
-}
-.every-list::-webkit-scrollbar{
+.every-list::-webkit-scrollbar {
   width: 2px;
 }
-.every-list::-webkit-scrollbar-thumb{
+.every-list::-webkit-scrollbar-thumb {
   background-color: #ed7e00;
 }
 
+.every-br {
+  position: absolute;
+  width: 200px;
+  color: rgb(14, 13, 13);
+  margin-left: 260px;
+}
 
+.every-br-h {
+  color: #ed8200;
+  font-size: 2rem;
+}
+
+.every-day:hover .every {
+  display: block;
+}
+
+/* end-every */
+
+/* money */
+.money {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 8%;
+  left: 50%;
+  padding-left: 200px;
+  z-index: 1000;
+  display: none;
+  height: 100%;
+}
+
+.money-list {
+  position: absolute;
+  width: 100%;
+}
+
+.money-trf:hover .money {
+  display: block;
+}
+
+/* end-money */
+
+/* start-promo */
+
+.promo {
+  position: absolute;
+  top: 10%;
+  z-index: 1000;
+  display: none;
+  padding-left: 300px;
+}
+
+.promo-list {
+  position: absolute;
+  width: 100%;
+}
+
+.promo-m:hover .promo {
+  display: block;
+}
+
+/* end-promo */
+
+/* start-saving */
+.saving {
+  position: absolute;
+  display: flex;
+  width: 100%;
+  top: 8%;
+  left: 50%;
+  padding-left: 200px;
+  z-index: 1000;
+  display: none;
+  height: 100%;
+}
+
+.save:hover .saving {
+  display: block;
+}
+
+/* end-saving */
+
+/* start-w */
+.w-in {
+  position: absolute;
+  top: 10%;
+  left: 100%;
+  width: 200px;
+  z-index: 1000;
+  color: rgb(14, 13, 13);
+  margin-left: 260px;
+  display: none;
+}
+
+.w-init:hover .w-in {
+  display: block;
+}
+/* end-w */
+
+/* content-footer */
 .drop-footer {
-  margin-top: 10px;
   padding: 20px;
   display: flex;
   gap: 20px;
@@ -414,8 +515,14 @@ height: 240px;
   display: flex;
   font-size: 0.85rem;
 }
+/* end-footer-content */
+
+
 
 /* business-dropdown */
+
+/* start-business */
+
 
 /* corporate dropdown*/
 .corporate {
@@ -522,4 +629,21 @@ height: 240px;
   width: 100%;
   height: 800px;
   background-color: #ededed;
+}
+
+.more-ways{
+  padding-top: 150px;
+  width: 70%;
+  margin: auto;
+  text-align: center;
+}
+
+.head-more-ways-h-txt{
+  font-size: 1.60rem;
+  color: black;
+}
+
+.more-ways-sub-txt{
+  font-size: 2rem;
+  font-weight: 700;
 }
