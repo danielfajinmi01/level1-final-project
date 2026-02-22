@@ -6,8 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home | Access Bank</title>
     <script src="https://kit.fontawesome.com/616d62fe9e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://fonts.cdnfonts.com/css/effra" rel="stylesheet" />
+    <script src="Javascripit/scroll.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <link rel="stylesheet" href="CSS/index.css" />
+
 </head>
 
 <body>
@@ -20,6 +25,9 @@
     <header>
         <nav class="nav-mini">
             <div class="mini-nav-bx">
+                <div class="mobile-menu-icon">
+                    <img src="Multimedia/images/menu-icon.svg">
+                </div>
                 <ul class="mini-nav-links">
                     <li><a href="html/about-us.html">About Us</a></li>
                     <li>
@@ -44,486 +52,463 @@
 
         <nav class="nav-main">
             <div class="logo-access">
-                <img src="Multimedia/images/access-lg-logo.png" alt="" />
+                <img src="Multimedia/images/access-lg-logo.png" />
+                <ul class="main-nav-links">
+                    <li><a href="#">Home</a></li>
+
+                    <!-- personal mega dropdown -->
+
+                    <li class="personal">
+                        <a href="#">Personal</a>
+                        <div class="dropdown-content">
+                            <div class="header-panel">
+                                <h4>Personal Banking</h4>
+                            </div>
+                            <div class="left-panel">
+                                <ul class="left-panel-content">
+                                    <li class="bank-assure">
+                                        <a href="#">Bancassurance </a>
+                                        <div class="bank-as">
+                                            <p><span class="txt-bank-as">Bancassurance</span></p>
+                                            <p>Something sweet for ENTREPRENEURS</p>
+                                        </div>
+                                    </li>
+                                    <li class="borrow-sec">
+                                        <a href="#">Borrowing <i class="fa-solid fa-chevron-right"></i>
+                                        </a>
+                                        <div class="borrow">
+                                            <ul class="loan-list">
+                                                <li><a href="#">Vacation Finance</a></li>
+                                                <li><a href="#">Access Agent Loan</a></li>
+                                                <li><a href="#">Access Device Financing</a></li>
+                                                <li><a href="#">Advance for School Fees</a></li>
+                                                <li><a href="#">Auto Loan</a></li>
+                                                <li><a href="#">Cash-Backed Loan</a></li>
+                                                <li><a href="#">Consumer Asset Lease</a></li>
+                                                <li><a href="#">Creative Sector Loan</a></li>
+                                                <li><a href="#">Home Loan</a></li>
+                                                <li>
+                                                    <a href="#">Lending Against Turnover (LATO)</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Maternal Health Service Support</a>
+                                                </li>
+                                                <li><a href="#">Payday loan</a></li>
+                                                <li><a href="#">Personal Loan</a></li>
+                                                <li><a href="#">Quickbucks</a></li>
+                                                <li><a href="#">Salary Advance</a></li>
+                                                <li><a href="#">Small Ticket Personal Loans</a></li>
+                                                <li><a href="#">Switch to Solar</a></li>
+                                                <li><a href="#">W Power Loan</a></li>
+                                            </ul>
+                                            <div class="txt-br">
+                                                <p><span class="txt-br-h">Get a Quick Loan</span></p>
+                                                <p>
+                                                    Your future plans can be put into action today. Get
+                                                    access to the funds you need.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <div class="">
+                                        <li class="dial">
+                                            <a href="#">Diaspora Banking<i class="fa-solid fa-chevron-right"></i></a>
+                                            <div class="diaspora">
+                                                <ul class="dia-list">
+                                                    <li><a href="#">Current Account</a></li>
+                                                    <li><a href="#">Diaspora Community</a></li>
+                                                    <li><a href="#">Domiciliary Account</a></li>
+                                                    <li><a href="#"> Remittance</a></li>
+                                                    <li><a href="#">Savings Account</a></li>
+                                                </ul>
+
+                                                <div class="dia-br">
+                                                    <p>
+                                                        <span class="dia-br-h">Diaspora Banking</span>
+                                                    </p>
+                                                    <p>
+                                                        Whatever continent your business takes you to, we
+                                                        have just the account for you
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+
+                                    <li class="every-day">
+                                        <a href="#">Everyday Accounts
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </a>
+                                        <div class="every">
+                                            <ul class="every-list">
+                                                <li><a href="#">Community Current Account</a></li>
+                                                <li><a href="#">Diamond School Advantage</a></li>
+                                                <li><a href="#">Domiciliary Account</a></li>
+                                                <li><a href="#">Evergreen Account</a></li>
+                                                <li><a href="#">Everyday Banking</a></li>
+                                                <li><a href="#">Gold Current Account</a></li>
+                                                <li><a href="#">Individual Current Account</a></li>
+                                                <li><a href="#">Premium Current Account</a></li>
+                                                <li><a href="#">Solo Account</a></li>
+                                            </ul>
+                                            <div class="every-br">
+                                                <p><span class="every-br-h">Everyday Accounts</span></p>
+                                                <p>
+                                                    Find the account that works best for your financial
+                                                    and business needs.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="dial">
+                                        <a href="#">Kids & Teens <i class="fa-solid fa-chevron-right"></i>
+                                        </a>
+                                        <div class="diaspora">
+                                            <ul class="dia-list">
+                                                <li><a href="#">Dreamville</a></li>
+                                                <li><a href="#">Early Savers Account</a></li>
+                                            </ul>
+                                            <div class="dia-br">
+                                                <p><span class="dia-br-h">Kids & Teens</span></p>
+                                                <p>You can introduce your children to a life of
+                                                    financial freedom by starting them up today.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="money-trf">
+                                        <a href="#">Money Transfer
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </a>
+                                        <div class="money">
+                                            <ul class="money-list">
+                                                <li><a href="#">AccessAfrica</a></li>
+                                                <li><a href="#">PAPSS</a></li>
+                                                <li><a href="#">Ria</a></li>
+                                                <li><a href="#">Transfast</a></li>
+                                                <li><a href="#">Western Union</a></li>
+                                            </ul>
+                                            <div class="dia-br">
+                                                <p>
+                                                    <span class="dia-br-h">Money Transfer</span>
+                                                </p>
+                                                <p>
+                                                    Reliable money transfer from and to anywhere in the
+                                                    world.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="promo-m">
+                                        <a href="#">Promos & Propositions
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </a>
+                                        <div class="promo">
+                                            <ul class="promo-list">
+                                                <li><a href="#"> CIG Promo</a></li>
+                                                <li><a href="#">Suzuki Promo</a></li>
+                                                <li><a href="#">XclusivePlus</a></li>
+                                            </ul>
+                                            <div class="dia-br">
+                                                <p>
+                                                    <span class="dia-br-h">Promos & Propositions</span>
+                                                </p>
+                                                <p>
+                                                    Find all our exciting ongoing promos and
+                                                    Propositions here.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="save">
+                                        <a href="#">Saving & Investing
+                                            <i class="fa-solid fa-chevron-right"></i></a>
+                                        <div class="saving">
+                                            <ul class="dia-list">
+                                                <li><a href="#">Access Money Wallet</a></li>
+                                                <li><a href="#">Evergreen Savings Accounto</a>
+                                                <li>
+                                                <li><a href="#">High Interest Deposit Account<a>
+                                                <li>
+                                                <li><a href="#">Home Invest</a></li>
+                                                <li><a href="#">Instant Savings Account</a></li>
+                                                <li><a href="#">Premier Savings Account</a></li>
+                                            </ul>
+                                            <div class="dia-br">
+                                                <p>
+                                                    <span class="dia-br-h">
+                                                        Saving & Investing</span>
+                                                </p>
+                                                <p>
+                                                    Find an account here that works for your saving and
+                                                    investing needs.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="w-init">
+                                        <a href="#">The “W" Initiative </a>
+                                        <div class="w-in">
+                                            <p><span class="dia-br-h">The “W" Initiative</span></p>
+                                            <p>
+                                                Over the years, we have provided sustainable tools for
+                                                women to Access true financial inclusion and growth.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="content">
+                                <div class="main-panel-content">
+                                    <div class="main-panel-left-img">
+                                        <p>
+                                            Over the years, we have provided sustainable tools for
+                                            women to Access true financial inclusion and growth
+                                        </p>
+                                    </div>
+                                    <div class="access-btn"><a href="#">Access More</a></div>
+                                </div>
+                            </div>
+                            <div class="drop-footer">
+                                <div class="footer-items">
+                                    <div class="contatc-us ft"> <img src="Multimedia/images/drop-down-ft-phone.svg"> <a href="#">Contact
+                                            Us</a></div>
+                                    <div class="support-help ft"> <img src="Multimedia/images/drop-ft-life-sup.svg"> <a href="#">Help
+                                            & Support</a> </div>
+                                    <div class="locate ft"> <img src="Multimedia/images/drop-ft-map.svg"> <a href="#">Locate Us</a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- Business mega dropdown-->
+                    <li class="business"><a href="#">Business</a>
+                        <div class="dropdown-content">
+                            <div class="header-panel">
+                                <h4>BUSINESS BANKING</h4>
+                            </div>
+                            <div class="left-panel">
+                                <ul class="left-panel-content">
+                                    <li class="bank-assure">
+                                        <a href="#">Business Accounts </a>
+                                        <div class="bus bank-as">
+                                            <ul class="business-act-list">
+                                                <li><a href="#">Corporate Account</a>
+                                                <li><a href="#">Domiciliary Account</a></li>
+                                            </ul>
+                                            <p><span class="txt-bank-as">Business Accounts</span></p>
+                                            <p class="text-[.80rem] w-[60%]">Find products and services designed for large and small scale businesses here</p>
+                                        </div>
+                                    </li>
+                                    <li class="borrow-sec">
+                                        <a href="#">CBN Healthcare Sector Loan <i class="fa-solid fa-chevron-right"></i>
+                                        </a>
+                                        <div class="borrow">
+                                           
+                                            <div class="txt-br">
+                                                <p><span class="txt-br-h">CBN Healthcare Sector Loan</span></p>
+                                                <p>
+                                                   The CBN Credit support for the
+                                                    Healthcare sector is an on-lending
+                                                     intervention scheme..
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <div class="">
+                                        <li class="dial">
+                                            <a href="#">Diaspora Banking<i class="fa-solid fa-chevron-right"></i></a>
+                                            <div class="diaspora">
+                                                <ul class="dia-list">
+                                                    <li><a href="#">Current Account</a></li>
+                                                    <li><a href="#">Diaspora Community</a></li>
+                                                    <li><a href="#">Domiciliary Account</a></li>
+                                                    <li><a href="#"> Remittance</a></li>
+                                                    <li><a href="#">Savings Account</a></li>
+                                                </ul>
+
+                                                <div class="dia-br">
+                                                    <p>
+                                                        <span class="dia-br-h">Diaspora Banking</span>
+                                                    </p>
+                                                    <p>
+                                                        Whatever continent your business takes you to, we
+                                                        have just the account for you
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </div>
+
+                                    <li class="every-day">
+                                        <a href="#">Everyday Accounts
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </a>
+                                        <div class="every">
+                                            <ul class="every-list">
+                                                <li><a href="#">Community Current Account</a></li>
+                                                <li><a href="#">Diamond School Advantage</a></li>
+                                                <li><a href="#">Domiciliary Account</a></li>
+                                                <li><a href="#">Evergreen Account</a></li>
+                                                <li><a href="#">Everyday Banking</a></li>
+                                                <li><a href="#">Gold Current Account</a></li>
+                                                <li><a href="#">Individual Current Account</a></li>
+                                                <li><a href="#">Premium Current Account</a></li>
+                                                <li><a href="#">Solo Account</a></li>
+                                            </ul>
+                                            <div class="every-br">
+                                                <p><span class="every-br-h">Everyday Accounts</span></p>
+                                                <p>
+                                                    Find the account that works best for your financial
+                                                    and business needs.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="dial">
+                                        <a href="#">Kids & Teens <i class="fa-solid fa-chevron-right"></i>
+                                        </a>
+                                        <div class="diaspora">
+                                            <ul class="dia-list">
+                                                <li><a href="#">Dreamville</a></li>
+                                                <li><a href="#">Early Savers Account</a></li>
+                                            </ul>
+                                            <div class="dia-br">
+                                                <p><span class="dia-br-h">Kids & Teens</span></p>
+                                                <p>You can introduce your children to a life of
+                                                    financial freedom by starting them up today.</p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="money-trf">
+                                        <a href="#">Money Transfer
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </a>
+                                        <div class="money">
+                                            <ul class="money-list">
+                                                <li><a href="#">AccessAfrica</a></li>
+                                                <li><a href="#">PAPSS</a></li>
+                                                <li><a href="#">Ria</a></li>
+                                                <li><a href="#">Transfast</a></li>
+                                                <li><a href="#">Western Union</a></li>
+                                            </ul>
+                                            <div class="dia-br">
+                                                <p>
+                                                    <span class="dia-br-h">Money Transfer</span>
+                                                </p>
+                                                <p>
+                                                    Reliable money transfer from and to anywhere in the
+                                                    world.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="promo-m">
+                                        <a href="#">Promos & Propositions
+                                            <i class="fa-solid fa-chevron-right"></i>
+                                        </a>
+                                        <div class="promo">
+                                            <ul class="promo-list">
+                                                <li><a href="#"> CIG Promo</a></li>
+                                                <li><a href="#">Suzuki Promo</a></li>
+                                                <li><a href="#">XclusivePlus</a></li>
+                                            </ul>
+                                            <div class="dia-br">
+                                                <p>
+                                                    <span class="dia-br-h">Promos & Propositions</span>
+                                                </p>
+                                                <p>
+                                                    Find all our exciting ongoing promos and
+                                                    Propositions here.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="save">
+                                        <a href="#">Saving & Investing
+                                            <i class="fa-solid fa-chevron-right"></i></a>
+                                        <div class="saving">
+                                            <ul class="dia-list">
+                                                <li><a href="#">Access Money Wallet</a></li>
+                                                <li><a href="#">Evergreen Savings Accounto</a>
+                                                <li>
+                                                <li><a href="#">High Interest Deposit Account<a>
+                                                <li>
+                                                <li><a href="#">Home Invest</a></li>
+                                                <li><a href="#">Instant Savings Account</a></li>
+                                                <li><a href="#">Premier Savings Account</a></li>
+                                            </ul>
+                                            <div class="dia-br">
+                                                <p>
+                                                    <span class="dia-br-h">
+                                                        Saving & Investing</span>
+                                                </p>
+                                                <p>
+                                                    Find an account here that works for your saving and
+                                                    investing needs.
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="w-init">
+                                        <a href="#">The “W" Initiative </a>
+                                        <div class="w-in">
+                                            <p><span class="dia-br-h">The “W" Initiative</span></p>
+                                            <p>
+                                                Over the years, we have provided sustainable tools for
+                                                women to Access true financial inclusion and growth.
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="content">
+                                <div class="main-panel-content">
+                                    <div class="main-panel-left-img">
+                                        <p>
+                                            Over the years, we have provided sustainable tools for
+                                            women to Access true financial inclusion and growth
+                                        </p>
+                                    </div>
+                                    <div class="access-btn"><a href="#">Access More</a></div>
+                                </div>
+                            </div>
+                            <div class="drop-footer">
+                                <div class="footer-items">
+                                    <div class="contatc-us ft"> <img src="Multimedia/images/drop-down-ft-phone.svg"> <a href="#">Contact
+                                            Us</a></div>
+                                    <div class="support-help ft"> <img src="Multimedia/images/drop-ft-life-sup.svg"> <a href="#">Help
+                                            & Support</a> </div>
+                                    <div class="locate ft"> <img src="Multimedia/images/drop-ft-map.svg"> <a href="#">Locate Us</a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- corporate mega dropdown -->
+                    <li><a href="#">Corporate</a></li>
+
+                    <!-- private mega dropdown -->
+                    <li><a href="#">Private</a></li>
+
+                    <!-- ways to bank mega dropdown -->
+                    <li><a href="#">Ways to Bank</a></li>
+
+                    <!-- contact us mega dropdown-->
+                    <li><a href="#">Contact Us</a></li>
+
+                    <!-- I am mega dropdown -->
+                    <li><a href="#">I am...</a></li>
+                </ul>
+
+               
+
             </div>
-            <ul class="main-nav-links">
-                <li><a href="#">Home</a></li>
-
-                <!-- personal mega dropdown -->
-
-                <li class="personal">
-                    <a href="#">Personal</a>
-                    <div class="dropdown-content">
-                        <div class="header-panel">
-                            <h4>Personal Banking</h4>
-                        </div>
-                        <div class="left-panel">
-                            <ul class="left-panel-content">
-                                <li class="bank-assure">
-                                    <a href="#">Bancassurance </a>
-                                    <div class="bank-as">
-                                        <p><span class="txt-bank-as">Bancassurance</span></p>
-                                        <p>Something sweet for ENTREPRENEURS</p>
-                                    </div>
-                                </li>
-                                <li class="borrow-sec">
-                                    <a href="#">Borrowing <i class="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <div class="borrow">
-                                        <ul class="loan-list">
-                                            <li><a href="#">Vacation Finance</a></li>
-                                            <li><a href="#">Access Agent Loan</a></li>
-                                            <li><a href="#">Access Device Financing</a></li>
-                                            <li><a href="#">Advance for School Fees</a></li>
-                                            <li><a href="#">Auto Loan</a></li>
-                                            <li><a href="#">Cash-Backed Loan</a></li>
-                                            <li><a href="#">Consumer Asset Lease</a></li>
-                                            <li><a href="#">Creative Sector Loan</a></li>
-                                            <li><a href="#">Home Loan</a></li>
-                                            <li>
-                                                <a href="#">Lending Against Turnover (LATO)</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Maternal Health Service Support</a>
-                                            </li>
-                                            <li><a href="#">Payday loan</a></li>
-                                            <li><a href="#">Personal Loan</a></li>
-                                            <li><a href="#">Quickbucks</a></li>
-                                            <li><a href="#">Salary Advance</a></li>
-                                            <li><a href="#">Small Ticket Personal Loans</a></li>
-                                            <li><a href="#">Switch to Solar</a></li>
-                                            <li><a href="#">W Power Loan</a></li>
-                                        </ul>
-                                        <div class="txt-br">
-                                            <p><span class="txt-br-h">Get a Quick Loan</span></p>
-                                            <p>
-                                                Your future plans can be put into action today. Get
-                                                access to the funds you need.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <div class="">
-                                    <li class="dial">
-                                        <a href="#">Diaspora Banking<i class="fa-solid fa-chevron-right"></i></a>
-                                        <div class="diaspora">
-                                            <ul class="dia-list">
-                                                <li><a href="#">Current Account</a></li>
-                                                <li><a href="#">Diaspora Community</a></li>
-                                                <li><a href="#">Domiciliary Account</a></li>
-                                                <li><a href="#"> Remittance</a></li>
-                                                <li><a href="#">Savings Account</a></li>
-                                            </ul>
-
-                                            <div class="dia-br">
-                                                <p>
-                                                    <span class="dia-br-h">Diaspora Banking</span>
-                                                </p>
-                                                <p>
-                                                    Whatever continent your business takes you to, we
-                                                    have just the account for you
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </div>
-
-                                <li class="every-day">
-                                    <a href="#">Everyday Accounts
-                                        <i class="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <div class="every">
-                                        <ul class="every-list">
-                                            <li><a href="#">Community Current Account</a></li>
-                                            <li><a href="#">Diamond School Advantage</a></li>
-                                            <li><a href="#">Domiciliary Account</a></li>
-                                            <li><a href="#">Evergreen Account</a></li>
-                                            <li><a href="#">Everyday Banking</a></li>
-                                            <li><a href="#">Gold Current Account</a></li>
-                                            <li><a href="#">Individual Current Account</a></li>
-                                            <li><a href="#">Premium Current Account</a></li>
-                                            <li><a href="#">Solo Account</a></li>
-                                        </ul>
-                                        <div class="every-br">
-                                            <p><span class="every-br-h">Everyday Accounts</span></p>
-                                            <p>
-                                                Find the account that works best for your financial
-                                                and business needs.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="dial">
-                                    <a href="#">Kids & Teens <i class="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <div class="diaspora">
-                                        <ul class="dia-list">
-                                            <li><a href="#">Dreamville</a></li>
-                                            <li><a href="#">Early Savers Account</a></li>
-                                        </ul>
-                                        <div class="dia-br">
-                                            <p><span class="dia-br-h">Kids & Teens</span></p>
-                                            <p>You can introduce your children to a life of
-                                                financial freedom by starting them up today.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="money-trf">
-                                    <a href="#">Money Transfer
-                                        <i class="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <div class="money">
-                                        <ul class="money-list">
-                                            <li><a href="#">AccessAfrica</a></li>
-                                            <li><a href="#">PAPSS</a></li>
-                                            <li><a href="#">Ria</a></li>
-                                            <li><a href="#">Transfast</a></li>
-                                            <li><a href="#">Western Union</a></li>
-                                        </ul>
-                                        <div class="dia-br">
-                                            <p>
-                                                <span class="dia-br-h">Money Transfer</span>
-                                            </p>
-                                            <p>
-                                                Reliable money transfer from and to anywhere in the
-                                                world.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="promo-m">
-                                    <a href="#">Promos & Propositions
-                                        <i class="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <div class="promo">
-                                        <ul class="promo-list">
-                                            <li><a href="#"> CIG Promo</a></li>
-                                            <li><a href="#">Suzuki Promo</a></li>
-                                            <li><a href="#">XclusivePlus</a></li>
-                                        </ul>
-                                        <div class="dia-br">
-                                            <p>
-                                                <span class="dia-br-h">Promos & Propositions</span>
-                                            </p>
-                                            <p>
-                                                Find all our exciting ongoing promos and
-                                                Propositions here.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="save">
-                                    <a href="#">Saving & Investing
-                                        <i class="fa-solid fa-chevron-right"></i></a>
-                                    <div class="saving">
-                                        <ul class="dia-list">
-                                            <li><a href="#">Access Money Wallet</a></li>
-                                            <li><a href="#">Evergreen Savings Accounto</a>
-                                            <li>
-                                            <li><a href="#">High Interest Deposit Account<a>
-                                            <li>
-                                            <li><a href="#">Home Invest</a></li>
-                                            <li><a href="#">Instant Savings Account</a></li>
-                                            <li><a href="#">Premier Savings Account</a></li>
-                                        </ul>
-                                        <div class="dia-br">
-                                            <p>
-                                                <span class="dia-br-h">
-                                                    Saving & Investing</span>
-                                            </p>
-                                            <p>
-                                                Find an account here that works for your saving and
-                                                investing needs.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="w-init">
-                                    <a href="#">The “W" Initiative </a>
-                                    <div class="w-in">
-                                        <p><span class="dia-br-h">The “W" Initiative</span></p>
-                                        <p>
-                                            Over the years, we have provided sustainable tools for
-                                            women to Access true financial inclusion and growth.
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="content">
-                            <div class="main-panel-content">
-                                <div class="main-panel-left-img">
-                                    <p>
-                                        Over the years, we have provided sustainable tools for
-                                        women to Access true financial inclusion and growth
-                                    </p>
-                                </div>
-                                <div class="access-btn"><a href="#">Access More</a></div>
-                            </div>
-                        </div>
-                        <div class="drop-footer">
-                            <div class="contatc-us ft">
-                                <img src="/Multimedia/images/phone.svg" /> Contact Us
-                            </div>
-                            <div class="support-help ft">
-                                <img src="/Multimedia/images/support.svg" /> Help & Support
-                            </div>
-                            <div class="locate ft">
-                                <img src="/Multimedia/images/locate-us.svg" /> Locate Us
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- Business mega dropdown-->
-                <li class="bussiness"><a href="#">Business</a>
-                    <div class="dropdown-content">
-                        <div class="header-panel">
-                            <h4>BUSINESS BANKING</h4>
-                        </div>
-                        <div class="left-panel">
-                            <ul class="left-panel-content">
-                                <li class="bank-assure">
-                                    <a href="#">Business Accounts </a>
-                                    <div class="bus bank-as">
-                                        <ul>
-                                            <li><a href="#">Corporate Account</a>
-                                            <li><a href="#">Domiciliary Account</a></li>
-                                        </ul>
-                                        <p><span class="txt-bank-as">Bancassurance</span></p>
-                                        <p>Something sweet for ENTREPRENEURS</p>
-                                    </div>
-                                </li>
-                                <li class="borrow-sec">
-                                    <a href="#">Borrowing <i class="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <div class="borrow">
-                                        <ul class="loan-list">
-                                            <li><a href="#">Vacation Finance</a></li>
-                                            <li><a href="#">Access Agent Loan</a></li>
-                                            <li><a href="#">Access Device Financing</a></li>
-                                            <li><a href="#">Advance for School Fees</a></li>
-                                            <li><a href="#">Auto Loan</a></li>
-                                            <li><a href="#">Cash-Backed Loan</a></li>
-                                            <li><a href="#">Consumer Asset Lease</a></li>
-                                            <li><a href="#">Creative Sector Loan</a></li>
-                                            <li><a href="#">Home Loan</a></li>
-                                            <li>
-                                                <a href="#">Lending Against Turnover (LATO)</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Maternal Health Service Support</a>
-                                            </li>
-                                            <li><a href="#">Payday loan</a></li>
-                                            <li><a href="#">Personal Loan</a></li>
-                                            <li><a href="#">Quickbucks</a></li>
-                                            <li><a href="#">Salary Advance</a></li>
-                                            <li><a href="#">Small Ticket Personal Loans</a></li>
-                                            <li><a href="#">Switch to Solar</a></li>
-                                            <li><a href="#">W Power Loan</a></li>
-                                        </ul>
-                                        <div class="txt-br">
-                                            <p><span class="txt-br-h">Get a Quick Loan</span></p>
-                                            <p>
-                                                Your future plans can be put into action today. Get
-                                                access to the funds you need.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <div class="">
-                                    <li class="dial">
-                                        <a href="#">Diaspora Banking<i class="fa-solid fa-chevron-right"></i></a>
-                                        <div class="diaspora">
-                                            <ul class="dia-list">
-                                                <li><a href="#">Current Account</a></li>
-                                                <li><a href="#">Diaspora Community</a></li>
-                                                <li><a href="#">Domiciliary Account</a></li>
-                                                <li><a href="#"> Remittance</a></li>
-                                                <li><a href="#">Savings Account</a></li>
-                                            </ul>
-
-                                            <div class="dia-br">
-                                                <p>
-                                                    <span class="dia-br-h">Diaspora Banking</span>
-                                                </p>
-                                                <p>
-                                                    Whatever continent your business takes you to, we
-                                                    have just the account for you
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </div>
-
-                                <li class="every-day">
-                                    <a href="#">Everyday Accounts
-                                        <i class="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <div class="every">
-                                        <ul class="every-list">
-                                            <li><a href="#">Community Current Account</a></li>
-                                            <li><a href="#">Diamond School Advantage</a></li>
-                                            <li><a href="#">Domiciliary Account</a></li>
-                                            <li><a href="#">Evergreen Account</a></li>
-                                            <li><a href="#">Everyday Banking</a></li>
-                                            <li><a href="#">Gold Current Account</a></li>
-                                            <li><a href="#">Individual Current Account</a></li>
-                                            <li><a href="#">Premium Current Account</a></li>
-                                            <li><a href="#">Solo Account</a></li>
-                                        </ul>
-                                        <div class="every-br">
-                                            <p><span class="every-br-h">Everyday Accounts</span></p>
-                                            <p>
-                                                Find the account that works best for your financial
-                                                and business needs.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="dial">
-                                    <a href="#">Kids & Teens <i class="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <div class="diaspora">
-                                        <ul class="dia-list">
-                                            <li><a href="#">Dreamville</a></li>
-                                            <li><a href="#">Early Savers Account</a></li>
-                                        </ul>
-                                        <div class="dia-br">
-                                            <p><span class="dia-br-h">Kids & Teens</span></p>
-                                            <p>You can introduce your children to a life of
-                                                financial freedom by starting them up today.</p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="money-trf">
-                                    <a href="#">Money Transfer
-                                        <i class="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <div class="money">
-                                        <ul class="money-list">
-                                            <li><a href="#">AccessAfrica</a></li>
-                                            <li><a href="#">PAPSS</a></li>
-                                            <li><a href="#">Ria</a></li>
-                                            <li><a href="#">Transfast</a></li>
-                                            <li><a href="#">Western Union</a></li>
-                                        </ul>
-                                        <div class="dia-br">
-                                            <p>
-                                                <span class="dia-br-h">Money Transfer</span>
-                                            </p>
-                                            <p>
-                                                Reliable money transfer from and to anywhere in the
-                                                world.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="promo-m">
-                                    <a href="#">Promos & Propositions
-                                        <i class="fa-solid fa-chevron-right"></i>
-                                    </a>
-                                    <div class="promo">
-                                        <ul class="promo-list">
-                                            <li><a href="#"> CIG Promo</a></li>
-                                            <li><a href="#">Suzuki Promo</a></li>
-                                            <li><a href="#">XclusivePlus</a></li>
-                                        </ul>
-                                        <div class="dia-br">
-                                            <p>
-                                                <span class="dia-br-h">Promos & Propositions</span>
-                                            </p>
-                                            <p>
-                                                Find all our exciting ongoing promos and
-                                                Propositions here.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-
-                                <li class="save">
-                                    <a href="#">Saving & Investing
-                                        <i class="fa-solid fa-chevron-right"></i></a>
-                                    <div class="saving">
-                                        <ul class="dia-list">
-                                            <li><a href="#">Access Money Wallet</a></li>
-                                            <li><a href="#">Evergreen Savings Accounto</a>
-                                            <li>
-                                            <li><a href="#">High Interest Deposit Account<a>
-                                            <li>
-                                            <li><a href="#">Home Invest</a></li>
-                                            <li><a href="#">Instant Savings Account</a></li>
-                                            <li><a href="#">Premier Savings Account</a></li>
-                                        </ul>
-                                        <div class="dia-br">
-                                            <p>
-                                                <span class="dia-br-h">
-                                                    Saving & Investing</span>
-                                            </p>
-                                            <p>
-                                                Find an account here that works for your saving and
-                                                investing needs.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li class="w-init">
-                                    <a href="#">The “W" Initiative </a>
-                                    <div class="w-in">
-                                        <p><span class="dia-br-h">The “W" Initiative</span></p>
-                                        <p>
-                                            Over the years, we have provided sustainable tools for
-                                            women to Access true financial inclusion and growth.
-                                        </p>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="content">
-                            <div class="main-panel-content">
-                                <div class="main-panel-left-img">
-                                    <p>
-                                        Over the years, we have provided sustainable tools for
-                                        women to Access true financial inclusion and growth
-                                    </p>
-                                </div>
-                                <div class="access-btn"><a href="#">Access More</a></div>
-                            </div>
-                        </div>
-                        <div class="drop-footer">
-                            <div class="contatc-us ft">
-                                <img src="/Multimedia/images/phone.svg" /> Contact Us
-                            </div>
-                            <div class="support-help ft">
-                                <img src="/Multimedia/images/support.svg" /> Help & Support
-                            </div>
-                            <div class="locate ft">
-                                <img src="/Multimedia/images/locate-us.svg" /> Locate Us
-                            </div>
-                        </div>
-                    </div>
-                </li>
-
-                <!-- corporate mega dropdown -->
-                <li><a href="#">Corporate</a></li>
-
-                <!-- private mega dropdown -->
-                <li><a href="#">Private</a></li>
-
-                <!-- ways to bank mega dropdown -->
-                <li><a href="#">Ways to Bank</a></li>
-
-                <!-- contact us mega dropdown-->
-                <li><a href="#">Contact Us</a></li>
-
-                <!-- I am mega dropdown -->
-                <li><a href="#">I am...</a></li>
-            </ul>
 
             <div class="left-btn">
                 <div class="search">
@@ -534,64 +519,566 @@
                     <a href="#">Internet Banking</a>
                     <div class="internet-dropdown"></div>
                 </div>
+
+                  <div class="mobile-menu-icon">
+                <i class="bi bi-search"></i>
+                <i class="bi bi-list"></i>
             </div>
+            </div>
+
+           
+
         </nav>
     </header>
 
     <!-- hero-section -->
 
     <section>
-        <div class="hero-bg"></div>
+        <section class="hero">
+
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide global">
+                        <div class="slide-txt">
+                            <h1 class="text-[3rem] font-[700] leading-[1]">Earn Locally, Invest</h1>
+                            <p class="text-[2rem] font-[10]">around the world</p>
+                            <p class="text-[1rem]"> You can decide how, when and where you do your banking with our wide
+                                variety of services
+                            </p>
+                            <div class="rp-slide-btn"><a id="slide-btn" href="#"> access more </a></div>
+                        </div>
+
+                    </div>
+
+                    <div class="slide industry">
+                        <div class="slide-txt">
+                            <p class="text-[3rem] font-[700] leading-[1]"> We offer industry specific </p>
+                            <p class="text-[2rem] font-[0]"> banking services with excellence...</p>
+                            <p class="w-[70%]">With experts who have relevant industry experience,
+                                you are rest assured that navigating the financial
+                                complexity of your industry will be easy and convenient.
+                                Whatever your needs, we have a professional for you. </p>
+                            <div class="rp-slide-btn"><a id="slide-btn" href="#"> access more </a></div>
+                        </div>
+                        <div class="banner-line">
+                            <img src="Multimedia/images/banner-icon-line.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="slide unlock">
+                        <div class="slide-txt">
+                            <p class="text-[2rem] text-[black] leading-[0]">Unlock a world of</p>
+                            <p class="unlock-main-txt">possibility just for you</p>
+                            <p class="text-[black] w-[60%]">Experience the sleek interface of the AccessMore app now on
+                                our Internet Banking Platform
+                            </p>
+                            <div class="rp-slide-btn"><a id="un" href="#"> access more </a></div>
+                        </div>
+                        <div class="banner-line">
+                            <img src="Multimedia/images/banner-icon-line.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="slide business-ven">
+                        <div class="slide-txt">
+                            <p class="text-[3rem] leading[0]"><strong>We provide access for</strong> </p>
+                            <p class="text-[3rem] leading-[1]">your business venture..</p>
+                            <p class="w-[55%]">Because we believe greatly in enterprise, we have provided you with
+                                access to the tools
+                                and human power to help initiate, grow, scale and sustain your business ventures.
+                                We will meet you where you are and take you where you need to be.</p>
+                            <div class="rp-slide-btn"><a id="slide-btn" href="#"> access more </a></div>
+                        </div>
+                        <div class="banner-line">
+                            <img src="Multimedia/images/banner-icon-line.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="slide amex">
+                        <div class="slide-txt">
+                            <p class="text-[2.5rem] font-[2]"> AMERICAN EXPRESS IS HERE.</p>
+                            <p class="text-[1.3rem]">Uncover more rewarding ways to spend quality time.</p>
+                            <p class="w-[55%]">American Express® is a registered trademark of American ExpressYA Cards
+                                are issued by
+                                Access Bank plc pursuant to a license from American Express. Terms and conditions apply.
+                            </p>
+                            <div class="rp-slide-btn"><a id="amex-btn" href="#"> access more </a></div>
+                        </div>
+                        <div class="banner-line">
+                            <img src="Multimedia/images/banner-icon-line.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="slide atm">
+                        <div class="slide-txt">
+                            <p class="text-[2rem] leading-[.90]">Your ATM card is for your use only.
+                            <p class="text-[3rem] text-[#ed7e00] font-[700] leading[.90]">Protect yourself</p>
+                            <p class="w-[60%] text-[1rem]">#Shine YourEye when performing transactions using your cards.
+                                Do not allow strangers to
+                                use your card. Do not disclose your details to anyone.</p>
+                            <a id="atm" href="#"><button>access more</button></a>
+                        </div>
+                        <div class="banner-line">
+                            <img src="Multimedia/images/banner-icon-line.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+
         <div class="card-warpper">
             <div class="hero-card">
-                <a href="#">
-                    <div class="create-an-account">
-                        <img src="/Multimedia/images/create-account.png" alt="" />
-                        <h3>Open an account.</h3>
-                        <p>Open an account and open your world to more.</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="create-an-account">
-                        <img src="/Multimedia/images/cards.png" alt="" />
-                        <h3>Cards</h3>
-                        <p>Cards you can use anywhere for all your financial ...</p>
-                    </div>
-                </a>
-                <a href="#">
-                    <div class="create-an-account">
-                        <img src="/Multimedia/images/quick-loans.png" alt="" />
-                        <h3>Quick Loans.</h3>
-                        <p>Need Quick cash for Quick fixes? See how we can help.</p>
-                    </div>
-                </a>
 
-                <a href="#">
-                    <div class="create-an-account">
-                        <img src="/Multimedia/images/money-transfer.png" alt="" />
-                        <h3>Diaspora Banking</h3>
-                        <p>
-                            Open a Diaspora banking account even if you work and live abroad
-                        </p>
-                    </div>
-                </a>
+                <div class="create-an-account">
+                    <a href="#">
+                        <img src="Multimedia/images/create-account.png" alt="" />
+                        <h3 class="text-[700]">Open an account.</h3>
+                        <p>Open an account and open your world to more.</p>
+                    </a>
+                </div>
+
+
+                <div class="create-an-account">
+                    <a href="#">
+                        <img src="Multimedia/images/cards.png" alt="" />
+                        <h3 class="text-[700]">Cards</h3>
+                        <p>Cards you can use anywhere for all your financial ...</p>
+                    </a>
+                </div>
+
+
+                <div class="create-an-account">
+                    <a href="#">
+                        <img src="Multimedia/images/quick-loans.png" alt="" />
+                        <h3 class="text-[700]">Quick Loans.</h3>
+                        <p>Need Quick cash for Quick fixes? See how we can help.</p>
+                    </a>
+                </div>
+
+
+
+                <div class="create-an-account">
+                    <a href="#">
+                        <img src="Multimedia/images/money-transfer.png" alt="" />
+                        <h3 class="text-[700]">Diaspora Banking</h3>
+                        <p>Open a Diaspora banking account even if you work and live abroad </p>
+                    </a>
+                </div>
             </div>
         </div>
 
+        <main class="main-section bg-[#ededed]">
+            <div class="main-content">
+                <div class="news-line"></div>
+                <div class="more-ways">
+                    <p class="more-ways-h-txt"><span class="more-ways-sub-txt">access more</span> ways to bank</p>
+                    <p> The less time you spend in a bank, the more time you have for yourself. Choose from a variety of
+                        easy
+                        and secure ways to manage your money on-the-go.</p>
+                </div>
 
 
-        <div class="main-content">
-            <div class="news-line"></div>
-              <div class="more-ways">
-            <p class="more-ways-h-txt"><span class="more-ways-sub-txt">access more</span>  ways to bank</p>
-               
-               <p> The less time you spend in a bank, the more time you have for yourself. Choose from a variety of easy
-                and secure ways to manage your money on-the-go.</p>
-        </div>
-        </div>
-      
+                <div class="way-to-bank">
 
+                    <a href="#">
+                        <div class="way-card ussd">
+                            <img src="Multimedia/images/ussd-main.svg">
+                            <p>*901# Banking</p>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="way-card on-banking">
+                            <img src="Multimedia/images/ussd.svg">
+                            <p>Online Banking</p>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="way-card mobile-banking">
+                            <img src="Multimedia/images/bank-appp-main.svg">
+                            <p>Mobile Banking</p>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="way-card americ-card">
+                            <img src="Multimedia/images/bank-app.svg">
+                            <p>American Express Cards</p>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="way-card ussd">
+                            <img src="Multimedia/images/ussd-main.svg">
+                            <p>*901# Banking</p>
+                        </div>
+                    </a>
+
+                    <a href="#">
+                        <div class="way-card mobile-banking">
+                            <img src="Multimedia/images/bank-appp-main.svg">
+                            <p>Online Banking</p>
+                        </div>
+                    </a>
+                </div>
+
+                <aside>
+
+                    <div class="loan-calcultor">
+                        <div class="loan-txt p-[20px] leading-[1]">
+                            <h1 class="text-[white] text-[2rem] font-[700] w-[40%]">Payday Loan Calculator</h1>
+                            <p class="loan-note w-[30%] leading-[1.2] text-[white] text-[.90rem]">Your financial needs
+                                are important to us. We know that some emergencies
+                                arise before payday and you may be low on cash. With Payday Loan by Access, you can
+                                borrow money and pay back at the agreed time.</p>
+
+                            <div class="terms-con">
+                                <p class="text-[white] text-[1rem] text-center"> <i class="bi bi-info-circle-fill"></i>
+                                    * Terms and Conditions Apply</p>
+                            </div>
+                            <div class="txt-brd"></div>
+                        </div>
+                        <P class="salary text-[white]"> What's your monthly salary?</P>
+                        <div class="calculator">
+
+                            <div class="cal-ball"></div>
+                            <p class="text-[1.5rem] font-[700] text-[white]">N 5,000,000</p>
+                        </div>
+
+                        <div class="eli">
+                            <div class="eli-details">
+                                <p> <strong>Eligible Loan Amount</strong> </p>
+                                <h1 class="text-[1.8rem] text-[#ed7e00] font-[500]">N2,677,500</h1>
+                                <p class="text-[.80rem]"> <strong>Tenor:</strong> Your next pay day or 30-days,
+                                    whichever comes first</p>
+                                <div class="in-loan"><a class="text-[.70rem]" id="un" href="#"> Get Instant Loan Now
+                                    </a></div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+            <article>
+                <div class="art-bg"></div>
+            </article>
+        </main>
     </section>
+
+
+    <section>
+        <div class="more-banking-car-container">
+
+            <div class="more-banking-ser slider-window">
+                <div class="slider-track">
+                    <div class="more-banking-txt">
+                        <h1 class="text-[1.7rem] text-[#007067] font-[100]">
+                            <span class="text-[#007067] 
+                    text-[1.7rem] font-[700]">access more</span> banking services
+                        </h1>
+                        <p class="w-[50%] text-[.80rem] font-[500]">Whether it's your child's first savings account,
+                            your personal savings account, your first
+                            retirement plan or a business loan, we offer
+                            personal and corporate banking products
+                            and services tailored to meet your needs.</p>
+                    </div>
+
+                    <div class="more-banking-car" id="slider-track">
+                        <div class="mr-banking-cards">
+                            <div class="mr-banking-card-mini">
+                                <img src="Multimedia/images/Wcomm_footer_logo-3.png" alt="">
+                                <h4 class="text[2.5rem] text-[#007067] font-[700]">Join the No.1 Community for women.
+                                </h4>
+                                <div class="mr-banking-main">
+                                    <p class="text-[.75rem]">We believe that women are a
+                                        powerful and key catalyst for change...</p>
+                                    <div class="mrr-btns"> <a class="mr-btn" href="#"> access more</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mr-banking-cards nine-banking">
+                            <div class="mr-banking-card-mini">
+                                <img src="Multimedia/images/901-banking-2.png" alt="">
+                                <h4 class="text[2.5rem] text-[#007067] font-[700]">Mobile Banking.</h4>
+                                <div class="mr-banking-main">
+                                    <p class="text-[.75rem]">Mobile banking is our banking-on-the-go service. It makes
+                                        banking accessible, easier, fast and secure.</p>
+                                    <div class="mrr-btns"> <a class="mr-btn" href="#"> access more</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mr-banking-cards t-bill">
+                            <div class="mr-banking-card-mini">
+                                <img src="Multimedia/images/t-bills-online.png" alt="">
+                                <h4 class="text[2.5rem] text-[#007067] font-[700]"> Online Banking</h4>
+                                <div class="mr-banking-main">
+                                    <p class="text-[.75rem]">Access our financial services online anywhere and with any
+                                        device.</p>
+                                    <div class="mrr-btns"> <a class="mr-btn" href="#"> access more</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mr-banking-cards america-bill">
+                            <div class="mr-banking-card-mini">
+                                <img src="Multimedia/images/t-bills-online.png" alt="">
+                                <h4 class="text[2.5rem] text-[#007067] font-[700]">American Express Cards</h4>
+                                <div class="mr-banking-main">
+                                    <p class="text-[.75rem]">The AMEX Gold and Platinum cards
+                                        are dual currency cards</p>
+                                    <div class="mrr-btns"> <a class="mr-btn" href="#"> access more</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mr-banking-cards early-save">
+                            <div class="mr-banking-card-mini">
+                                <img src="Multimedia/images/early-savers-account.png" alt="">
+                                <h4 class="text[2.5rem] text-[#007067] font-[700]">Early Savers</h4>
+                                <div class="mr-banking-main">
+                                    <p class="text-[.75rem]">Find out how you can start
+                                        saving today for tomorrow with our Early
+                                        Savers account.</p>
+                                    <div class="mrr-btns"> <a class="mr-btn" href="#"> access more</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mr-banking-cards america-bill">
+                            <div class="mr-banking-card-mini">
+                                <img src="Multimedia/images/t-bills-online.png" alt="">
+                                <h4 class="text[2.5rem] text-[#007067] font-[700]">American Express Cards</h4>
+                                <div class="mr-banking-main">
+                                    <p class="text-[.75rem]">The AMEX Gold and Platinum cards
+                                        are dual currency cards</p>
+                                    <div class="mrr-btns"> <a class="mr-btn" href="#"> access more</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mr-banking-cards t-bill">
+                            <div class="mr-banking-card-mini">
+                                <img src="Multimedia/images/t-bills-online.png" alt="">
+                                <h4 class="text[2.5rem] text-[#007067] font-[700]"> Online Banking</h4>
+                                <div class="mr-banking-main">
+                                    <p class="text-[.75rem]">Access our financial services online anywhere and with any
+                                        device.</p>
+                                    <div class="mrr-btns"> <a class="mr-btn" href="#"> access more</a></div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <article>
+        <div class="closa">
+            <div class="closa-con">
+                <div class="bx-xlosa">
+                    <div class="closa-txt">
+                        <h1 class="text-[white] text-[1.5rem] font-[500]">your bank is <h1></h1>
+                            <h1 class="text-[2rem] text-[white] font-[700]"> CLOSA</h1>
+                            <p class="text-[1.5rem] text-[black] font-[500]">than you think.</p>
+                            <p class="w-[90%] text-[.80rem] text-[white] font-[400]">With our one stop agency banking,
+                                you can now carry out banking
+                                transactions like.</p>
+                            <div class="mrr-btns"> <a class="mr-btn" href="#"> access more</a></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </article>
+
+
+    <article>
+        <div class="explore-more">
+            <div class="explore-more-txt">
+                <h1 class="text-[1.7rem] text-[#014087] font-[100]">
+                    <span class="text-[#014087] 
+                    text-[1.7rem] font-[700]">explore more</span> than banking
+                </h1>
+                <p>Whether it's your child's first savings account, your personal
+                    savings account, your first home
+                    or retirement plan, we offer personal
+                    banking products and services</p>
+            </div>
+
+            <div class="explore-more-main">
+                <div class="leftr card-ft">
+                    <div class="left-sub-card">
+                        <div class="explore-banking-txt">
+                            <h1 class="text-[white] font-[500] text-[1.5rem]">Financing</h1>
+                            <p class="text-[white] text-[.90rem]">Based on specific requirements to bridge funding
+                                gaps with flexible repayment structures.</p>
+                            <div class="mrr-btns"> <a class="ex-btn" href="#"> access more</a></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mid card-ft">
+                    <div class="mid-sub-card">
+                        <div class="explore-banking-txt">
+                            <h1 class="text-[white] font-[500] text-[1.5rem]">Equipping Growing Businesses</h1>
+                            <p class="text-[white] text-[.90rem]">We believe in growth and sustainability and we want to
+                                grow your business with you. See how we can help.</p>
+                            <div class="mrr-btns"> <a class="ex-btn" href="#"> access more</a></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="rightr card-ft">
+                    <div class="right-subb-card">
+                        <div class="explore-banking-txt">
+                            <h1 class="text-[white] font-[500] text-[1.5rem]">Sustainable Banking</h1>
+                            <p class="text-[white] text-[.90rem]">For over two decades, we have been taking
+                                actionable steps towards sustainability in a rapidly changing world.</p>
+                            <div class="mrr-btns"> <a class="ex-btn" href="#"> access more</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </article>
+
+    <figure>
+        <div class="helpful-tools">
+            <p>Access more helpful tools</p>
+
+            <div class="tool-bx-h">
+                <a href="#">
+                    <div class="tool-bx">
+                        <div class="tool-box-ex-con">
+                            <img src="Multimedia/images/901-banking-ex.svg">
+                            <p class="text-[.90rem] pt-[20px]">*901# banking</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="tool-bx">
+                        <div class="tool-box-ex-con">
+                            <img src="Multimedia/images/location.svg">
+                            <p class="text-[.90rem] pt-[20px]">ATM Branch & Locator</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="tool-bx">
+                        <div class="tool-box-ex-con">
+                            <img src="Multimedia/images/help and support.svg">
+                            <p class="text-[.90rem] pt-[20px]">HELP</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="tool-bx">
+                        <div class="tool-box-ex-con">
+                            <img src="Multimedia/images/gift.svg">
+                            <p class="text-[.90rem] pt-[20px]">More Xtravaganza</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="tool-bx">
+                        <div class="tool-box-ex-con">
+                            <img src="Multimedia/images/piggy.svg">
+                            <p class="text-[.90rem] ">Instant Savings Account</p>
+                        </div>
+                    </div>
+                </a>
+
+                <a href="#">
+                    <div class="tool-bx">
+                        <div class="tool-box-ex-con">
+                            <img src="Multimedia/images/wistle.svg">
+                            <p class="text-[.90rem] pt-[20px]">Whistle Blower</p>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </figure>
+
+
+    <footer>
+        <div class="tb-content">
+            <div class="abt">
+                <h1 class="text-[1.8rem font-[600]">ABOUT US</h1>
+                <p><a href="#">Our History</a></p>
+                <p><a href="#">Corporate Profile</a></p>
+                <p><a href="#">Corporate Governance</a></p>
+                <p><a href="#">Board and Management Team</a></p>
+                <p><a href="#">Corporate Philosophy</a></p>
+                <p><a href="#">Our Awards</a></p>
+                <p><a href="#">Our Businesses</a></p>
+            </div>
+
+            <div class="abt">
+                <h1 class="text-[1.8rem font-[600]">CAREERS</h1>
+                <p><a href="#">Working At Access Bank</a></p>
+                <p><a href="#">Your Career</a></p>
+                <p><a href="#">Recruitment Process</a></p>
+            </div>
+
+            <div class="abt">
+                <h1 class="text-[1.8rem font-[600]">CONTACT US</h1>
+                <p><a href="#">Agent Banking Details</a></p>
+                <p><a href="#">Biometrics Enrollment</a></p>
+                <p><a href="#">Branch & ATM Locator</a></p>
+                <p><a href="#">Branches With Wi-Fi</a></p>
+                <p><a href="#">My Access</a></p>
+                <p><a href="#">We Care</a></p>
+            </div>
+
+            <div class="abt">
+                <h1 class="text-[1.8rem font-[600]">QUICK LINKS</h1>
+                <p><a href="#">Frequently Asked Questions</a></p>
+                <p><a href="">Access Bank Nigeria - ESMP</a></p>
+                <p><a href="">Dormant Accounts</a></p>
+                <p><a href="">Access Online</a></p>
+                <p><a href="">Anti-Money Laundering</a></p>
+                <p><a href="">New Naira Note Update</a></p>
+                <p><a href="">Download Center</a></p>
+                <p><a href="">Help</a></p>
+                <p><a href="">Neft Transactions Update</a></p>
+                <p><a href="">Form M Rates</a></p>
+                <p><a href="">IMS Policy</a></p>
+                <p><a href="">Online Security Tips</a></p>
+                <p><a href="">Scam Alert</a></p>
+            </div>
+
+            <div class="abt">
+                <h1 class="text-[1.8rem font-[600]">YOU ARE...</h1>            
+                <p><a href="">An Individual</a></p>
+                <p><a href="">A Job Applicant</a></p>
+                <p><a href="">A Woman</a></p>
+                <p><a href="">A Company</a></p>
+                <p><a href="">A Journalist</a></p>
+                <p><a href="">A Teenager</a></p>
+                <p><a href="">An Entrepreneur</a></p>
+                <p><a href="">An Investor</a></p>
+            </div>
+        </div>
+        <div class="extra-info">
+                <div class="extra-bx">
+
+                </div>
+            </div>
+    </footer>
 
 </body>
 
