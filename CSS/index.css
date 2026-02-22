@@ -1584,12 +1584,15 @@ footer {
 /* Mobile + small tablets */
 @media (max-width: 768px) {
   .lets-talk {
-    left: auto;
-    right: 16px;
-    width: 120px;
-    padding: 12px;
+    left: auto !important;
+    right: 10px !important;
     top: auto;
-    bottom: 16px;
+    bottom: 14px;
+    width: auto;
+    max-width: calc(100vw - 20px);
+    padding: 10px 12px;
+    white-space: nowrap;
+    overflow: hidden;
   }
 
   .nav-mini {
@@ -1922,6 +1925,14 @@ footer {
 
 /* Small phones */
 @media (max-width: 480px) {
+  .lets-talk {
+    right: 8px !important;
+    bottom: 10px;
+    max-width: calc(100vw - 16px);
+    padding: 9px 10px;
+    font-size: 0.9rem;
+  }
+
   .hero {
     margin-top: 94px;
     min-height: 370px;
