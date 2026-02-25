@@ -1,5 +1,7 @@
 {
     "recommendations": [
-        "wakatime.vscode-wakatime"
+        "wakatime.vscode-wakatime",
+        "anthropic.claude-code",
+        "blackboxapp.blackbox"
     ]
 }
