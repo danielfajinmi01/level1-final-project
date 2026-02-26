@@ -645,6 +645,12 @@ header {
   gap: 10px;
 }
 
+.ft-more-than-banking{
+display: flex;
+flex-direction: column;
+gap: 20px;
+}
+
 
 /* end-footer-content */
 
@@ -816,6 +822,21 @@ header {
   outline: none;
 }
 
+.menu-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: none;
+}
+
+.search .input-area {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.internet-banking {
+}
+
 
 .input-area{
   padding: 0 10px;
@@ -836,6 +857,7 @@ header {
   display: flex;
   align-items: center;
   align-self: center;
+  margin-left: auto;
 }
 
 .logo-access img {
@@ -1186,6 +1208,20 @@ header {
 }
 
 @media (max-width: 1024px) {
+  .internet-banking {
+    order: -1;
+  }
+
+  .nav-mini .mobile-menu-icon {
+    display: flex !important;
+    align-items: center;
+  }
+
+  .nav-mini .mobile-menu-icon img {
+    width: 22px;
+    height: 22px;
+  }
+
   .cards-wrapper {
     overflow-x: auto;
   }
@@ -1453,6 +1489,22 @@ header {
 /* ------------------------------
    Responsive: tablets and below
 ------------------------------ */
+@media (max-width: 1150px) {
+  .helpful-tools {
+    overflow-x: auto;
+  }
+
+  .tool-bx-h {
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap;
+  }
+
+  .tool-bx {
+    flex: 0 0 auto;
+  }
+}
+
 @media (max-width: 1024px) {
   .lets-talk {
     position: fixed;
@@ -1481,7 +1533,46 @@ header {
   }
 
   .search {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .input-area {
+    background-color: transparent;
+    padding: 0;
+  }
+
+  .search input {
     display: none;
+  }
+
+  .search .bi-search,
+  .search .menu-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .menu-label {
+    display: inline-flex;
+  }
+
+  .search .menu-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+  }
+
+  .internet-banking {
+    display: inline-flex;
+  }
+
+  .internet-banking a {
+    background-color: transparent;
+    border: 2px solid #a2c41a;
+    color: #1a1a1a;
+    padding: 10px 12px;
+    font-weight: 600;
   }
 
   .mobile-menu-icon {
@@ -1489,6 +1580,10 @@ header {
     align-items: center;
     gap: 12px;
     font-size: 1.4rem;
+  }
+
+  .mobile-menu-icon .bi-search {
+    display: none;
   }
 
   .hero {
@@ -1551,12 +1646,12 @@ header {
 
   .pay-day-loans-txt p,
   .pay-day-loans-txt .emergen,
-  .pay-day-loans-txt .w-[30%] {
+  .pay-day-loans-txt {
     width: 100%;
   }
 
   .instant-ln-btn {
-    display: flex;
+    display: block;
     justify-content: center;
   }
 
@@ -1630,6 +1725,19 @@ header {
 }
 
 @media (max-width: 768px) {
+  .lets-talk {
+    left: auto;
+    right: 12px;
+    top: auto;
+    bottom: 14px;
+    width: 150px;
+    max-width: calc(100vw - 24px);
+    padding: 14px;
+    border-radius: 1px 20px 20px 10px;
+    white-space: nowrap;
+    overflow: visible;
+  }
+
   .more-banking-car {
     grid-template-columns: 1fr;
   }
@@ -1664,12 +1772,12 @@ header {
   }
 
   .salary-amt {
-    gap: 0;
+    gap: 170px;
     justify-content: space-between;
   }
 
   .calculated-amt {
-    left: 0;
+    left: 14%;
   }
 
   .access-mrre-ways-content {
@@ -1691,7 +1799,7 @@ header {
   }
 
   .instant-ln-btn {
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
 
@@ -1749,7 +1857,11 @@ header {
   }
 
   .instant-ln-btn {
-    justify-content: flex-start;
+    justify-content: center;
+  }
+
+  .terms{
+    width: 100%;
   }
 
   .actual-loan-cal {
@@ -1762,5 +1874,281 @@ header {
 
   .access-more-ways-txt p {
     font-size: 1rem;
+  }
+}
+.licensed img{
+  width: 20px;
+  height: 20px;
+}
+
+@media (max-width: 1024px) {
+  .extra-info {
+    width: 100%;
+    padding: 20px 16px 30px;
+  }
+
+  .extra-bx {
+    height: auto;
+    border-right: 1px solid rgba(255, 255, 255, 0.589);
+  }
+
+  .xtra-bx-content {
+    display: grid;
+    grid-template-columns: auto;
+    align-items: center;
+    justify-items: center;
+    gap: 16px;
+    text-align: center;
+  }
+}
+
+.ft-more-than-banking {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-access-line {
+  width: 30px;
+}
+
+@media (max-width: 1150px) {
+  .terms-policy {
+    display: none;
+  }
+
+  .ft-more-than-banking img:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .extra-info {
+    display: block;
+    width: 100%;
+    padding: 20px 16px 30px;
+  }
+
+  .terms-policy {
+    display: none;
+  }
+
+  .ft-more-than-banking img:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .lets-talk {
+    left: auto;
+    right: 10px;
+    bottom: 10px;
+    width: 140px;
+    max-width: calc(100vw - 20px);
+    padding: 12px;
+    font-size: 0.92rem;
+    border-radius: 1px 18px 18px 10px;
+  }
+}
+.extra-info {
+  width: 65%;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.extra-bx {
+  width: 100%;
+  height: 70px;
+  border: 1px solid rgba(255, 255, 255, 0.589);
+  border-right: 3px solid white;
+}
+
+.xtra-bx-content{
+  display: inline-flex;
+  width: 90%;
+  margin: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.xtra-bx-content img{
+  width: 40px;
+}
+
+.xtra-bx-content a{
+  color:  white;
+  font-size: .90rem;
+  font-weight: 600;
+}
+
+.xtra-bx-content p{
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+/* Shared index footer + news normalization */
+.latetest-news-bx {
+  position: relative;
+  width: 250px;
+  background-color: #ededed;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  clip-path: polygon(0 0, 100% 0%, 98% 100%, 0 100%);
+}
+
+.la-s-bx{
+  position: absolute;
+  left: 92%;
+  background-color: #eb7623;
+  width: 20px;
+  height: 100%;
+  clip-path: polygon(79% 0, 100% 0%, 75% 100%, 51% 100%);
+}
+
+.latetest-news-bx p {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.news-headlines {
+  display: flex;
+  align-items: center;
+  background-color: #fff5ed;
+  width: 100%;
+  height: 28px;
+}
+
+.news-headlines marquee {
+  flex: 1;
+}
+
+
+.news-headlines marquee p {
+  color: black;
+  margin: 0;
+}
+
+.news-headlines marquee a {
+  color: black;
+}
+
+footer {
+  background-color: #03478b;
+  background-image: url(../Multimedia/images/access-logo-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: right;
+  object-fit: cover;
+}
+
+.tb-content {
+  width: 65%;
+  margin: auto;
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+}
+
+.abt h1 {
+  color: white;
+}
+
+.abt p {
+  color: rgba(255, 255, 255, 0.765);
+  font-size: 0.65rem;
+  padding-top: 15px;
+}
+
+.extra-info {
+  width: 65%;
+  margin: auto;
+  padding-top: 20px;
+  padding-bottom: 40px;
+}
+
+.extra-bx {
+  width: 100%;
+  height: 70px;
+  border: 1px solid rgba(255, 255, 255, 0.589);
+  border-right: 3px solid white;
+}
+
+.xtra-bx-content {
+  display: inline-flex;
+  width: 90%;
+  margin: auto;
+  gap: 20px;
+  padding: 20px;
+}
+
+.xtra-bx-content img {
+  width: 40px;
+}
+
+.xtra-bx-content a {
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.xtra-bx-content p {
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+}
+
+.licensed {
+  width: 100%;
+  background-color: white;
+  font-size: 0.7rem;
+  font-weight: 400;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.licensed img {
+  width: 20px;
+  height: 20px;
+}
+
+.ft-more-than-banking {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-access-line {
+  width: 30px;
+}
+
+.terms-policy ul {
+  display: flex;
+  gap: 20px;
+}
+
+@media (max-width: 1150px) {
+  .terms-policy {
+    display: none;
+  }
+
+  .ft-more-than-banking img:first-child {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .terms-policy {
+    display: none;
+  }
+
+  .ft-more-than-banking img:first-child {
+    display: none;
   }
 }
