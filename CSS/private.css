@@ -3,7 +3,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* font-family: ; */
   font-family: "Effra" "sans-serif";
 }
 
@@ -86,13 +85,13 @@ header {
   left: 0;
   width: 0%;
   height: 1px;
-  background-color: #ed8200;
+  background-color: black;
   padding-top: 20px;
   transition: width 0.3s ease;
 }
 
 .mini-nav-links a:hover {
-  color: #ed8200;
+  color: black;
 }
 
 .mini-nav-links a:hover::before {
@@ -119,6 +118,61 @@ header {
 .countries a {
   text-decoration: none;
   color: #5f7287;
+}
+
+.country-list {
+  position: absolute;
+  width: 200px;
+  height: 600px;
+  margin-left: -5%;
+  background-color: white;
+  z-index: 1;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ngn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.countries:hover .country-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+.country-li {
+  position: relative;
+}
+
+.country-li li {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-bottom: 20px;
+  gap: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.country-li li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 10px;
+  width: 0;
+  height: 3px;
+  background-color: black;
+  transition: width 0.25s ease;
+}
+
+.country-li li:hover::before,
+.country-li li:focus-within::before {
+  width: 100%;
 }
 
 .nav-main {
@@ -157,12 +211,12 @@ header {
 
 .main-nav-links a::before {
   content: "";
-  background-color: #ed8200;
+  background-color: black;
   position: absolute;
   top: 100%;
   left: 0;
   width: 0%;
-  margin-top: 11px;
+  margin-top: 8px;
   height: 3px;
   transition: width 0.3s ease;
 }
@@ -176,7 +230,6 @@ header {
   position: absolute;
   top: 100%;
   left: 10.5%;
-  /* right: -13%; */
   margin-top: 0;
   width: 1000px;
   height: 400px;
@@ -218,10 +271,11 @@ header {
 .left-panel a {
   font-size: 0.7rem;
   line-height: 30px;
+  color: rgb(105, 105, 105);
 }
 
 .left-panel a:hover {
-  color: #ed8200;
+  color: black;
 }
 
 .left-panel-content {
@@ -236,7 +290,7 @@ header {
 }
 
 .left-panel-content::-webkit-scrollbar-thumb {
-  background: #ed7e00;
+  background: black;
 }
 
 .header-panel {
@@ -301,7 +355,7 @@ header {
 
 .access-btn a {
   padding: 10px;
-  background-color: #ed8200;
+  background-color: black;
   color: white;
 }
 
@@ -321,7 +375,7 @@ header {
 }
 
 .txt-bank-as {
-  color: #ed8200;
+  color: black;
   font-size: 2rem;
   font-weight: 300;
 }
@@ -347,7 +401,7 @@ header {
 }
 
 .borrow-list::-webkit-scrollbar-thumb {
-  background: #ed7e00;
+  background: black;
   /* padding-right: 20px; */
 }
 
@@ -361,7 +415,7 @@ header {
 }
 
 .txt-br-h {
-  color: #ed8200;
+  color: black;
   font-size: 2rem;
 }
 
@@ -370,14 +424,13 @@ header {
   z-index: 1000;
 }
 
-/* .borrow-sec:focus-within .borrow,
-.borrow:hover */
 
 .borrow-sec:hover > .borrow {
   display: block;
 }
 
 /* end-borrow */
+
 
 /* diaspora */
 .diaspora {
@@ -410,7 +463,7 @@ header {
 }
 
 .dia-br-h {
-  color: #ed8200;
+  color: black;
   font-size: 1.6rem;
   font-weight: 200;
   line-height: 1;
@@ -460,7 +513,7 @@ header {
   width: 2px;
 }
 .every-list::-webkit-scrollbar-thumb {
-  background-color: #ed7e00;
+  background-color: black;
 }
 
 .every-br {
@@ -471,7 +524,7 @@ header {
 }
 
 .every-br-h {
-  color: #ed8200;
+  color: black;
   font-size: 1.8rem;
   font-weight: 200;
   line-height: 1;
@@ -483,9 +536,6 @@ header {
   font-weight: 400;
 }
 
-.every-day {
-  /* position: relative; */
-}
 
 .every-day:hover .every,
 .every-day:focus-within .every {
@@ -562,6 +612,7 @@ header {
 /* end-promo */
 
 /* start-saving */
+
 .saving {
   position: absolute;
   display: flex;
@@ -615,6 +666,7 @@ header {
 /* end-w */
 
 /* content-footer */
+
 .drop-footer {
   padding: 10px;
   display: flex;
@@ -803,7 +855,6 @@ header {
   display: grid;
   grid-template-columns: auto auto auto auto;
 }
-
 /* end private mega dropdown */
 
 /* start ways to bank drop-down */
@@ -888,7 +939,7 @@ header {
 
 .internet-drop-down {
   position: absolute;
-  background-color: white;
+  background-color: black;
   left: -105%;
   top: -155%;
   width: 270px;
@@ -942,7 +993,7 @@ header {
 .drop-indiv-btn {
   width: 240px;
   height: 50px;
-  color: black;
+  color: white;
   background-color: #a2c41a;
   text-align: left;
   margin-top: 20px;
@@ -951,7 +1002,7 @@ header {
 .drop-indiv-btn:hover {
   background-color: rgba(255, 255, 255, 0);
   border: 2px solid #a2c41a;
-  color: black;
+  color: white;
 }
 
 .drop-indiv-btn img {
@@ -986,9 +1037,9 @@ header {
   text-align: left;
 }
 
-.drop-business-btn:hover{
+.drop-business-btn:hover {
   background-color: white;
-  border: 2px solid #03478b;
+  border: 2px solid #03478b00;
   color: #03478b;
 }
 
@@ -1007,7 +1058,7 @@ header {
   text-decoration: none;
   color: white;
   font-size: 0.7rem;
-  background-color: #ed8200;
+  background-color: black;
 }
 
 .search {
@@ -1051,39 +1102,15 @@ header {
 }
 
 .global {
-  background-image: url(../Multimedia/images/earn-globally_1.png);
+  background-image: linear-gradient(90deg, rgba(0, 0, 0, 255) 3%,rgba(255, 255, 255, 0) 100%), url(../Multimedia/images/imageye___-_Private-Bank-Banner3-1-\(1\).png);
   background-size: cover;
 }
 
-.industry {
-  background-image: url(../Multimedia/images/industry-specific_1.png);
-  background-size: cover;
-}
 
-.unlock {
-  background-image: url(../Multimedia/images/unlock_1.png);
-  background-size: cover;
-}
-
-.business-ven {
-  background-image: url(../Multimedia/images/business-venture_1.png);
-  background-size: cover;
-}
-
-.amex {
-  background-image: url(../Multimedia/images/amex-banner.png);
-  background-size: cover;
-}
-
-.atm {
-  background-image: url(../Multimedia/images/ATM.png);
-  background-size: cover;
-  background-position: right;
-}
 
 .slide-txt {
   position: absolute;
-  z-index: 1000;
+  z-index: 100;
   width: 70%;
   color: white;
   top: 20%;
@@ -1131,53 +1158,7 @@ header {
   transition: ease-in-out 0.2s;
 }
 
-@keyframes slideAnimation {
-  0% {
-    transform: translateX(0%);
-  }
-  14% {
-    transform: translateX(0%);
-  }
 
-  16% {
-    transform: translateX(-100%);
-  }
-  30% {
-    transform: translateX(-100%);
-  }
-
-  32% {
-    transform: translateX(-200%);
-  }
-  46% {
-    transform: translateX(-200%);
-  }
-
-  48% {
-    transform: translateX(-300%);
-  }
-  62% {
-    transform: translateX(-300%);
-  }
-
-  64% {
-    transform: translateX(-400%);
-  }
-  78% {
-    transform: translateX(-400%);
-  }
-
-  80% {
-    transform: translateX(-500%);
-  }
-  94% {
-    transform: translateX(-500%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
-}
 
 .hero-card {
   position: absolute;
@@ -1237,10 +1218,10 @@ header {
   text-decoration: none;
 }
 
-.latetest-news-bx{
+.latetest-news-bx {
   position: relative;
   width: 250px;
-  background-color: #ededed;
+  background-color: #1a1a1a;
   height: 100%;
   display: flex;
   align-items: center;
@@ -1249,7 +1230,7 @@ header {
   clip-path: polygon(0 0, 100% 0%, 98% 100%, 0 100%);
 }
 
-.la-s-bx{
+.la-s-bx {
   position: absolute;
   left: 92%;
   background-color: #eb7623;
@@ -1258,31 +1239,241 @@ header {
   clip-path: polygon(79% 0, 100% 0%, 75% 100%, 51% 100%);
 }
 
-.news-headlines{
+.news-headlines {
   display: flex;
   align-items: center;
-  background-color: #fff5ed;
+  background-color: black;
   width: 100%;
   height: 28px;
 }
 
-.news-headlines marquee{
+.news-headlines marquee {
   flex: 1;
 }
 
-.news-headlines marquee p{
-  color: black;
+.news-headlines marquee p {
+  color: #ffffff;
   margin: 0;
 }
 
-.news-headlines marquee a{
-  color: black;
+.news-headlines marquee a {
+  color: rgb(142, 142, 142);
 }
 
 .main-content {
   width: 85%;
   margin: auto;
-  height: 600px;
+  height: auto;
+}
+
+.about-private-access{
+  margin: auto;
+  text-align: center;
+  width: 50%;
+  padding-bottom: 70px;
+}
+.about-private-access h1{
+  margin: auto;
+}
+
+.mini-contain{
+  width: 370px;
+  height: 0;
+  background-color: #2f2f2f;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 60%;
+  opacity: 0;
+  visibility: hidden;
+  clip-path: polygon(0 7%, 100% 0%, 100% 100%, 0% 100%);
+  transition: height .3s ease-in-out, opacity .3s ease-in-out;
+}
+
+.prod-ser:hover .mini-contain{
+  opacity: 1;
+  visibility: visible;
+  height: 120px;
+  transform: translateY(-0);
+}
+
+
+.prod-ser{
+  width: 370px;
+  height: 280px;
+  position: absolute;
+  top: 50%;
+  padding: 25px;
+  background-color: #1a1a1a;
+  color: #cacac4;
+}
+
+.prod-ser h1{
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.prod-ser p{
+  font-size: .90rem;
+  width: 80%;
+}
+
+.prod-arrow{
+  color: white;
+  position: absolute;
+  top: 80%;
+  font-size: 1rem;
+  left: 40%;
+  z-index: 1;
+}
+
+.main-call-icn-bx{
+  position: absolute;
+  left: 80%;
+  top: 70%;
+ background-color: #ed7e00;
+ padding: 15px;
+ width: 70px;
+}
+
+.bi-telephone-fill{
+ color: white;
+ font-size: 2rem;
+}
+
+.manage{
+  left: 52%;
+  top: 70%;
+}
+
+.invest-mangement{
+  padding: 40px;
+  position: relative;
+  margin: auto;
+  width: 900px;
+  background-image: url(../Multimedia/images/private/imageye___-_about-banner.jpg);
+  background-size: cover;
+  height: 400px;
+}
+
+.black-cards{
+  padding-top: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.black-cards img{
+  width: 500px;
+}
+
+.blak-card-txt{
+  width: 45%;
+}
+
+.boat{
+  padding-left: 200px;
+  padding-top: 80px;
+  padding-bottom: 90px;
+  background-color: black;
+}
+
+.private-banker{
+  position: relative;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.616)), url(../Multimedia/images/private/4043892.jpg);
+  background-size: cover;
+  height: 300px;
+}
+
+.banker-txt{
+  top: 20%;
+  position: absolute;
+  left: 50%;
+  z-index: 1;
+
+}
+
+.own-bank img{
+  height: 300px;
+  clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+
+}
+
+.customized-services{
+  background-color: #1a1a1a;
+  height: auto;
+  padding-bottom: 90px;
+}
+
+.sect-wealth{
+  width: 80%;
+  padding-top: 90px;
+  padding-bottom: 90px;
+  margin: auto;
+  text-align: center;
+}
+
+
+.expectations{
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  width: 80%;
+  padding-bottom: 100px;
+  padding: 50px;
+}
+
+
+.legend-card{
+  width: 300px;
+  height: 250px;
+  padding: 20px;
+  background-color: black;
+  text-align: center;
+  color: #c9c9c9;
+  border-bottom: 6px solid #ed8200;
+}
+
+.legend-card:hover{
+  transform: translateY(-10px);
+  transition: all .5s ease-in-out;
+}
+
+.legend-card img{
+  width: 50px;
+  margin-left: 100px;
+}
+
+
+.give-a-call{
+  position: relative;
+  width: 75%;
+  margin: auto;
+  height: 400px;
+  background-image: url(../Multimedia/images/private/imageye___-_contact-us-banner.png);
+  background-size: cover;
+}
+
+.call-box{
+  position: absolute;
+  width: 300px;
+  height: 320px;
+  background-color: black;
+  top: 30%;
+  left: 5%;
+}
+
+.call-bx-txt{
+  color: #b9b9b9;
+  padding: 25px;
+}
+
+.call-bx-txt h1{
+  font-size: 1.5rem;
+}
+
+.call-bx-txt p{
+
 }
 
 .more-ways {
@@ -1833,6 +2024,7 @@ aside {
 }
 
 .helpful-tools {
+  height: 300px;
   width: 75%;
   margin: auto;
 }
@@ -1840,6 +2032,11 @@ aside {
 .helpful-tools p {
   padding-top: 40px;
   font-size: 1rem;
+  color: white;
+}
+
+.common-ft {
+  height: 100%;
 }
 
 .tool-bx-h {
@@ -1852,7 +2049,7 @@ aside {
 .tool-bx {
   width: 150px;
   height: 150px;
-  border: 3px solid #03478b4a;
+  border: 3px solid #9b9e9e75;
   display: flex;
   padding: 20px;
 }
@@ -1879,9 +2076,12 @@ aside {
 .tool-bx:hover img {
   filter: brightness(0) invert(1);
 }
+.tool-bx img {
+  filter: brightness(0) invert(1);
+}
 
 footer {
-  background-color: #03478b;
+  background-color: black;
   background-image: url(../Multimedia/images/access-logo-bg.png);
   background-size: contain;
   background-repeat: no-repeat;
@@ -1890,6 +2090,7 @@ footer {
 }
 
 .tb-content {
+  margin-top: 0;
   width: 65%;
   margin: auto;
   padding-top: 80px;
@@ -1949,7 +2150,8 @@ footer {
 
 .licensed {
   width: 100%;
-  background-color: white;
+  background-color: black;
+  color: rgb(88, 88, 88);
   font-size: 0.7rem;
   font-weight: 400;
   display: flex;
@@ -2679,3 +2881,227 @@ footer {
   }
 }
 
+/* Private page overflow fixes: tablet and mobile */
+@media (max-width: 992px) {
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  .nav-mini {
+    display: none;
+  }
+
+  .main-nav-links {
+    display: none;
+  }
+
+  .nav-main .mobile-menu-icon {
+    display: flex !important;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.2rem;
+  }
+
+  .about-private-access {
+    width: 100%;
+    max-width: 680px;
+    padding-bottom: 40px;
+  }
+
+  .invest-mangement {
+    width: 100%;
+    max-width: 100%;
+    padding: 20px 14px;
+    height: auto;
+    min-height: 520px;
+    background-position: center;
+  }
+
+  .prod-ser,
+  .manage {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto 14px;
+    height: auto;
+    min-height: 220px;
+  }
+
+  .mini-contain {
+    width: 100%;
+  }
+
+  .black-cards {
+    padding-top: 80px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .blak-card-txt {
+    width: 100%;
+  }
+
+  .black-cards img {
+    width: 100%;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .a-side-txt p {
+    width: 100% !important;
+    padding-top: 40px !important;
+  }
+
+  .boat {
+    padding-left: 0;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .banker-txt {
+    left: 0;
+    right: 0;
+    top: auto;
+    bottom: 20px;
+    padding: 0 14px;
+  }
+
+  .banker-txt h1,
+  .banker-txt p {
+    width: 100% !important;
+  }
+
+  .expectations {
+    width: 100%;
+    padding: 20px 14px 40px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+  }
+
+  .legend-card {
+    width: 100%;
+    margin: 0;
+  }
+
+  .legend-card img {
+    margin-left: 0;
+  }
+
+  .give-a-call {
+    width: 100%;
+    min-height: 420px;
+    height: auto;
+    background-position: center;
+  }
+
+  .call-box {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: calc(100% - 28px);
+    max-width: 360px;
+    margin: 18px 14px 0;
+  }
+
+  .main-call-icn-bx {
+    left: auto;
+    right: 14px;
+    top: auto;
+    bottom: 14px;
+  }
+
+  .latetest-news-bx {
+    width: 170px;
+  }
+
+  .latetest-news-bx p {
+    padding-left: 0 !important;
+    text-align: center;
+  }
+
+  .la-s-bx {
+    left: auto;
+    right: -10px;
+  }
+
+  .licensed {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .ft-more-than-banking {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 767px) {
+  .expectations {
+    grid-template-columns: 1fr;
+  }
+
+  .legend-card {
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .way-to-bank {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+
+  .xtra-bx-content p {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .main-nav-links.mobile-show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* directly below the nav bar */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  /* Show only the first five list items */
+  .main-nav-links.mobile-show li:nth-child(-n + 5) {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  /* Hide the remaining items (Ways to Bank, Contact Us, I am...) */
+  .main-nav-links.mobile-show li:nth-child(n + 6) {
+    display: none;
+  }
+
+  /* Adjust link appearance for mobile */
+  .main-nav-links.mobile-show a {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    display: block;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .main-nav-links.mobile-show a:hover {
+    color: #ed8200;
+  }
+
+  /* Remove the orange hover line effect on mobile */
+  .main-nav-links.mobile-show a::before {
+    display: none;
+  }
+}

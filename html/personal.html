@@ -12,8 +12,36 @@
     <script src="../Javascripit/scroll.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="../CSS/personal.css">
-
 </head>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.nav-main .mobile-menu-icon .bi-list');
+    const navLinks = document.querySelector('.main-nav-links');
+    
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navLinks.classList.toggle('mobile-show');
+      });
+
+      // Optional: Close menu when a link is clicked
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('mobile-show');
+        });
+      });
+
+      // Optional: Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+          navLinks.classList.remove('mobile-show');
+        }
+      });
+    }
+  });
+</script>
 
 <body>
     <!-- fixed-btn -->
@@ -43,7 +71,25 @@
                     </li>
                 </ul>
                 <div class="countries">
-                    <a href="#">Country Locations </a>
+                    <a href="#"><div class="ngn"> <p>Country Locations</p> <div class="ngn-icon"><img src="../Multimedia/images/ngn.png"></div> </div> </a>
+                    <div class="country-list">
+                        <ul class="country-li">
+                            <li><a href="#">Cameroon</a> <img src="../Multimedia/images/cameroon.png"></li>
+                            <li><a href="#"> Congo</a> <img src="../Multimedia/images/congo.png"></li>
+                            <li><a href="#">Botswana</a> <img src="../Multimedia/images/botswana.png"></li>
+                            <li><a href="#">Gambia</a> <img src="../Multimedia/images/gambia.png" alt=""></li>
+                            <li><a href="#">South Africa</a> <img src="../Multimedia/images/southafrica.png" alt=""></li>
+                            <li><a href="#">Ghana</a> <img src="../Multimedia/images/ghana.png" alt=""></li>
+                            <li><a href="#">Nigeria</a><img src="../Multimedia/images/nigeria (1).png" alt=""></li>
+                            <li><a href="#">Mozambique</a> <img src="../Multimedia/images/mozambique.png" alt=""></li>
+                            <li><a href="">Guinea</a><img src="../Multimedia/images/guinea.png" alt=""></li>
+                            <li><a href="">Kenya</a> <img src="../Multimedia/images/kenya.png" alt=""></li>
+                            <li><a href="">UK</a><img src="../Multimedia/images/uk.png" alt=""></li>
+                            <li><a href="">Rwanda</a><img src="../Multimedia/images/rwanda.png" alt=""></li>
+                            <li><a href="">Tanzania</a><img src="../Multimedia/images/Tanzania.png" alt=""></li>
+                            <li><a href="">US</a><img src="../Multimedia/images/us.png" alt=""></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -52,11 +98,11 @@
             <div class="logo-access">
                 <img src="../Multimedia/images/access-lg-logo.png" />
                 <ul class="main-nav-links active">
-                    <li class="home"><a href="index.html">Home</a></li>
+                    <li class="home"><a href="../index.html">Home</a></li>
 
                     <!-- personal mega dropdown -->
 
-                    <li class="personal"> <a href="/html/personal.html">Personal</a>
+                    <li class="personal"> <a href="personal.html">Personal</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>PERSONAL BANKING</h4>
@@ -270,13 +316,13 @@
                             </div>
                             <div class="drop-footer">
                                 <div class="footer-items">
-                                    <div class="contatc-us ft"> <img src="Multimedia/images/drop-down-ft-phone.svg"> <a
+                                    <div class="contatc-us ft"> <img src="../Multimedia/images/drop-down-ft-phone.svg"> <a
                                             href="#">Contact
                                             Us</a></div>
-                                    <div class="support-help ft"> <img src="Multimedia/images/drop-ft-life-sup.svg"> <a
+                                    <div class="support-help ft"> <img src="../Multimedia/images/drop-ft-life-sup.svg"> <a
                                             href="#">Help
                                             & Support</a> </div>
-                                    <div class="locate ft"> <img src="Multimedia/images/drop-ft-map.svg"> <a
+                                    <div class="locate ft"> <img src="../Multimedia/images/drop-ft-map.svg"> <a
                                             href="#">Locate Us</a> </div>
                                 </div>
                             </div>
@@ -284,7 +330,7 @@
                     </li>
 
                     <!-- Business mega dropdown-->
-                    <li class="business"><a href="html/business.html">Business</a>
+                    <li class="business"><a href="business.html">Business</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>BUSINESS BANKING</h4>
@@ -386,13 +432,13 @@
                             </div>
                             <div class="drop-footer">
                                 <div class="footer-items">
-                                    <div class="contatc-us ft"> <img src="Multimedia/images/drop-down-ft-phone.svg"> <a
+                                    <div class="contatc-us ft"> <img src="../Multimedia/images/drop-down-ft-phone.svg"> <a
                                             href="#">Contact
                                             Us</a></div>
-                                    <div class="support-help ft"> <img src="Multimedia/images/drop-ft-life-sup.svg"> <a
+                                    <div class="support-help ft"> <img src="../Multimedia/images/drop-ft-life-sup.svg"> <a
                                             href="#">Help
                                             & Support</a> </div>
-                                    <div class="locate ft"> <img src="Multimedia/images/drop-ft-map.svg"> <a
+                                    <div class="locate ft"> <img src="../Multimedia/images/drop-ft-map.svg"> <a
                                             href="#">Locate Us</a> </div>
                                 </div>
                             </div>
@@ -400,7 +446,7 @@
                     </li>
 
                     <!-- corporate mega dropdown -->
-                    <li class="personal"><a href="html/corporate.html">Corporate</a>
+                    <li class="personal"><a href="corporate.html">Corporate</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>CORPORATE BANKING </h4>
@@ -553,13 +599,13 @@
                             </div>
                             <div class="drop-footer">
                                 <div class="footer-items">
-                                    <div class="contatc-us ft"> <img src="Multimedia/images/drop-down-ft-phone.svg"> <a
+                                    <div class="contatc-us ft"> <img src="../Multimedia/images/drop-down-ft-phone.svg"> <a
                                             href="#">Contact
                                             Us</a></div>
-                                    <div class="support-help ft"> <img src="Multimedia/images/drop-ft-life-sup.svg"> <a
+                                    <div class="support-help ft"> <img src="../Multimedia/images/drop-ft-life-sup.svg"> <a
                                             href="#">Help
                                             & Support</a> </div>
-                                    <div class="locate ft"> <img src="Multimedia/images/drop-ft-map.svg"> <a
+                                    <div class="locate ft"> <img src="../Multimedia/images/drop-ft-map.svg"> <a
                                             href="#">Locate Us</a> </div>
                                 </div>
                             </div>
@@ -567,7 +613,7 @@
                     </li>
 
                     <!-- private mega dropdown -->
-                    <li class="private"><a href="html/private.html">Private</a>
+                    <li class="private"><a href="private.html">Private</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>PRIVATE BANKING</h4>
@@ -664,13 +710,13 @@
                             </div>
                             <div class="drop-footer">
                                 <div class="footer-items">
-                                    <div class="contatc-us ft"> <img src="Multimedia/images/drop-down-ft-phone.svg"> <a
+                                    <div class="contatc-us ft"> <img src="../Multimedia/images/drop-down-ft-phone.svg"> <a
                                             href="#">Contact
                                             Us</a></div>
-                                    <div class="support-help ft"> <img src="Multimedia/images/drop-ft-life-sup.svg"> <a
+                                    <div class="support-help ft"> <img src="../Multimedia/images/drop-ft-life-sup.svg"> <a
                                             href="#">Help
                                             & Support</a> </div>
-                                    <div class="locate ft"> <img src="Multimedia/images/drop-ft-map.svg"> <a
+                                    <div class="locate ft"> <img src="../Multimedia/images/drop-ft-map.svg"> <a
                                             href="#">Locate Us</a> </div>
                                 </div>
                             </div>
@@ -859,11 +905,11 @@
                             </div>
                             <div class="drop-footer">
                                 <div class="footer-items">
-                                    <div class="contatc-us ft"><img src="Multimedia/images/drop-down-ft-phone.svg"> <a
+                                    <div class="contatc-us ft"><img src="../Multimedia/images/drop-down-ft-phone.svg"> <a
                                             href="#">Contact Us</a></div>
-                                    <div class="support-help ft"><img src="Multimedia/images/drop-ft-life-sup.svg"> <a
+                                    <div class="support-help ft"><img src="../Multimedia/images/drop-ft-life-sup.svg"> <a
                                             href="#">Help & Support</a></div>
-                                    <div class="locate ft"><img src="Multimedia/images/drop-ft-map.svg"> <a
+                                    <div class="locate ft"><img src="../Multimedia/images/drop-ft-map.svg"> <a
                                             href="#">Locate Us</a></div>
                                 </div>
                             </div>
@@ -955,11 +1001,11 @@
                             </div>
                             <div class="drop-footer">
                                 <div class="footer-items">
-                                    <div class="contatc-us ft"><img src="Multimedia/images/drop-down-ft-phone.svg"> <a
+                                    <div class="contatc-us ft"><img src="../Multimedia/images/drop-down-ft-phone.svg"> <a
                                             href="#">Call Us</a></div>
-                                    <div class="support-help ft"><img src="Multimedia/images/drop-ft-life-sup.svg"> <a
+                                    <div class="support-help ft"><img src="../Multimedia/images/drop-ft-life-sup.svg"> <a
                                             href="#">Help Center</a></div>
-                                    <div class="locate ft"><img src="Multimedia/images/drop-ft-map.svg"> <a
+                                    <div class="locate ft"><img src="../Multimedia/images/drop-ft-map.svg"> <a
                                             href="#">Locate Branch</a></div>
                                 </div>
                             </div>
@@ -967,39 +1013,23 @@
                     </li>
 
                     <!-- I am mega dropdown -->
-                    <li class="iam"><a href="#">I am...</a>
+                                        <li class="iam"><a href="#">I am...</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>I AM...</h4>
                             </div>
                             <div class="iam-cardss">
-                                <div class="iam-card company">
-                                    <p>A Comapany</p>
-                                </div>
-                                <div class="iam-card applicant">
-                                    <p>A Job Applicant</p>
-                                </div>
-                                <div class="iam-card journal">
-                                    <p>A Journalist</p>
-                                </div>
-                                <div class="iam-card teen">
-                                    <p>A Teenager</p>
-                                </div>
-                                <div class="iam-card woman">
-                                    <p>A woman</p>
-                                </div>
-                                <div class="iam-card enter">
-                                    <p>An Entrepreneur</p>
-                                </div>
-                                <div class="iam-card indiviual">
-                                    <p>An Individual</p>
-                                </div>
-                                <div class="iam-card investor">
-                                    <p>An Investor</p>
-                                </div>
-
+                                <div class="iam-card company"><p>A Comapany</p></div>
+                                <div class="iam-card applicant"><p>A Job Applicant</p></div>
+                                <div class="iam-card journal"><p>A Journalist</p></div>
+                                <div class="iam-card teen"><p>A Teenager</p></div>
+                                <div class="iam-card woman"><p>A woman</p></div>
+                                <div class="iam-card enter"><p>An Entrepreneur</p></div>
+                                <div class="iam-card indiviual"><p>An Individual</p></div>
+                                <div class="iam-card investor"><p>An Investor</p></div>
+                                
                             </div>
-
+                            
                         </div>
                     </li>
                 </ul>
@@ -1013,8 +1043,25 @@
                         <span class="menu-label">Menu</span>
                     </div>
                     <div class="internet-banking">
-                        <a href="#"> <i class="bi bi-lock"></i> Internet Banking</a>
-                        <div class="internet-dropdown">
+                        <a class="main-internet-btn" href="#"> <i class="bi bi-lock"></i> Internet Banking</a>
+                        <div class="internet-drop-down">
+                            <div class="internet-drop-content-bx">
+                                <h1> <img class="wrold-icon" src="../Multimedia/images/like-an-internet.svg" alt=""> Internet Banking</h1>
+                                
+                                <a href="#">
+                                    <div class="drop-indiv-btn">
+                                    <p> <img src="../Multimedia/images/like-a-person.svg"> Individual <img class="anchor-drop" src="../Multimedia/images/anchor-links.svg"></p>
+                                </div>
+                                </a>
+
+                                <a href="#">
+                                <div class="drop-business-btn">
+                                    <p> <img src="../Multimedia/images/like-a-business.svg"> Business <img class="anchor-drop" src="../Multimedia/images/anchor-links.svg"></p>
+                                </div>
+                                </a>
+
+                                <a href="#"><img src="../Multimedia/images/megabillionwin.png"></a>
+                            </div>
 
                         </div>
                     </div>
@@ -1034,7 +1081,6 @@
 
     <section>
         <section class="hero">
-
             <div class="slider">
                 <div class="slides">
                     <div class="slide global">
@@ -1075,7 +1121,7 @@
                     </div>
 
                 </div>
-                <div class="spot"></div>
+                
             </div>
         </section>
 
@@ -1086,8 +1132,6 @@
                 <div class="create-an-account">
                     <a href="#">
                         <img src="../Multimedia/images/Personal/current-account-svg.svg" alt="">
-
-
                         <h3 class="text-[700]">Everyday Accounts</h3>
                         <p>Find the account that works best for your financial and business needs.</p>
                     </a>
@@ -1119,13 +1163,14 @@
     <section class="interest-section">
         <div class="section-header">
             <h2>What are you interested in?</h2>
-            <p>
+            <p class="text-[black]">
                 Trusted by businesses across the continent, the UK, and the UAE.
                 Access our expertise at home and abroad.
             </p>
         </div>
 
         <div class="cards-wrapper">
+            <div class="spot"></div>
             <div class="cards-container">
                 <div class="card">
                     <img src="../Multimedia/images/Personal/imageye___-_service-1.png" alt="">
@@ -1203,8 +1248,6 @@
         </div>
     </section>
 
-
-
     <section>
         <div class="pay-day-loans">
             <div class="pay-day-loans-content">
@@ -1255,8 +1298,6 @@
                 </div>
             </div>
     </section>
-
-
 
     <article>
         <div class="seccure-kids">

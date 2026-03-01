@@ -13,6 +13,35 @@
     <link rel="stylesheet" href="../CSS/business.css" />
 </head>
 
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.querySelector('.nav-main .mobile-menu-icon .bi-list');
+        const navLinks = document.querySelector('.main-nav-links');
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', function (e) {
+                e.stopPropagation();
+                navLinks.classList.toggle('mobile-show');
+            });
+
+            // Optional: Close menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('mobile-show');
+                });
+            });
+
+            // Optional: Close menu when clicking outside
+            document.addEventListener('click', function (event) {
+                if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+                    navLinks.classList.remove('mobile-show');
+                }
+            });
+        }
+    });
+</script>
+
+
 <body>
     <div class="lets-talk">
         <p>Let's Talk</p>
@@ -32,7 +61,7 @@
                     <li>
                         <a href="../html/investor-relations.html">Investor Relations</a>
                     </li>
-                    <li><a href="../html/media.html">Media</a></li>
+                    <li><a href="#">Media</a></li>
                     <li><a href="#">Careers</a></li>
                     <li><a href="#">Branch & ATM Locator</a></li>
                     <li><a href="#">Market Rates</a></li>
@@ -41,7 +70,25 @@
                     </li>
                 </ul>
                 <div class="countries">
-                    <a href="#">Country Locations </a>
+                    <a href="#"><div class="ngn"> <p>Country Locations</p> <div class="ngn-icon"><img src="../Multimedia/images/ngn.png"></div> </div> </a>
+                    <div class="country-list">
+                        <ul class="country-li">
+                            <li><a href="#">Cameroon</a> <img src="../Multimedia/images/cameroon.png"></li>
+                            <li><a href="#"> Congo</a> <img src="../Multimedia/images/congo.png"></li>
+                            <li><a href="#">Botswana</a> <img src="../Multimedia/images/botswana.png"></li>
+                            <li><a href="#">Gambia</a> <img src="../Multimedia/images/gambia.png" alt=""></li>
+                            <li><a href="#">South Africa</a> <img src="../Multimedia/images/southafrica.png" alt=""></li>
+                            <li><a href="#">Ghana</a> <img src="../Multimedia/images/ghana.png" alt=""></li>
+                            <li><a href="#">Nigeria</a><img src="../Multimedia/images/nigeria (1).png" alt=""></li>
+                            <li><a href="#">Mozambique</a> <img src="../Multimedia/images/mozambique.png" alt=""></li>
+                            <li><a href="">Guinea</a><img src="../Multimedia/images/guinea.png" alt=""></li>
+                            <li><a href="">Kenya</a> <img src="../Multimedia/images/kenya.png" alt=""></li>
+                            <li><a href="">UK</a><img src="../Multimedia/images/uk.png" alt=""></li>
+                            <li><a href="">Rwanda</a><img src="../Multimedia/images/rwanda.png" alt=""></li>
+                            <li><a href="">Tanzania</a><img src="../Multimedia/images/Tanzania.png" alt=""></li>
+                            <li><a href="">US</a><img src="../Multimedia/images/us.png" alt=""></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -50,12 +97,12 @@
             <div class="logo-access">
                 <img src="../Multimedia/images/access-lg-logo.png" />
                 <ul class="main-nav-links active">
-                    <li class="home"><a href="#">Home</a></li>
+                    <li class="home"><a href="../index.html">Home</a></li>
 
                     <!-- personal mega dropdown -->
 
                     <li class="personal">
-                        <a href="../html/personal.html">Personal</a>
+                        <a href="personal.html">Personal</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>PERSONAL BANKING</h4>
@@ -285,7 +332,7 @@
                     </li>
 
                     <!-- Business mega dropdown-->
-                    <li class="business"><a href="#">Business</a>
+                    <li class="business"><a href="business.html">Business</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>BUSINESS BANKING</h4>
@@ -403,7 +450,7 @@
                     </li>
 
                     <!-- corporate mega dropdown -->
-                    <li class="personal"><a href="#">Corporate</a>
+                    <li class="personal"><a href="corporate.html">Corporate</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>CORPORATE BANKING </h4>
@@ -572,7 +619,7 @@
                     </li>
 
                     <!-- private mega dropdown -->
-                    <li class="private"><a href="#">Private</a>
+                    <li class="private"><a href="private.html">Private</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>PRIVATE BANKING</h4>
@@ -1268,7 +1315,7 @@
                     <div class="blurred-cards">
                         <h1 class="text-[1rem] font-[700]">SME Gold Current Account</h1>
                         <p class="text-[.80rem] font-[500]">Specially designed to enable account
-                             holders run their accounts at a minimal cost.
+                            holders run their accounts at a minimal cost.
                         <div class="dba-bttn"><a id="dba-btn" href="#"> access more </a></div>
                         </p>
 
@@ -1278,8 +1325,8 @@
                 <div class="installment-revoling-card sme-gold">
                     <div class="blurred-cards">
                         <h1 class="text-[1rem] font-[700]">Instalment and Revolving Credit</h1>
-                        <p class="text-[.80rem] font-[500]">Get the opportunity to purchase 
-                            vehicles and other fixed assets to facilitate 
+                        <p class="text-[.80rem] font-[500]">Get the opportunity to purchase
+                            vehicles and other fixed assets to facilitate
                             your business growth.
                         <div class="dba-bttn"><a id="dba-btn" href="#"> access more </a></div>
                         </p>
@@ -1289,8 +1336,6 @@
             </div>
         </div>
     </aside>
-
-
 
 
     <figure>
@@ -1480,6 +1525,7 @@
 
         </div>
     </footer>
+
 </body>
 
 </html>

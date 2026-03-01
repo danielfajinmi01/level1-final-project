@@ -55,6 +55,139 @@ header {
   gap: 20px;
 }
 
+
+
+.internet-banking {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 3px;
+}
+
+.internet-drop-down {
+  position: absolute;
+  background-color: white;
+  left: -105%;
+  top: -155%;
+  width: 270px;
+  height: 600px;
+  color: black;
+  text-align: center;
+  transition: all ease-in-out 0.3s;
+  transform: translateX(0);
+  opacity: 0;
+  visibility: hidden;
+}
+
+.internet-banking:hover .internet-drop-down {
+  opacity: 1;
+  visibility: visible;
+}
+
+.internet-drop-content-bx {
+  width: 90%;
+  margin: auto;
+}
+
+.wrold-icon {
+  position: absolute;
+}
+
+.internet-drop-content-bx h1 {
+  position: relative;
+  left: 30%;
+  width: 100%;
+  margin-top: 20px;
+  font-size: 1rem;
+  display: flex;
+  margin: auto;
+  gap: 20px;
+}
+
+.internet-drop-content-bx h1 img {
+  position: absolute;
+  left: -55%;
+  top: -50%;
+  width: 13px;
+  margin-left: 45%;
+}
+
+.internet-drop-content-bx img {
+  margin-top: 20px;
+  width: 240px;
+}
+
+.drop-indiv-btn {
+  width: 240px;
+  height: 50px;
+  color: black;
+  background-color: #a2c41a;
+  text-align: left;
+  margin-top: 20px;
+}
+
+.drop-indiv-btn:hover {
+  background-color: rgba(255, 255, 255, 0);
+  border: 2px solid #a2c41a;
+  color: black;
+}
+
+.drop-indiv-btn img {
+  width: 20px;
+  margin-bottom: 20px;
+}
+
+.drop-indiv-btn p {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  top: -30%;
+  padding-left: 20px;
+  gap: 10px;
+}
+
+.drop-business-btn p {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  top: -30%;
+  padding-left: 20px;
+  gap: 10px;
+}
+
+.drop-business-btn {
+  margin-top: 20px;
+  width: 240px;
+  height: 50px;
+  color: white;
+  background-color: #03478b;
+  text-align: left;
+}
+
+.drop-business-btn:hover{
+  background-color: white;
+  border: 2px solid #03478b;
+  color: #03478b;
+}
+
+.drop-business-btn img {
+  width: 20px;
+  margin-bottom: 20px;
+}
+
+.anchor-drop {
+  margin-left: 70px;
+}
+
+.main-internet-btn {
+  width: 200px;
+  padding: 15px 18px;
+  text-decoration: none;
+  color: white;
+  font-size: 0.7rem;
+  background-color: #ed8200;
+}
+
+
 .mini-nav-bx {
   display: flex;
   justify-content: center;
@@ -120,6 +253,61 @@ header {
 .countries a {
   text-decoration: none;
   color: #5f7287;
+}
+
+.country-list {
+  position: absolute;
+  width: 200px;
+  height: 600px;
+  margin-left: -5%;
+  background-color: white;
+  z-index: 1;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ngn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.countries:hover .country-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+.country-li {
+  position: relative;
+}
+
+.country-li li {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-bottom: 20px;
+  gap: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.country-li li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 10px;
+  width: 0;
+  height: 3px;
+  background-color: #a2c41a;
+  transition: width 0.25s ease;
+}
+
+.country-li li:hover::before,
+.country-li li:focus-within::before {
+  width: 100%;
 }
 
 .nav-main {
@@ -765,15 +953,12 @@ gap: 20px;
   min-height: 68px;
   display: flex;
   align-items: center;
-  border-left: 4px solid #ed8200;
   transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease;
 }
 
 .iam-card:hover,
 .iam-card:focus-visible {
   transform: translateY(-2px);
-  box-shadow: 0 10px 18px rgba(3, 71, 139, 0.16);
-  background: linear-gradient(135deg, #03478b 0%, #0a5db2 100%);
   color: #ffffff;
   outline: none;
 }
@@ -805,6 +990,80 @@ gap: 20px;
   pointer-events: auto;
   transform: translateY(0);
   transition-delay: 0s;
+}
+
+
+.iam-main {
+  background-image: url("../Multimedia/images/benefits-img.png");
+}
+
+.iam-content {
+  display: block;
+  padding: 20px;
+}
+
+.iam-card {
+  width: 250px;
+  height: 250px;
+  background-image: url(../Multimedia/images/iam_teenager.png);
+  background-size: cover;
+  object-position: center;
+  text-align: center;
+  cursor: pointer;
+}
+
+.iam-card p {
+  padding-top: 60%;
+  color: white;
+  font-weight: 400;
+}
+
+.company {
+  background-image: url(../Multimedia/images/iam_company_1.png);
+  background-size: cover;
+}
+
+.applicant {
+  background-image: url(../Multimedia/images/iam_job_applicant.png);
+  background-size: cover;
+}
+
+.journal {
+  background-image: url(../Multimedia/images/iam_journalist.png);
+  background-size: cover;
+}
+
+.teen {
+  background-image: url(../Multimedia/images/iam_teenager.png);
+  background-size: cover;
+}
+
+.woman {
+  background-image: url(../Multimedia/images/iam_woman.png);
+  background-size: cover;
+}
+
+.enter {
+  background-image: url(../Multimedia/images/iam_entrepreneur.png);
+  background-size: cover;
+}
+
+.indiviual {
+  background-image: url(../Multimedia/images/iam_individual.png);
+  background-size: contain;
+}
+
+.investor {
+  background-image: url(../Multimedia/images/iam_investor.png);
+  background-size: cover;
+}
+
+.iam-cardss {
+  position: relative;
+  width: 100%;
+  gap: 0;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
 }
 
 /* end ways to bank drop-down */
@@ -884,6 +1143,7 @@ gap: 20px;
   align-items: center;
 }
 
+
 .hero {
   position: relative;
   width: 100%;
@@ -936,21 +1196,30 @@ gap: 20px;
   flex-shrink: 0;
 }
 
+.spot{
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  height: 120px;
+  left: 0;
+  top: 118%;
+  background-color:#e8e8e8;
+}
+
 .global {
-  background-image: url(../Multimedia/images/Personal/imageye___-_banner-2.png);
+  background-image:linear-gradient(90deg, rgba(0, 0, 0, 255) 3%,rgba(255, 255, 255, 0) 100%), url(../Multimedia/images/Personal/imageye___-_banner-2.png);
   background-size: cover;
 }
 
 .industry {
-  background-image: url(../Multimedia/images/Personal/imageye___-_Personal-Banking-Banner-New.png);
+  background-image:linear-gradient(90deg, rgba(0, 0, 0, 255) 3%,rgba(255, 255, 255, 0) 100%),url(../Multimedia/images/Personal/imageye___-_Personal-Banking-Banner-New.png);
   background-size: cover;
 }
 
 .unlock {
-  background-image: url(../Multimedia/images/Personal/imageye___-_banner-3_1.png);
+  background-image:linear-gradient(90deg, rgba(0, 0, 0, 255) 3%,rgba(255, 255, 255, 0) 100%),url(../Multimedia/images/Personal/imageye___-_banner-3_1.png);
   background-size: cover;
 }
-
 
 
 .slide-txt {
@@ -1091,6 +1360,8 @@ gap: 20px;
   text-align: center;
   max-width: 650px;
   margin: 0 auto 40px;
+  margin-top: 35px;
+  padding-top: 20px;
 }
 
 .section-header h2 {
@@ -1101,7 +1372,7 @@ gap: 20px;
 
 .section-header p {
   font-size: 0.9rem;
-  color: #555;
+  color: black;
 }
 
 /* SCROLL WRAPPER */
@@ -2150,5 +2421,167 @@ footer {
 
   .ft-more-than-banking img:first-child {
     display: none;
+  }
+}
+
+/* Accessbank-like responsive breakpoints (tablet -> small phone -> smaller phone) */
+@media (max-width: 992px) {
+  .lets-talk {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    left: auto;
+    top: auto;
+    margin: 0;
+  }
+
+  .nav-mini {
+    display: none;
+  }
+
+  .mobile-menu-icon {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1.35rem;
+  }
+
+  .main-nav-links {
+    display: none;
+  }
+
+  .dropdown-content {
+    display: none !important;
+  }
+
+  .main-nav-links.mobile-show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.12);
+    z-index: 999;
+  }
+
+  .main-nav-links.mobile-show li:nth-child(-n+5) {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .main-nav-links.mobile-show li:nth-child(n+6) {
+    display: none;
+  }
+
+  .main-nav-links.mobile-show a {
+    display: block;
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    color: #333;
+  }
+
+  .main-nav-links.mobile-show a::before {
+    display: none;
+  }
+
+  .hero,
+  .slide {
+    height: 520px;
+  }
+
+  .slide-txt {
+    width: 82%;
+    left: 8%;
+    top: 18%;
+  }
+
+  .hero-card {
+    position: static;
+    width: 92%;
+    margin: 18px auto 0;
+    clip-path: none;
+    flex-direction: column;
+  }
+
+  .create-an-account {
+    border-right: none;
+    border-bottom: 1px solid #1a1a1a;
+  }
+
+  .create-an-account:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .nav-main {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  .lets-talk {
+    right: 12px;
+    bottom: 12px;
+    width: 150px;
+    max-width: calc(100vw - 24px);
+    padding: 14px;
+  }
+
+  .hero,
+  .slide {
+    height: 460px;
+  }
+
+  .slide-txt {
+    width: 88%;
+    left: 6%;
+  }
+
+  .unlock-main-txt {
+    font-size: 2.2rem;
+  }
+
+  .more-banking-car {
+    grid-template-columns: 1fr;
+  }
+
+  .pay-day-loans-content,
+  .access-mrre-ways-content {
+    width: 92%;
+  }
+}
+
+@media (max-width: 575px) {
+  .logo-access img {
+    width: 96px;
+    margin-left: 0;
+  }
+
+  .hero {
+    margin-top: 56px;
+  }
+
+  .hero,
+  .slide {
+    height: 420px;
+  }
+
+  .slide-txt h1,
+  .slide-txt p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 375px) {
+  .lets-talk {
+    right: 10px;
+    bottom: 10px;
+    width: 136px;
+    max-width: calc(100vw - 20px);
+    padding: 11px;
+    font-size: 0.9rem;
   }
 }

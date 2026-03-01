@@ -14,6 +14,34 @@
 
 </head>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.nav-main .mobile-menu-icon .bi-list');
+    const navLinks = document.querySelector('.main-nav-links');
+    
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navLinks.classList.toggle('mobile-show');
+      });
+
+      // Optional: Close menu when a link is clicked
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('mobile-show');
+        });
+      });
+
+      // Optional: Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+          navLinks.classList.remove('mobile-show');
+        }
+      });
+    }
+  });
+</script>
+
 <body>
     <!-- fixed-btn -->
     <div class="lets-talk">
@@ -44,7 +72,27 @@
                     </li>
                 </ul>
                 <div class="countries">
-                    <a href="#">Country Locations </a>
+                    <a href="#">
+                        <div class="ngn"> <p>Country Locations</p> <div class="ngn-icon"><img src="Multimedia/images/ngn.png"></div> </div>
+                    </a>
+                    <div class="country-list">
+                        <ul class="country-li">
+                            <li><a href="#">Cameroon</a> <img src="Multimedia/images/cameroon.png"></li>
+                            <li><a href="#"> Congo</a> <img src="Multimedia/images/congo.png"></li>
+                            <li><a href="#">Botswana</a> <img src="Multimedia/images/botswana.png"></li>
+                            <li><a href="#">Gambia</a> <img src="Multimedia/images/gambia.png" alt=""></li>
+                            <li><a href="#">South Africa</a> <img src="Multimedia/images/southafrica.png" alt=""></li>
+                            <li><a href="#">Ghana</a> <img src="Multimedia/images/ghana.png" alt=""></li>
+                            <li><a href="#">Nigeria</a><img src="Multimedia/images/nigeria (1).png" alt=""></li>
+                            <li><a href="#">Mozambique</a> <img src="Multimedia/images/mozambique.png" alt=""></li>
+                            <li><a href="">Guinea</a><img src="Multimedia/images/guinea.png" alt=""></li>
+                            <li><a href="">Kenya</a> <img src="Multimedia/images/kenya.png" alt=""></li>
+                            <li><a href="">UK</a><img src="Multimedia/images/uk.png" alt=""></li>
+                            <li><a href="">Rwanda</a><img src="Multimedia/images/rwanda.png" alt=""></li>
+                            <li><a href="">Tanzania</a><img src="Multimedia/images/Tanzania.png" alt=""></li>
+                            <li><a href="">US</a><img src="Multimedia/images/us.png" alt=""></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -53,7 +101,7 @@
             <div class="logo-access">
                 <img src="Multimedia/images/access-lg-logo.png" />
                 <ul class="main-nav-links active">
-                    <li class="home"><a href="/index.html">Home</a></li>
+                    <li class="home"><a href="index.html">Home</a></li>
 
                     <!-- personal mega dropdown -->
 
@@ -221,10 +269,10 @@
                                         </div>
                                     </li>
 
-                                    <li class="save">
+                                    <li class="dial">
                                         <a href="#">Saving & Investing
                                             <i class="fa-solid fa-chevron-right"></i></a>
-                                        <div class="saving">
+                                        <div class="diaspora">
                                             <ul class="dia-list">
                                                 <li><a href="#">Access Money Wallet</a></li>
                                                 <li><a href="#">Evergreen Savings Accounto</a>
@@ -251,8 +299,7 @@
                                         <a href="#">The “W" Initiative </a>
                                         <div class="w-in">
                                             <p><span class="dia-br-h">The “W" Initiative</span></p>
-                                            <p>
-                                                Over the years, we have provided sustainable tools for
+                                            <p class="w-[50%]">Over the years, we have provided sustainable tools for
                                                 women to Access true financial inclusion and growth.
                                             </p>
                                         </div>
@@ -580,7 +627,7 @@
                                         <a href="#">About the Access Private Bank </a>
                                         <div class="bank-as">
     
-                                            <p><span class="txt-bank-as leading-[1]">About Access Private Bank</span></p>
+                                            <p><span class="txt-bank-as leading-[1] w-[10%]">About Access <br>Private Bank</span></p>
                                             <p class="text-[.80rem] w-[65%]">Introducing the Access Bank American Express® 
                                                 Platinum Card and the American Express® Gold Card.</p>
                                         </div>
@@ -1018,7 +1065,9 @@
                             </p>
                             <div class="rp-slide-btn"><a id="slide-btn" href="#"> access more </a></div>
                         </div>
-
+                         <div class="banner-line">
+                            <img src="Multimedia/images/banner-icon-line.png" alt="">
+                        </div>
                     </div>
 
                     <div class="slide industry">

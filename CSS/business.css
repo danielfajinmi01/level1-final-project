@@ -121,6 +121,61 @@ header {
   color: #5f7287;
 }
 
+.country-list {
+  position: absolute;
+  width: 200px;
+  height: 600px;
+  margin-left: -5%;
+  background-color: white;
+  z-index: 1;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ngn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.countries:hover .country-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+.country-li {
+  position: relative;
+}
+
+.country-li li {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-bottom: 20px;
+  gap: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.country-li li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 10px;
+  width: 0;
+  height: 3px;
+  background-color: #03478b;
+  transition: width 0.25s ease;
+}
+
+.country-li li:hover::before,
+.country-li li:focus-within::before {
+  width: 100%;
+}
+
 .nav-main {
   position: relative;
   display: flex;
@@ -162,7 +217,7 @@ header {
   top: 100%;
   left: 0;
   width: 0%;
-  margin-top: 11px;
+  margin-top: 8px;
   height: 3px;
   transition: width 0.3s ease;
 }
@@ -1013,17 +1068,17 @@ header {
 }
 
 .main-buss-ban {
-  background-image: url(../Multimedia/images/Business/imageye___-_access-business-3_1.png);
+  background-image:linear-gradient(90deg, rgba(0, 0, 0, 255) 3%,rgba(255, 255, 255, 0) 100%), url(../Multimedia/images/Business/imageye___-_access-business-3_1.png);
   background-size: cover;
 }
 
 .bus-industry {
-  background-image: url(../Multimedia/images/Business/imageye___-_banner-1.png);
+  background-image:linear-gradient(90deg, rgba(0, 0, 0, 255) 3%,rgba(255, 255, 255, 0) 100%), url(../Multimedia/images/Business/imageye___-_banner-1.png);
   background-size: cover;
 }
 
 .unlock {
-  background-image: url(../Multimedia/images/unlock_1.png);
+  background-image:linear-gradient(90deg, rgba(0, 0, 0, 255) 3%,rgba(255, 255, 255, 0) 100%), url(../Multimedia/images/unlock_1.png);
   background-size: cover;
 }
 
@@ -1509,7 +1564,6 @@ header {
   padding: 10px;
   text-align: left;
 }
-
 
 
 .news-line {
@@ -2559,3 +2613,46 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .main-nav-links.mobile-show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* directly below the nav bar */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  /* Show only the first five list items */
+  .main-nav-links.mobile-show li:nth-child(-n+5) {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  /* Hide the remaining items (Ways to Bank, Contact Us, I am...) */
+  .main-nav-links.mobile-show li:nth-child(n+6) {
+    display: none;
+  }
+
+  /* Adjust link appearance for mobile */
+  .main-nav-links.mobile-show a {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    display: block;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .main-nav-links.mobile-show a:hover {
+    color: #ed8200;
+  }
+
+  /* Remove the orange hover line effect on mobile */
+  .main-nav-links.mobile-show a::before {
+    display: none;
+  }
+}

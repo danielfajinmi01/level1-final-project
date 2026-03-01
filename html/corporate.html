@@ -9,9 +9,40 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link href="https://fonts.cdnfonts.com/css/effra" rel="stylesheet" />
     <script src="../Javascripit/scroll.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"/>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="../CSS/corporate.css" />
 </head>
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.nav-main .mobile-menu-icon .bi-list');
+    const navLinks = document.querySelector('.main-nav-links');
+    
+    if (hamburger && navLinks) {
+      hamburger.addEventListener('click', function(e) {
+        e.stopPropagation();
+        navLinks.classList.toggle('mobile-show');
+      });
+
+      // Optional: Close menu when a link is clicked
+      navLinks.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navLinks.classList.remove('mobile-show');
+        });
+      });
+
+      // Optional: Close menu when clicking outside
+      document.addEventListener('click', function(event) {
+        if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+          navLinks.classList.remove('mobile-show');
+        }
+      });
+    }
+  });
+</script>
+
 
 <body>
     <div class="lets-talk">
@@ -41,7 +72,25 @@
                     </li>
                 </ul>
                 <div class="countries">
-                    <a href="#">Country Locations </a>
+                    <a href="#"><div class="ngn"> <p>Country Locations</p> <div class="ngn-icon"><img src="../Multimedia/images/ngn.png"></div> </div> </a>
+                    <div class="country-list">
+                        <ul class="country-li">
+                            <li><a href="#">Cameroon</a> <img src="../Multimedia/images/cameroon.png"></li>
+                            <li><a href="#"> Congo</a> <img src="../Multimedia/images/congo.png"></li>
+                            <li><a href="#">Botswana</a> <img src="../Multimedia/images/botswana.png"></li>
+                            <li><a href="#">Gambia</a> <img src="../Multimedia/images/gambia.png" alt=""></li>
+                            <li><a href="#">South Africa</a> <img src="../Multimedia/images/southafrica.png" alt=""></li>
+                            <li><a href="#">Ghana</a> <img src="../Multimedia/images/ghana.png" alt=""></li>
+                            <li><a href="#">Nigeria</a><img src="../Multimedia/images/nigeria (1).png" alt=""></li>
+                            <li><a href="#">Mozambique</a> <img src="../Multimedia/images/mozambique.png" alt=""></li>
+                            <li><a href="">Guinea</a><img src="../Multimedia/images/guinea.png" alt=""></li>
+                            <li><a href="">Kenya</a> <img src="../Multimedia/images/kenya.png" alt=""></li>
+                            <li><a href="">UK</a><img src="../Multimedia/images/uk.png" alt=""></li>
+                            <li><a href="">Rwanda</a><img src="../Multimedia/images/rwanda.png" alt=""></li>
+                            <li><a href="">Tanzania</a><img src="../Multimedia/images/Tanzania.png" alt=""></li>
+                            <li><a href="">US</a><img src="../Multimedia/images/us.png" alt=""></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -50,12 +99,12 @@
             <div class="logo-access">
                 <img src="../Multimedia/images/access-lg-logo.png" />
                 <ul class="main-nav-links active">
-                    <li class="home"><a href="#">Home</a></li>
+                    <li class="home"><a href="../index.html">Home</a></li>
 
                     <!-- personal mega dropdown -->
 
                     <li class="personal">
-                        <a href="../html/personal.html">Personal</a>
+                        <a href="personal.html">Personal</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>PERSONAL BANKING</h4>
@@ -283,7 +332,7 @@
                     </li>
 
                     <!-- Business mega dropdown-->
-                    <li class="business"><a href="#">Business</a>
+                    <li class="business"><a href="business.html">Business</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>BUSINESS BANKING</h4>
@@ -399,7 +448,7 @@
                     </li>
 
                     <!-- corporate mega dropdown -->
-                    <li class="personal"><a href="#">Corporate</a>
+                    <li class="personal"><a href="html/corporate.html">Corporate</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>CORPORATE BANKING </h4>
@@ -566,7 +615,7 @@
                     </li>
 
                     <!-- private mega dropdown -->
-                    <li class="private"><a href="#">Private</a>
+                    <li class="private"><a href="private.html">Private</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>PRIVATE BANKING</h4>
@@ -986,28 +1035,284 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div class="mobile-menu-icon">
                     <i class="bi bi-search"></i>
                     <i class="bi bi-list"></i>
                 </div>
             </div>
-
-
-
         </nav>
     </header>
 
-    <main style="padding-top: 150px;" class="main-section bg-[#ededed]">
 
-        <section class="main-content" style="height: auto; min-height: 320px; padding-top: 40px;">
-            <p style="font-size: 1.2rem; font-weight: 600;">Corporate Page Content</p>
+        <section>
+        <section class="hero">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide global">
+                        <div class="slide-txt">
+                            <h1 class="text-[3rem] font-[700] leading-[1]"> access more</h1>
+                            <p class="text-[2rem] font-[10]">Corporate Banking</p>
+                            <p class="text-[1rem]"> You can decide how, when and where you do your banking with a wide vairty of services.
+                            </p>
+                            <div class="rp-slide-btn"><a id="slide-btn" href="#"> access more </a></div>
+                        </div>
+
+                    </div>
+
+                    <div class="slide industry">
+                        <div class="slide-txt">
+                            <p class="text-[3rem] font-[700] leading-[1]"> access more</p>
+                            <p class="text-[2rem] font-[0]"> Corporate Banking</p>
+                            <p class="w-[70%]">You can decide how, when and where you do your banking with a
+                                wide variety of services.. </p>
+                            <div class="rp-slide-btn"><a id="slide-btn" href="#"> access more </a></div>
+                        </div>
+                        <div class="banner-line">
+                            <img src="../Multimedia/images/banner-icon-line.png" alt="">
+                        </div>
+                    </div>
+
+                    <div class="slide unlock">
+                        <div class="slide-txt">
+                           <p class="text-[3rem] font-[700] leading-[1]"> access more</p>
+                             <p class="text-[2rem] font-[0]"> Corporate Banking</p>
+                            <p class="text-[white] w-[60%]">You can decide how, when and where you do your banking with a wide vairty of services.
+                            </p>
+                            <div class="rp-slide-btn"><a id="slide-btn" href="#"> access more </a></div>
+                        </div>
+                        <div class="banner-line">
+                            <img src="../Multimedia/images/banner-icon-line.png" alt="">
+                        </div>
+                    </div>
+
+                </div>
+                
+            </div>
+        </section>
+
+
+        <div class="card-warpper">
+            <div class="hero-card">
+
+                <div class="create-an-account">
+                    <a href="#">
+                        <img src="../Multimedia/images/Corporate/corporate-sector.svg" alt="">
+                        <h3 class="text-[700]">Corporate Sector</h3>
+                        <p class="w-[10%]">Specialized knowledge and expertise to help you navigate the financial...</p>
+                    </a>
+                </div>
+
+
+                <div class="create-an-account">
+                    <a href="#">
+                        <img src="../Multimedia/images/Corporate/product-services.svg" alt="" />
+                        <h3 class="text-[700]">Products & Services</h3>
+                        <p class="w-[100%]">Find out the variety tailored just for you.</p>
+                    </a>
+                </div>
+
+                <div class="create-an-account">
+                    <a href="#">
+                        <img src="../Multimedia/images/Corporate/economic-research.svg" alt=""/>
+                        <h3 class="text-[700]">Economic Research</h3>
+                        <p>Stay up-to-date on the latest happenings in the market with our...</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+
+    <main style="padding-top: 100px;" class="main-section bg-[#ededed]">
+
+        <section class="main-content">
+            <p style="font-weight: 400; color: #03478b; text-align: center;
+            font-size: 2.5rem;">
+            FLOWS</p>
+            <p style="text-align: center; font-size: .90rem; color: black ;">Finance and Logistics Worldwide Scheme.</p>
+
+            <div class="flow-container">
+                <div class="flow-1 fin">  
+                    <span class="material-symbols-outlined flow-arrow">arrow_right</span>
+                    <div class="flow-txt">
+                        <h1>Finance</h1>
+                        <p>Short/Medium Term Facilities 
+                            {IFF, Confirmation Lines, Usance, etc}, Local/International Trade Services, 
+                            Online Banking Platform
+                            (PRIMUS or PRIMUS LITE).</p>
+                             <div class="rp-slide-btn"><a class="flow-btn" href="#"> access more </a></div>
+                    </div>
+                </div>
+                <div class="flow-1 logi">
+                     <span class="material-symbols-outlined flow-arrow">arrow_right</span>
+                    <div class="flow-txt">
+                        <h1>Logistics</h1>
+                        <p>Partnership with a reputable 
+                            logistics company that can manage the 
+                            flow of activities between the pin of
+                             origin and the point of delivery.</p>
+                             <div class="rp-slide-btn"><a class="flow-btn" href="#"> access more </a></div>
+                    </div>
+                </div>
+                <div class="flow-1 ww">
+                     <span class="material-symbols-outlined flow-arrow">arrow_right</span>
+                    <div class="flow-txt ww-tx">
+                        <h1>Worldwide</h1>
+                        <p>Worldwide access means there is no 
+                            limit to where you can import your goods from.</p>
+                             <div class="rp-slide-btn"><a class="flow-btn" href="#"> access more </a></div>
+                    </div>
+                </div>
+
+                <div class="flow-1 scheme">
+                    <div class="flow-txt ww-tx">
+                        <h1>Scheme</h1>
+                        <p>Tailored service for diverse needs. 
+                            Faster Transaction time across all platforms.
+                            We help you moderate risk in your business.</p>
+                            <div class="rp-slide-btn"><a class="flow-btn" href="#"> access more </a></div>
+                    </div>
+                </div>
+
+            </div>
         </section>
     </main>
 
+    <form>
+        <span class="material-symbols-outlined form-arrow">arrow_right</span>
+        <div class="get-in-touch">
+            <div class="get-in-txt">
+                <h1 class="text-[2rem] text-[white] font-[400]">Get In Touch With Us</h1>
+            <p class="w-[54%] text-[white]">We’ve been waiting to hear
+            from you, incase you have questions.
+            You are just a minute from the answers 
+            you need. Please use the contact form.</p>
+             <div class="rp-slide-btn"><a class="get-in-btn" href="#"> access more </a></div>
+            </div>
+
+            <div class="contact-box">
+              <div class="form-warpper">
+                  <h1 style="font-size: 1.5rem; color: #03478b; font-weight: 400;">Contact Form</h1>
+                <input style="  margin: 5px;  background-color: #ededed;  padding: 10px;  width: 100%;  outline: none;" type="text" placeholder="Full Name">
+                <div class="name-num-form">
+                    <input class="email" type="email" placeholder="Email Address"> <input class="number" type="text" placeholder="Phone Number">
+                </div>
+                <input class="comment" type="text" placeholder="Comment">
+                <div class="form-sub-btn"><a class="submit-btn" href="#">Submit</a></div>
+              </div>
+            </div>
+
+        </div>
+    </form>
+
+
+    <article>
+        <aside class="why-access-bank">
+            <h1 class="text-[1.5rem] text-[#03478b] font-[500]">Why Bank with Access?</h1>
+            <p class="text-[.80rem] w-[80%]">We understand the complexity 
+                and evolving needs of businesses
+                in a wide range of industries.
+                Our experts will work with you 
+                to help turn your 
+                aspirations into reality.</p> 
+        </aside>
+        <figure>
+            <div class="deep">
+                
+                <a href="#">
+                    <div class="divide"></div>
+                    <div class="dep pg1">
+                    <div class="dep-text">
+                        <h1>Deeper Relationships</h1>
+                    <p>Specialized knowledge and 
+                        expertise to help you 
+                        navigate the financial.</p>
+                        <div class="rp-slide-btn"><a class="flow-btn" href="#"> access more </a></div>
+                    </div>  
+                </div>
+            </a>
+                <a href="#">
+                    <div class="divide-two"></div>
+                    <div class="dep pg2"> 
+                    <div class="dep-text">
+                        <h1>Multiple Ways to Bank</h1>
+                    <p> Short/Medium Term Facilities 
+                        {IFF, Confirmation Lines, Usance, etc},
+                        Local/International Trade</p>
+                        <div class="rp-slide-btn"><a class="flow-btn" href="#"> access more </a></div>
+                    </div>
+                    </div></a>
+
+                <a href="#">
+                    <div class="divide-three"></div>
+                    <div class="dep pg3"> 
+                    <div class="dep-text">
+                        <h1>Multiple Ways to Bank</h1>
+                    <p> Short/Medium Term Facilities 
+                        {IFF, Confirmation Lines, Usance, etc},
+                        Local/International Trade</p>
+                        <div class="rp-slide-btn"><a class="flow-btn" href="#"> access more </a></div>
+                    </div>
+                    </div></a>
+
+                <a href="#"><div class="dep pg4"> 
+                    <div class="dep-text">
+                        <h1>A Path To Grow</h1>
+                    <p>Short/Medium Term Facilities 
+                        {IFF, Confirmation Lines, Usance, etc}, 
+                        Local/International Trade</p>
+                        <div class="rp-slide-btn"><a class="flow-btn" href="#"> access more </a></div>
+                    </div>
+                    </div></a>
+            </div>
+        </figure>
+    </article>
+
+
+
+    <section class="products-service">
+        <div class="product-ser-cont">
+            <div class="more-prod">
+                <h1 class="text-[1.8rem] text-[#03478b] font-[600]">Access More Products & Services</h1>
+                <p>We understand the complexity and
+                    evolving needs of businesses in
+                    a wide range</p>
+                <div class="rp-slide-btn"><a class="prod-btn" href="#"> access more </a></div>
+            </div>
+
+          <div class="pdoduction-cards">
+              <div class="prod-card treasure">
+                <div class="card-mini">
+                     <h1 class="text-[1.5rem] font-[400] text-[#03478b]">Treasury Services</h1>
+                    <p class="text-[.80rem] font-[480]">Access Bank's understanding of
+                    the local market and your unique
+                    needs allows us to work with you
+                    to accommodate your.</p>
+                </div>
+            </div>
+
+
+            <div class="prod-card">
+                <div class="card-mini">
+                    <h1 class="text-[1.5rem] font-[450] text-[#03478b]">Financing</h1>
+                    <p class="text-[.80rem] font-[480]">Access Bank's understanding of
+                    the local market and your unique
+                    needs allows us to work with you
+                    to accommodate your.</p>
+                </div>
+            </div>
+          </div>
+
+        </div>
+
+    </section>
+
+
     <figure>
-        
           <div class="news-headlines">
                 <div class="latetest-news-bx">
                     <div class="la-s-bx"></div>

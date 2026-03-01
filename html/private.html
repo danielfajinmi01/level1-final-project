@@ -13,6 +13,35 @@
     <link rel="stylesheet" href="../CSS/private.css" />
 </head>
 
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.querySelector('.nav-main .mobile-menu-icon .bi-list');
+        const navLinks = document.querySelector('.main-nav-links');
+
+        if (hamburger && navLinks) {
+            hamburger.addEventListener('click', function (e) {
+                e.stopPropagation();
+                navLinks.classList.toggle('mobile-show');
+            });
+
+            // Optional: Close menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('mobile-show');
+                });
+            });
+
+            // Optional: Close menu when clicking outside
+            document.addEventListener('click', function (event) {
+                if (!navLinks.contains(event.target) && !hamburger.contains(event.target)) {
+                    navLinks.classList.remove('mobile-show');
+                }
+            });
+        }
+    });
+</script>
+
 <body>
     <div class="lets-talk">
         <p>Let's Talk</p>
@@ -41,7 +70,25 @@
                     </li>
                 </ul>
                 <div class="countries">
-                    <a href="#">Country Locations </a>
+                    <a href="#"><div class="ngn"> <p>Country Locations</p> <div class="ngn-icon"><img src="../Multimedia/images/ngn.png"></div> </div> </a>
+                    <div class="country-list">
+                        <ul class="country-li">
+                            <li><a href="#">Cameroon</a> <img src="../Multimedia/images/cameroon.png"></li>
+                            <li><a href="#"> Congo</a> <img src="../Multimedia/images/congo.png"></li>
+                            <li><a href="#">Botswana</a> <img src="../Multimedia/images/botswana.png"></li>
+                            <li><a href="#">Gambia</a> <img src="../Multimedia/images/gambia.png" alt=""></li>
+                            <li><a href="#">South Africa</a> <img src="../Multimedia/images/southafrica.png" alt=""></li>
+                            <li><a href="#">Ghana</a> <img src="../Multimedia/images/ghana.png" alt=""></li>
+                            <li><a href="#">Nigeria</a><img src="../Multimedia/images/nigeria (1).png" alt=""></li>
+                            <li><a href="#">Mozambique</a> <img src="../Multimedia/images/mozambique.png" alt=""></li>
+                            <li><a href="">Guinea</a><img src="../Multimedia/images/guinea.png" alt=""></li>
+                            <li><a href="">Kenya</a> <img src="../Multimedia/images/kenya.png" alt=""></li>
+                            <li><a href="">UK</a><img src="../Multimedia/images/uk.png" alt=""></li>
+                            <li><a href="">Rwanda</a><img src="../Multimedia/images/rwanda.png" alt=""></li>
+                            <li><a href="">Tanzania</a><img src="../Multimedia/images/Tanzania.png" alt=""></li>
+                            <li><a href="">US</a><img src="../Multimedia/images/us.png" alt=""></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -50,12 +97,11 @@
             <div class="logo-access">
                 <img src="../Multimedia/images/access-lg-logo.png" />
                 <ul class="main-nav-links active">
-                    <li class="home"><a href="#">Home</a></li>
+                    <li class="home"><a href="../index.html">Home</a></li>
 
                     <!-- personal mega dropdown -->
-
                     <li class="personal">
-                        <a href="../html/personal.html">Personal</a>
+                        <a href="html/personal.html">Personal</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>PERSONAL BANKING</h4>
@@ -269,12 +315,14 @@
                             </div>
                             <div class="drop-footer">
                                 <div class="footer-items">
-                                    <div class="contatc-us ft"> <img src="../Multimedia/images/drop-down-ft-phone.svg"> <a
-                                            href="#">Contact
-                                            Us</a></div>
-                                    <div class="support-help ft"> <img src="../Multimedia/images/drop-ft-life-sup.svg"> <a
-                                            href="#">Help
-                                            & Support</a> </div>
+                                    <div class="contatc-us ft"> <img src="../Multimedia/images/drop-down-ft-phone.svg">
+                                        <a href="#">Contact
+                                            Us</a>
+                                    </div>
+                                    <div class="support-help ft"> <img src="../Multimedia/images/drop-ft-life-sup.svg">
+                                        <a href="#">Help
+                                            & Support</a>
+                                    </div>
                                     <div class="locate ft"> <img src="../Multimedia/images/drop-ft-map.svg"> <a
                                             href="#">Locate Us</a> </div>
                                 </div>
@@ -283,7 +331,7 @@
                     </li>
 
                     <!-- Business mega dropdown-->
-                    <li class="business"><a href="#">Business</a>
+                    <li class="business"><a href="business.html">Business</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>BUSINESS BANKING</h4>
@@ -312,7 +360,6 @@
                                                 intervention scheme..</p>
                                         </div>
                                     </li>
-
                                     <div class="">
                                         <li class="dial">
                                             <a href="#">E Solutions & Services<i
@@ -385,12 +432,14 @@
                             </div>
                             <div class="drop-footer">
                                 <div class="footer-items">
-                                    <div class="contatc-us ft"> <img src="../Multimedia/images/drop-down-ft-phone.svg"> <a
-                                            href="#">Contact
-                                            Us</a></div>
-                                    <div class="support-help ft"> <img src="../Multimedia/images/drop-ft-life-sup.svg"> <a
-                                            href="#">Help
-                                            & Support</a> </div>
+                                    <div class="contatc-us ft"> <img src="../Multimedia/images/drop-down-ft-phone.svg">
+                                        <a href="#">Contact
+                                            Us</a>
+                                    </div>
+                                    <div class="support-help ft"> <img src="../Multimedia/images/drop-ft-life-sup.svg">
+                                        <a href="#">Help
+                                            & Support</a>
+                                    </div>
                                     <div class="locate ft"> <img src="../Multimedia/images/drop-ft-map.svg"> <a
                                             href="#">Locate Us</a> </div>
                                 </div>
@@ -399,7 +448,7 @@
                     </li>
 
                     <!-- corporate mega dropdown -->
-                    <li class="personal"><a href="#">Corporate</a>
+                    <li class="personal"><a href="personal.html">Corporate</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>CORPORATE BANKING </h4>
@@ -524,8 +573,8 @@
                                             </ul>
                                             <div class="every-br">
                                                 <p><span class="every-br-h">Products & Services</span></p>
-                                                <p class="text-[.80rem]"> We have the specialised knowledge 
-                                                    and expertise to help you navigate the financial 
+                                                <p class="text-[.80rem]"> We have the specialised knowledge
+                                                    and expertise to help you navigate the financial
                                                     complexity of your industry. </p>
                                             </div>
                                         </div>
@@ -552,12 +601,14 @@
                             </div>
                             <div class="drop-footer">
                                 <div class="footer-items">
-                                    <div class="contatc-us ft"> <img src="../Multimedia/images/drop-down-ft-phone.svg"> <a
-                                            href="#">Contact
-                                            Us</a></div>
-                                    <div class="support-help ft"> <img src="../Multimedia/images/drop-ft-life-sup.svg"> <a
-                                            href="#">Help
-                                            & Support</a> </div>
+                                    <div class="contatc-us ft"> <img src="../Multimedia/images/drop-down-ft-phone.svg">
+                                        <a href="#">Contact
+                                            Us</a>
+                                    </div>
+                                    <div class="support-help ft"> <img src="../Multimedia/images/drop-ft-life-sup.svg">
+                                        <a href="#">Help
+                                            & Support</a>
+                                    </div>
                                     <div class="locate ft"> <img src="../Multimedia/images/drop-ft-map.svg"> <a
                                             href="#">Locate Us</a> </div>
                                 </div>
@@ -566,7 +617,7 @@
                     </li>
 
                     <!-- private mega dropdown -->
-                    <li class="private"><a href="#">Private</a>
+                    <li class="private"><a href="private.html">Private</a>
                         <div class="dropdown-content">
                             <div class="header-panel">
                                 <h4>PRIVATE BANKING</h4>
@@ -576,9 +627,11 @@
                                     <li class="bank-assure">
                                         <a href="#">About the Access Private Bank </a>
                                         <div class="bank-as">
-    
-                                            <p><span class="txt-bank-as leading-[1]">About Access Private Bank</span></p>
-                                            <p class="text-[.80rem] w-[65%]">Introducing the Access Bank American Express® 
+
+                                            <p><span class="txt-bank-as leading-[1]">About Access Private Bank</span>
+                                            </p>
+                                            <p class="text-[.80rem] w-[65%]">Introducing the Access Bank American
+                                                Express®
                                                 Platinum Card and the American Express® Gold Card.</p>
                                         </div>
                                     </li>
@@ -599,8 +652,8 @@
                                             <a href="#">American Express (AMEX) Card </a>
                                             <div class="diaspora">
                                                 <div class="dia-br">
-                                                    <p> <span class="dia-br-h">American Express Cards (Amex)</span>  </p>
-                                                    <p>  Introducing the Access Bank American Express® 
+                                                    <p> <span class="dia-br-h">American Express Cards (Amex)</span> </p>
+                                                    <p> Introducing the Access Bank American Express®
                                                         Platinum Card and the American Express® Gold Card.</p>
                                                 </div>
                                             </div>
@@ -621,7 +674,7 @@
                                         <div class="diaspora">
                                             <div class="dia-br">
                                                 <p><span class="dia-br-h"> Exclusive Private Banker </span></p>
-                                                <p>As a client of Access Private Bank, you will 
+                                                <p>As a client of Access Private Bank, you will
                                                     receive all the assistance you require from us.</p>
                                             </div>
                                         </div>
@@ -630,8 +683,9 @@
                                         <a href="#"> Investment Management </a>
                                         <div class="money">
                                             <div class="dia-br">
-                                               <p> <span class="dia-br-h">Investment Management</span> </p>
-                                                <p> Our Investment management service takes care of all your investment efforts. </p>
+                                                <p> <span class="dia-br-h">Investment Management</span> </p>
+                                                <p> Our Investment management service takes care of all your investment
+                                                    efforts. </p>
                                             </div>
                                         </div>
                                     </li>
@@ -642,7 +696,7 @@
                                                 <p>
                                                     <span class="dia-br-h"> Our Products & Services</span>
                                                 </p>
-                                                <p> Access our empowering products and 
+                                                <p> Access our empowering products and
                                                     services. Earn Locally, Invest around the world.</p>
                                             </div>
                                         </div>
@@ -653,26 +707,28 @@
                                 <div class="main-panel-content">
                                     <div class="main-panel-right-img private-main">
                                         <p>Introducing the Access Bank American Express® Platinum
-                                             Card and the American Express® Gold Card. </p>
+                                            Card and the American Express® Gold Card. </p>
                                     </div>
                                     <div class="access-btn"><a href="#">Access More</a></div>
                                 </div>
                             </div>
                             <div class="drop-footer">
                                 <div class="footer-items">
-                                    <div class="contatc-us ft"> <img src="../Multimedia/images/drop-down-ft-phone.svg"> <a
-                                            href="#">Contact
-                                            Us</a></div>
-                                    <div class="support-help ft"> <img src="../Multimedia/images/drop-ft-life-sup.svg"> <a
-                                            href="#">Help
-                                            & Support</a> </div>
+                                    <div class="contatc-us ft"> <img src="../Multimedia/images/drop-down-ft-phone.svg">
+                                        <a href="#">Contact
+                                            Us</a>
+                                    </div>
+                                    <div class="support-help ft"> <img src="../Multimedia/images/drop-ft-life-sup.svg">
+                                        <a href="#">Help
+                                            & Support</a>
+                                    </div>
                                     <div class="locate ft"> <img src="../Multimedia/images/drop-ft-map.svg"> <a
                                             href="#">Locate Us</a> </div>
                                 </div>
                             </div>
                         </div>
                     </li>
-                    
+
 
                     <!-- ways to bank mega dropdown -->
                     <li class="wayss"><a href="#">Ways to Bank</a>
@@ -683,14 +739,18 @@
                             <div class="left-panel">
                                 <ul class="left-panel-content">
                                     <li class="dial">
-                                        <a href="https://901.accessbankplc.com" target="_blank" rel="noopener noreferrer">*901# <i class="fa-solid fa-chevron-right"></i></a>
+                                        <a href="https://901.accessbankplc.com" target="_blank"
+                                            rel="noopener noreferrer">*901# <i
+                                                class="fa-solid fa-chevron-right"></i></a>
                                         <div class="diaspora">
                                             <ul class="dia-list">
                                                 <li><a href="#">AccessPlus</a></li>
                                             </ul>
                                             <div class="dia-br">
-                                                <p><span class="dia-br-h">*901# <i class="fa-solid fa-chevron-right"></i></span></p>
-                                                <p>*901# is our USSD banking solution that gives you access to our services with only your mobile phone.</p>
+                                                <p><span class="dia-br-h">*901# <i
+                                                            class="fa-solid fa-chevron-right"></i></span></p>
+                                                <p>*901# is our USSD banking solution that gives you access to our
+                                                    services with only your mobile phone.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -699,7 +759,8 @@
                                         <div class="diaspora">
                                             <div class="dia-br">
                                                 <p><span class="dia-br-h">Access Bank Shopping Discount Deals</span></p>
-                                                <p>Access exciting shopping discount offers curated for Access Bank customers.</p>
+                                                <p>Access exciting shopping discount offers curated for Access Bank
+                                                    customers.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -708,7 +769,8 @@
                                         <div class="diaspora">
                                             <div class="dia-br">
                                                 <p><span class="dia-br-h">Access Money</span></p>
-                                                <p>Perform simple, secure and instant financial transactions using your mobile device on any network, anytime and anywhere.</p>
+                                                <p>Perform simple, secure and instant financial transactions using your
+                                                    mobile device on any network, anytime and anywhere.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -735,7 +797,8 @@
                                         <div class="diaspora">
                                             <div class="dia-br">
                                                 <p><span class="dia-br-h">American Express Cards (AMEX)</span></p>
-                                                <p>Introducing the Access Bank American Express Platinum Card and the American Express Gold Card.</p>
+                                                <p>Introducing the Access Bank American Express Platinum Card and the
+                                                    American Express Gold Card.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -747,7 +810,8 @@
                                             </ul>
                                             <div class="dia-br">
                                                 <p><span class="dia-br-h">ATM</span></p>
-                                                <p>Access Bank ATMs give you easy access to basic banking transactions at any time of the day, anywhere you are.</p>
+                                                <p>Access Bank ATMs give you easy access to basic banking transactions
+                                                    at any time of the day, anywhere you are.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -766,7 +830,8 @@
                                             </ul>
                                             <div class="dia-br">
                                                 <p><span class="dia-br-h">Cards</span></p>
-                                                <p>Find the right card that you can use anywhere for all your financial transactions.</p>
+                                                <p>Find the right card that you can use anywhere for all your financial
+                                                    transactions.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -775,7 +840,8 @@
                                         <div class="diaspora">
                                             <div class="dia-br">
                                                 <p><span class="dia-br-h">FacePay</span></p>
-                                                <p>A unique, secure and easy way to pay at registered merchant outlets without using your card or cash.</p>
+                                                <p>A unique, secure and easy way to pay at registered merchant outlets
+                                                    without using your card or cash.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -788,7 +854,8 @@
                                             </ul>
                                             <div class="dia-br">
                                                 <p><span class="dia-br-h">Mobile Banking</span></p>
-                                                <p>The convenient and secure way to carry out your banking operations anytime and with services tailored to your needs.</p>
+                                                <p>The convenient and secure way to carry out your banking operations
+                                                    anytime and with services tailored to your needs.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -803,25 +870,31 @@
                                             </ul>
                                             <div class="every-br">
                                                 <p><span class="every-br-h">More Xtravaganza</span></p>
-                                                <p>Access all our exciting offers here. You never know what you'll find.</p>
+                                                <p>Access all our exciting offers here. You never know what you'll find.
+                                                </p>
                                             </div>
                                         </div>
                                     </li>
                                     <li class="dial">
-                                        <a href="https://ibank.accessbankplc.com" target="_blank" rel="noopener noreferrer">Online Banking <i class="fa-solid fa-chevron-right"></i></a>
+                                        <a href="https://ibank.accessbankplc.com" target="_blank"
+                                            rel="noopener noreferrer">Online Banking <i
+                                                class="fa-solid fa-chevron-right"></i></a>
                                         <div class="diaspora">
                                             <div class="dia-br">
                                                 <p><span class="dia-br-h">Online Banking For Individuals</span></p>
-                                                <p>Access our financial services online anywhere and with any device.</p>
+                                                <p>Access our financial services online anywhere and with any device.
+                                                </p>
                                             </div>
                                         </div>
                                     </li>
                                     <li class="dial">
-                                        <a href="#">Online Banking Business <i class="fa-solid fa-chevron-right"></i></a>
+                                        <a href="#">Online Banking Business <i
+                                                class="fa-solid fa-chevron-right"></i></a>
                                         <div class="diaspora">
                                             <div class="dia-br">
                                                 <p><span class="dia-br-h">PrimusPlus</span></p>
-                                                <p>Carry out secure transactions faster with straight-through processing and simplified transaction workflows.</p>
+                                                <p>Carry out secure transactions faster with straight-through processing
+                                                    and simplified transaction workflows.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -830,16 +903,22 @@
                             <div class="content">
                                 <div class="main-panel-content">
                                     <div class="main-panel-right-img ways-main">
-                                        <p>Discover all the available digital and physical channels for your banking needs.</p>
+                                        <p>Discover all the available digital and physical channels for your banking
+                                            needs.</p>
                                     </div>
                                     <div class="access-btn"><a href="#">Explore More</a></div>
                                 </div>
                             </div>
                             <div class="drop-footer">
                                 <div class="footer-items">
-                                    <div class="contatc-us ft"><img src="../Multimedia/images/drop-down-ft-phone.svg"> <a href="#">Contact Us</a></div>
-                                    <div class="support-help ft"><img src="../Multimedia/images/drop-ft-life-sup.svg"> <a href="#">Help & Support</a></div>
-                                    <div class="locate ft"><img src="../Multimedia/images/drop-ft-map.svg"> <a href="#">Locate Us</a></div>
+                                    <div class="contatc-us ft"><img src="../Multimedia/images/drop-down-ft-phone.svg">
+                                        <a href="#">Contact Us</a>
+                                    </div>
+                                    <div class="support-help ft"><img src="../Multimedia/images/drop-ft-life-sup.svg">
+                                        <a href="#">Help & Support</a>
+                                    </div>
+                                    <div class="locate ft"><img src="../Multimedia/images/drop-ft-map.svg"> <a
+                                            href="#">Locate Us</a></div>
                                 </div>
                             </div>
                         </div>
@@ -860,7 +939,8 @@
                                         </div>
                                     </li>
                                     <li class="dial">
-                                        <a href="#">Customer Support Contacts <i class="fa-solid fa-chevron-right"></i></a>
+                                        <a href="#">Customer Support Contacts <i
+                                                class="fa-solid fa-chevron-right"></i></a>
                                         <div class="diaspora">
                                             <ul class="dia-list">
                                                 <li><a href="#">0700 3000 000</a></li>
@@ -885,7 +965,8 @@
                                             </ul>
                                             <div class="every-br">
                                                 <p><span class="every-br-h">Service Channels</span></p>
-                                                <p>Locate branch services, IVR, self-service and digital access channels.</p>
+                                                <p>Locate branch services, IVR, self-service and digital access
+                                                    channels.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -899,7 +980,8 @@
                                             </ul>
                                             <div class="dia-br">
                                                 <p><span class="dia-br-h">Feedback & Grievance</span></p>
-                                                <p>Submit concerns and follow structured grievance resolution channels.</p>
+                                                <p>Submit concerns and follow structured grievance resolution channels.
+                                                </p>
                                             </div>
                                         </div>
                                     </li>
@@ -908,7 +990,10 @@
                                         <div class="promo">
                                             <div class="dia-br">
                                                 <p><span class="dia-br-h">Contact Us</span></p>
-                                                <p>Agency Banking Details, Biometrics Enrollment Branches, Branch & ATM Locator, Branches With Wi-Fi, Customer Feedback, Grievance Management for Project Finance, Interactive Voice Response, My Access and We Care.</p>
+                                                <p>Agency Banking Details, Biometrics Enrollment Branches, Branch & ATM
+                                                    Locator, Branches With Wi-Fi, Customer Feedback, Grievance
+                                                    Management for Project Finance, Interactive Voice Response, My
+                                                    Access and We Care.</p>
                                             </div>
                                         </div>
                                     </li>
@@ -924,9 +1009,14 @@
                             </div>
                             <div class="drop-footer">
                                 <div class="footer-items">
-                                    <div class="contatc-us ft"><img src="../Multimedia/images/drop-down-ft-phone.svg"> <a href="#">Call Us</a></div>
-                                    <div class="support-help ft"><img src="../Multimedia/images/drop-ft-life-sup.svg"> <a href="#">Help Center</a></div>
-                                    <div class="locate ft"><img src="../Multimedia/images/drop-ft-map.svg"> <a href="#">Locate Branch</a></div>
+                                    <div class="contatc-us ft"><img src="../Multimedia/images/drop-down-ft-phone.svg">
+                                        <a href="#">Call Us</a>
+                                    </div>
+                                    <div class="support-help ft"><img src="../Multimedia/images/drop-ft-life-sup.svg">
+                                        <a href="#">Help Center</a>
+                                    </div>
+                                    <div class="locate ft"><img src="../Multimedia/images/drop-ft-map.svg"> <a
+                                            href="#">Locate Branch</a></div>
                                 </div>
                             </div>
                         </div>
@@ -939,17 +1029,33 @@
                                 <h4>I AM...</h4>
                             </div>
                             <div class="iam-cardss">
-                                <div class="iam-card company"><p>A Comapany</p></div>
-                                <div class="iam-card applicant"><p>A Job Applicant</p></div>
-                                <div class="iam-card journal"><p>A Journalist</p></div>
-                                <div class="iam-card teen"><p>A Teenager</p></div>
-                                <div class="iam-card woman"><p>A woman</p></div>
-                                <div class="iam-card enter"><p>An Entrepreneur</p></div>
-                                <div class="iam-card indiviual"><p>An Individual</p></div>
-                                <div class="iam-card investor"><p>An Investor</p></div>
-                                
+                                <div class="iam-card company">
+                                    <p>A Comapany</p>
+                                </div>
+                                <div class="iam-card applicant">
+                                    <p>A Job Applicant</p>
+                                </div>
+                                <div class="iam-card journal">
+                                    <p>A Journalist</p>
+                                </div>
+                                <div class="iam-card teen">
+                                    <p>A Teenager</p>
+                                </div>
+                                <div class="iam-card woman">
+                                    <p>A woman</p>
+                                </div>
+                                <div class="iam-card enter">
+                                    <p>An Entrepreneur</p>
+                                </div>
+                                <div class="iam-card indiviual">
+                                    <p>An Individual</p>
+                                </div>
+                                <div class="iam-card investor">
+                                    <p>An Investor</p>
+                                </div>
+
                             </div>
-                            
+
                         </div>
                     </li>
                 </ul>
@@ -966,18 +1072,20 @@
                         <a class="main-internet-btn" href="#"> <i class="bi bi-lock"></i> Internet Banking</a>
                         <div class="internet-drop-down">
                             <div class="internet-drop-content-bx">
-                                <h1> <img class="wrold-icon" src="../Multimedia/images/like-an-internet.svg" alt=""> Internet Banking</h1>
-                                
+                                <h1 class="text-[white]"> <img class="wrold-icon"
+                                        src="../Multimedia/images/like-an-internet.svg"> Internet Banking </h1>
                                 <a href="#">
                                     <div class="drop-indiv-btn">
-                                    <p> <img src="../Multimedia/images/like-a-person.svg"> Individual <img class="anchor-drop" src="../Multimedia/images/anchor-links.svg" ></p>
-                                </div>
+                                        <p> <img src="../Multimedia/images/like-a-person.svg"> Individual <img
+                                                class="anchor-drop" src="../Multimedia/images/anchor-links.svg"></p>
+                                    </div>
                                 </a>
 
                                 <a href="#">
-                                <div class="drop-business-btn">
-                                    <p> <img src="../Multimedia/images/like-a-business.svg"> Business <img class="anchor-drop" src="../Multimedia/images/anchor-links.svg"></p>
-                                </div>
+                                    <div class="drop-business-btn">
+                                        <p> <img src="../Multimedia/images/like-a-business.svg"> Business <img
+                                                class="anchor-drop" src="../Multimedia/images/anchor-links.svg"></p>
+                                    </div>
                                 </a>
 
                                 <a href="#"><img src="../Multimedia/images/megabillionwin.png"></a>
@@ -999,29 +1107,179 @@
         </nav>
     </header>
 
-    <main style="padding-top: 150px;" class="main-section bg-[#ededed]">
 
-        <section class="main-content" style="height: auto; min-height: 320px; padding-top: 40px;">
-            <p style="font-size: 1.2rem; font-weight: 600;">Private Page Content</p>
+    <div class="slider">
+        <div class="slides">
+            <div class="slide global">
+                <div class="slide-txt">
+                    <h1 class="text-[3rem] font-[700] leading-[1]">Earn Locally, Invest</h1>
+                    <p class="text-[2rem] font-[10]">around the world</p>
+                    <p class="text-[1rem]"> You can decide how, when and where you do your banking with our wide
+                        variety of services
+                    </p>
+                    <div class="rp-slide-btn"><a id="slide-btn" href="#"> access more </a></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <main style="padding-top: 100px;" class="main-section bg-[black]">
+
+        <section class="main-content">
+
+            <div class="about-private-access">
+                <h1 class="text-[white] text-[2rem] w-[60%]"> About the Access Private Bank</h1>
+                <p class="text-[white]">Our mission is to help you realise
+                    enduring financial success by harmonising prudent strategy with
+                    informed opportunity. As an Access
+                    Private Bank client, you enjoy a distinctly superior service
+                    experience-one that fuses world-class
+                    investment expertise with integrated
+                    accounting, tax, legal, and estate-planning capabilities</p>
+                <div class="rp-slide-btn text-[white]"><a id="slide-btn" href="#"> access more </a></div>
+            </div>
+
+
+            <div class="invest-mangement">
+                <a href="#">
+                    <div class="prod-ser manage">
+                        <h1>Our Products & Services</h1>
+                        <p>Access our empowering products
+                            and services. Earn Locally,
+                            Invest around the world.</p>
+                        <i class="fa-solid fa-chevron-right prod-arrow"></i>
+                        <div class="mini-contain"></div>
+                    </div>
+                    
+                </a>
+
+                <a href="#">
+                    <div class="prod-ser">
+                        <h1>Investment Management</h1>
+                        <p>Our Investment management service
+                            takes care of all your investment
+                            efforts.</p>
+                        <i class="fa-solid fa-chevron-right prod-arrow"></i>
+                        <div class="mini-contain"></div>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="black-cards">
+                <div class="blak-card-txt text-[white]">
+                    <h1 style="color: rgb(204, 201, 201); font-size: 1.5rem;">Access Black Cards</h1>
+                    <p style="color: rgb(204, 201, 201); font-size: 1rem;">Our Black Card provides unprecedented levels
+                        of service
+                        and outstanding benefits for a limited few.
+                        You get all the advantages of Visa Infinite,
+                        the highest card that Visa International offers.</p>
+                    <div class="rp-slide-btn text-[white]"><a id="slide-btn" href="#"> access more </a></div>
+                </div>
+                <img src="../Multimedia/images/private/imageye___-_Access-Black-Card.png">
+            </div>
+
+            <div class="a-side-txt">
+                <p style="width: 40%; margin: auto; color: rgb(204, 201, 201); text-align: center; padding-top: 100px;">
+                    As a client of Access Private Bank,
+                    you will receive all the assistance
+                    you require from us.</p>
+            </div>
         </section>
     </main>
 
-    <figure>
-          <div class="news-headlines">
-                <div class="latetest-news-bx">
-                    <div class="la-s-bx"></div>
-                    <p style="padding-left: 100px; font-size: .80rem; font-weight: 600;">Latest News</p>
+    <div class="boat">
+        <aside class="private-banker">
+            <div class="exclusive-banker">
+                <div class="own-bank">
+                    <img src="../Multimedia/images/private/imageye___-_own-your-bank.png">
                 </div>
-                <marquee  behavior="smooth" direction="left">
-                  <p style="display: flex; gap: 140px; font-size: .60rem;">
-                    <a href="#">ACCESS  LAGOS CITY MARATHON RETURNS FEB 14, POWERING CULTURE, COMMUNITY AND GLOBAL CONNECTIONS </a>
-                    <a href="#">GREEN AFRICA ACQUIRES SECOND AIRCRAFT, EXPANDS ASSET FINANCING PARTNERSHIP WITH ACCESS BANK</a>
-                   <a href="#"> ACCESS BANK PLC SIGNS AGREEMENT TO ACQUIRE 100% EQUITY STAKE IN SOUTH AFRICAN-BASED BIDVEST BANK</a>
+                <div class="banker-txt">
+                    <h1 style="color: #ed7e00; font-size: 1.5rem; width: 20%;">Exclusive Private Banker</h1>
+                    <p style="color: rgb(204, 201, 201);">Find the solution you need here</p>
+                     <div class="rp-slide-btn text-[white]"><a id="slide-btn" href="#"> access more </a></div>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+
+
+    <article class="customized-services">
+        <div class="sect-wealth">
+            <h1 style="color: rgb(170, 170, 170); font-size: 1.5rem;">Customised services tailored to suit your core needs.</h1>
+        <p style="color: rgb(170, 170, 170);"> We are committed to ensuring that we meet and go beyond your expectations.</p>
+
+            <div class="expectations">
+            <a href="#">
+                <div class="legend-card">
+                <img src="../Multimedia/images/private/wealth-growth-icon.svg">
+                <h6>Wealth Management</h6>
+                <p>Let’s help create a custom wealth
+                    management structure to ensure you meet...</p>
+            </div>
+            </a>
+
+            <a href="#">
+                <div class="legend-card">
+                <img src="../Multimedia/images/private/focus.svg">
+                <h6>Wealth Management</h6>
+                <p>Let’s help create a custom wealth
+                    management structure to ensure you meet...</p>
+            </div>
+            </a>
+            
+            <a href="#">
+                <div class="legend-card">
+                <img src="../Multimedia/images/private/stacked-currency-icon.svg">
+                <h6>Wealth Management</h6>
+                <p>Let’s help create a custom wealth
+                    management structure to ensure you meet...</p>
+            </div>
+            </a>
+        </div>
+
+        </div>
+
+        <div class="give-a-call">
+            <div class="call-box">
+                <div class="call-bx-txt">
+                    <h1>Give us a call</h1>
+                <p>To find out more about our
+                    services and how we can meet your needs,
+                    please call your 
+                    Relationship Manager.</p>
+                    <i class="fa-solid fa-chevron-right prod-arrow"></i>
+                </div>
+            </div>
+            <div class="main-call-icn-bx"> 
+                <i class="bi bi-telephone-fill"></i>
+            </div>
+        </div>
+
+    </article>
+
+    <figure class="bg-[#404040] common-ft">
+        <div class="news-headlines">
+            <div class="latetest-news-bx">
+                <div class="la-s-bx"></div>
+                <p style="padding-left: 100px; font-size: .80rem; font-weight: 600;">Latest News</p>
+            </div>
+            <marquee behavior="smooth" direction="left">
+                <p style="display: flex; gap: 140px; font-size: .60rem;">
+                    <a href="#">ACCESS LAGOS CITY MARATHON RETURNS FEB 14, POWERING CULTURE, COMMUNITY AND GLOBAL
+                        CONNECTIONS </a>
+                    <a href="#">GREEN AFRICA ACQUIRES SECOND AIRCRAFT, EXPANDS ASSET FINANCING PARTNERSHIP WITH ACCESS
+                        BANK</a>
+                    <a href="#"> ACCESS BANK PLC SIGNS AGREEMENT TO ACQUIRE 100% EQUITY STAKE IN SOUTH AFRICAN-BASED
+                        BIDVEST BANK</a>
                     <a href="#">ACCESS HOLDINGS REAFFIRMS SUPPORT FOR ZAMBIA’S ECONOMY</a>
                     <a href="#">PROPOSED ACQUISITION OF NATIONAL BANK OF KENYA LIMITED BY ACCESS BANK PLC</a>
                 </p>
-                </marquee>
-            </div>
+            </marquee>
+        </div>
         <div class="news-line">
             <div class="blue-line"></div>
             <div class="red-line"></div>
@@ -1155,17 +1413,21 @@
             <div class="extra-bx">
                 <div class="xtra-bx-content">
                     <a href="#">0201 280 2500, 07003000000</a>
-                    <p style="display: flex; gap: 10px;">Access Mobile Apps <img src="../Multimedia/images/get-it-on-appstore.png">
-                    <img src="../Multimedia/images/get-it-on-playstore.png"></p>
-                    
-                    <p>We're social : <i class="bi bi-twitter-x"></i> <i class="bi bi-facebook"></i> <i class="bi bi-instagram"></i> <i class="bi bi-linkedin"></i></p>
+                    <p style="display: flex; gap: 10px;">Access Mobile Apps <img
+                            src="../Multimedia/images/get-it-on-appstore.png">
+                        <img src="../Multimedia/images/get-it-on-playstore.png">
+                    </p>
+
+                    <p>We're social : <i class="bi bi-twitter-x"></i> <i class="bi bi-facebook"></i> <i
+                            class="bi bi-instagram"></i> <i class="bi bi-linkedin"></i></p>
                 </div>
             </div>
         </div>
 
         <div class="licensed">
             <div class="lin-1">
-                <h6 class="text-[black]">© 2026 Access Bank PLC. RC-125384 (Licensed by the Central Bank of Nigeria)
+                <h6 class="text-[rgb(88, 88, 88)]">© 2026 Access Bank PLC. RC-125384 (Licensed by the Central Bank of
+                    Nigeria)
                 </h6>
             </div>
 
@@ -1178,13 +1440,14 @@
                     <li><a href="#">Whistle Blower</a></li>
                 </ul>
             </div>
-           
+
             <div class="ft-more-than-banking">
-            <img style="width: 90px; padding-left: 60px;" src="../Multimedia/images/Personal/imageye___-_access-logo.png">
-            <img class="footer-access-line" src="../Multimedia/images/Personal/access-banking-line.svg">
-            <p class="text-[#ed8200] text-[.70rem] font-[700]">more than banking</p>
+                <img style="width: 90px; padding-left: 60px;"
+                    src="../Multimedia/images/Personal/imageye___-_access-logo.png">
+                <img class="footer-access-line" src="../Multimedia/images/Personal/access-banking-line.svg">
+                <p class="text-[#ed8200] text-[.70rem] font-[700]">more than banking</p>
             </div>
-           
+
         </div>
     </footer>
 </body>

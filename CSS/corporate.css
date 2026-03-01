@@ -3,7 +3,6 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  /* font-family: ; */
   font-family: "Effra" "sans-serif";
 }
 
@@ -86,13 +85,13 @@ header {
   left: 0;
   width: 0%;
   height: 1px;
-  background-color: #ed8200;
+  background-color: #03478b;
   padding-top: 20px;
   transition: width 0.3s ease;
 }
 
 .mini-nav-links a:hover {
-  color: #ed8200;
+  color:  #03478b;
 }
 
 .mini-nav-links a:hover::before {
@@ -119,6 +118,61 @@ header {
 .countries a {
   text-decoration: none;
   color: #5f7287;
+}
+
+.country-list {
+  position: absolute;
+  width: 200px;
+  height: 600px;
+  margin-left: -5%;
+  background-color: white;
+  z-index: 1;
+  padding: 20px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.ngn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.countries:hover .country-list {
+  opacity: 1;
+  visibility: visible;
+}
+
+.country-li {
+  position: relative;
+}
+
+.country-li li {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  padding-bottom: 20px;
+  gap: 20px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.country-li li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 10px;
+  width: 0;
+  height: 3px;
+  background-color: #03478b;
+  transition: width 0.25s ease;
+}
+
+.country-li li:hover::before,
+.country-li li:focus-within::before {
+  width: 100%;
 }
 
 .nav-main {
@@ -157,12 +211,12 @@ header {
 
 .main-nav-links a::before {
   content: "";
-  background-color: #ed8200;
+  background-color:  #03478b;
   position: absolute;
   top: 100%;
   left: 0;
   width: 0%;
-  margin-top: 11px;
+  margin-top: 8px;
   height: 3px;
   transition: width 0.3s ease;
 }
@@ -221,7 +275,7 @@ header {
 }
 
 .left-panel a:hover {
-  color: #ed8200;
+  color: #03478b;
 }
 
 .left-panel-content {
@@ -236,7 +290,7 @@ header {
 }
 
 .left-panel-content::-webkit-scrollbar-thumb {
-  background: #ed7e00;
+  background:  #03478b;
 }
 
 .header-panel {
@@ -301,7 +355,7 @@ header {
 
 .access-btn a {
   padding: 10px;
-  background-color: #ed8200;
+  background-color: #03478b;
   color: white;
 }
 
@@ -321,7 +375,7 @@ header {
 }
 
 .txt-bank-as {
-  color: #ed8200;
+  color:  #03478b;
   font-size: 2rem;
   font-weight: 300;
 }
@@ -347,7 +401,7 @@ header {
 }
 
 .borrow-list::-webkit-scrollbar-thumb {
-  background: #ed7e00;
+  background: #03478b;
   /* padding-right: 20px; */
 }
 
@@ -460,7 +514,7 @@ header {
   width: 2px;
 }
 .every-list::-webkit-scrollbar-thumb {
-  background-color: #ed7e00;
+  background-color: #03478b;
 }
 
 .every-br {
@@ -1007,7 +1061,7 @@ header {
   text-decoration: none;
   color: white;
   font-size: 0.7rem;
-  background-color: #ed8200;
+  background-color:  #03478b;
 }
 
 .search {
@@ -1051,35 +1105,22 @@ header {
 }
 
 .global {
-  background-image: url(../Multimedia/images/earn-globally_1.png);
+  background-image: linear-gradient(49deg, rgba(0, 0, 0, 1) 0%,rgba(255, 255, 255, 0) 100%), url(../Multimedia/images/Corporate/imageye___-_corporatebanking.png);
   background-size: cover;
 }
 
+
 .industry {
-  background-image: url(../Multimedia/images/industry-specific_1.png);
+  background-image: linear-gradient(49deg, rgba(0, 0, 0, 1) 0%,rgba(255, 255, 255, 0) 100%),url(../Multimedia/images/Corporate/imageye___-_corporate-banner-1.png);
   background-size: cover;
 }
 
 .unlock {
-  background-image: url(../Multimedia/images/unlock_1.png);
+  background-image: linear-gradient(49deg, rgba(0, 0, 0, 1) 0%,rgba(255, 255, 255, 0) 100%),url(../Multimedia/images/Corporate/imageye___-_flow-3.jpg);
   background-size: cover;
 }
 
-.business-ven {
-  background-image: url(../Multimedia/images/business-venture_1.png);
-  background-size: cover;
-}
 
-.amex {
-  background-image: url(../Multimedia/images/amex-banner.png);
-  background-size: cover;
-}
-
-.atm {
-  background-image: url(../Multimedia/images/ATM.png);
-  background-size: cover;
-  background-position: right;
-}
 
 .slide-txt {
   position: absolute;
@@ -1132,51 +1173,13 @@ header {
 }
 
 @keyframes slideAnimation {
-  0% {
-    transform: translateX(0%);
-  }
-  14% {
-    transform: translateX(0%);
-  }
-
-  16% {
-    transform: translateX(-100%);
-  }
-  30% {
-    transform: translateX(-100%);
-  }
-
-  32% {
-    transform: translateX(-200%);
-  }
-  46% {
-    transform: translateX(-200%);
-  }
-
-  48% {
-    transform: translateX(-300%);
-  }
-  62% {
-    transform: translateX(-300%);
-  }
-
-  64% {
-    transform: translateX(-400%);
-  }
-  78% {
-    transform: translateX(-400%);
-  }
-
-  80% {
-    transform: translateX(-500%);
-  }
-  94% {
-    transform: translateX(-500%);
-  }
-
-  100% {
-    transform: translateX(0%);
-  }
+  0% { transform: translateX(0%); }
+  30% { transform: translateX(0%); }
+  35% { transform: translateX(-100%); }
+  63% { transform: translateX(-100%); }
+  68% { transform: translateX(-200%); }
+  95% { transform: translateX(-200%); }
+  100% { transform: translateX(0%); }
 }
 
 .hero-card {
@@ -1188,7 +1191,7 @@ header {
   top: 100%;
   left: 5%;
   margin-top: 30px;
-  background-color: #a2c41a;
+  background-color: #fffffff7;
   clip-path: polygon(0 0, 100% 0, 96% 100%, 0% 100%);
 }
 
@@ -1204,7 +1207,7 @@ header {
   left: 0;
   height: 5px;
   width: 0%;
-  background-color: white;
+  background-color: #03478b;
   transition: width 0.3s ease;
 }
 
@@ -1224,7 +1227,7 @@ header {
 
 .create-an-account {
   padding: 25px;
-  border-right: 1px solid white;
+  border-right: 1px solid black;
   line-height: 22px;
 }
 
@@ -1236,6 +1239,395 @@ header {
   color: black;
   text-decoration: none;
 }
+
+
+.fin{
+  background-image: linear-gradient(353deg, rgba(0, 0, 0, 0.94) 0%,rgba(255, 255, 255, 0) 100%), url(../Multimedia/images/Corporate/imageye___-_flow-1.jpg);
+}
+.logi{
+  background-image: linear-gradient(353deg, rgba(0, 0, 0, 0.94) 0%,rgba(255, 255, 255, 0) 100%), url(../Multimedia/images/Corporate/imageye___-_flow-2.jpg);
+}
+.ww{
+  background-image: linear-gradient(353deg, rgba(0, 0, 0, 0.94) 0%,rgba(255, 255, 255, 0) 100%), url(../Multimedia/images/Corporate/imageye___-_flow-3.jpg);
+}
+.scheme{
+  background-image: linear-gradient(353deg, rgba(0, 0, 0, 0.94) 0%,rgba(255, 255, 255, 0) 100%), url(../Multimedia/images/Corporate/imageye___-_flow-4.jpg);
+}
+
+.flow-arrow{
+  position: absolute;
+  font-size: 7rem;
+  top: 10%;
+  left: 79%;
+  z-index: 1;
+  color: #1a1a1ae7;
+}
+
+.flow-container{
+  padding-top: 40px;
+  position: relative;
+  width: 85%;
+  display: flex;
+  margin: auto;
+}
+
+.flow-1{
+  position: relative;
+  height: 350px;
+  width: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.flow-btn {
+  padding: 6px;
+  border: 2px solid white;
+  font-size: .80rem;
+}
+
+.flow-btn:hover{
+  background-color: white;
+  color: #03478b;
+}
+
+.flow-txt{
+  position: absolute;
+  padding: 20px;
+  color: white;
+  top: 50%;
+  overflow: hidden;
+  max-height: 140px;
+  transition: max-height 0.3s ease;
+}
+
+.ww-tx{
+  max-height: 120px;
+}
+
+.scheme:hover{
+  background-image: none;
+  background-color: #03478b;
+  transition: all .3s ease-in;
+}
+
+.fin:hover,
+.logi:hover,
+.ww:hover,
+.scheme:hover {
+  background-image: none;
+  background-color: #03478b;
+  transition: all .3s ease-in;
+  background-color: #03478b;
+  transition: all 0.3s ease;
+}
+
+.fin:hover .flow-arrow,
+.logi:hover .flow-arrow,
+.ww:hover .flow-arrow,
+.scheme:hover .flow-arrow {
+  color: #03478b;
+}
+
+.fin:hover .flow-txt,
+.logi:hover .flow-txt,
+.ww:hover .flow-txt,
+.scheme:hover .flow-txt {
+  transition: all .3s ease-in-out;
+  top: 25%;
+  max-height: 300px;
+}
+
+
+.flow-txt h1{
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.flow-txt p{
+  font-size: .70rem;
+  font-weight: 500;
+}
+
+form{
+  position: relative;
+  background-color: #03478b;
+  height: 500px;
+}
+
+.form-arrow{
+position: absolute;
+  color: #ededed;
+  font-size: 9rem;
+  rotate: 90deg;
+  top: -13%;
+  left: 44%;
+  z-index: 1;
+}
+
+.get-in-touch{
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: auto;
+  width: 90%;
+  padding-top: 100px;
+}
+
+.get-in-btn{
+  padding: 7px;
+  background-color: #eb7623;
+  color: white;
+}
+
+.get-in-btn:hover{
+  background-color: #eb762300;
+  border: 1.5px solid #eb7623;
+  color: #eb7623;
+  transition: all .3s ease-in-out;
+}
+
+.get-in-txt{
+  padding-top: 80px;
+}
+
+.contact-box{
+  padding: 20px;
+  width: 600px;
+  height: 350px;
+  background-color: white;
+}
+
+.form-warpper{
+  width: 95%;
+  margin: auto;
+  text-align: left;
+}
+
+.why-access-bank{
+  width: 40%;
+  padding-top: 70px;
+  padding-bottom: 60px;
+  margin: auto;
+  text-align: center;
+}
+
+.why-access-bank p{
+  margin: auto;
+  font-weight: 600;
+}
+
+.email{
+    margin: 5px;
+  background-color: #ededed;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  width: 250px;
+}
+
+.number{
+    margin: 5px;
+  background-color: #ededed;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  width: 250px;
+}
+
+.comment{
+    margin: 5px;
+  background-color: #ededed;
+  padding: 10px;
+  width: 100%;
+  outline: none;
+  height: 80px;
+}
+input:focus{
+  border: 3px solid #057a8290;
+}
+
+.submit-btn{
+  padding: 8px 50px;
+  background-color: #eb7623;
+  color: white;
+}
+
+
+.form-sub-btn{
+  margin-top: 40px;
+}
+
+.deep{
+  position: relative;
+  display: flex;
+  cursor: pointer;
+}
+
+.divide{
+  height: 100%;
+  width: 2px;
+  background-color: #eb7623;
+  position: absolute;
+  left: 23%;
+  z-index: 10;
+}
+
+.divide-two{
+  height: 100%;
+  width: 2px;
+  background-color: #eb7623;
+  position: absolute;
+  right: 53%;
+  z-index: 10;
+}
+
+.divide-three{
+  height: 100%;
+  width: 2px;
+  background-color: #eb7623;
+  position: absolute;
+  right: 28%;
+  z-index: 11;
+}
+
+
+
+.dep{
+  font-size: .90rem;
+  padding: 30px;
+  width: 300px;
+  height: 100%;
+  color: white;
+  padding-top: 250px;
+}
+
+.dep-text{
+  max-height: 84px;
+  overflow: hidden;
+}
+
+.dep {
+  transition: all 0.3s ease;
+}
+
+.deep:has(.dep:hover) .dep:not(:hover) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+
+.dep:hover .dep-text {
+  padding-bottom: 80px;
+  max-height: 300px; 
+}
+
+.deep:has(.pg2:hover) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url('../Multimedia/images/Corporate/imageye___-_flow-1.jpg');
+}
+
+.deep:has(.pg4:hover) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6)), url('../Multimedia/images/Corporate/imageye___-_flow-1.jpg');
+}
+
+.deep:has(.pg1:hover) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.687)), url(../Multimedia/images/Corporate/imageye___-_bg-1.png);
+}
+.deep:has(.pg3:hover) {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.687)), url(../Multimedia/images/Corporate/imageye___-_bg-1.png);
+}
+
+
+.pg4{
+  border-right: none;
+}
+
+.deep{
+  width: 100%;
+  height: 400px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.687)), url(../Multimedia/images/Corporate/imageye___-_bg-1.png);
+  background-size: cover;
+}
+
+.pg {
+  transition: all 0.3s ease;
+}
+
+
+
+.more-prod{
+  width: 250px;
+  margin: auto;
+}
+
+.more-prod h1{
+  line-height: 1;
+  width: 80%;
+}
+
+.prod-btn{
+  font-weight: 500;
+  color: #03478b;
+  font-size: .80rem;
+  padding: 8px;
+  border: 1.5px solid #03478b;
+}
+
+.prod-btn:hover{
+  background-color: #03478b;
+  color: white;
+  transition: all .3s ease-in-out;
+}
+
+.more-prod p{
+  font-size: .90rem;
+  font-weight: 400;
+}
+
+.pdoduction-cards{
+  margin: auto;
+  display: flex;
+  gap: 20px;
+}
+
+.card-mini{
+  top: 100%;
+  position: absolute;
+  padding: 10px;
+  height: 150px;
+  background-color: white;
+}
+
+
+.prod-card{
+  position: relative;
+  width: 300px;
+  height: 200px;
+  background-image: url(../Multimedia/images/Corporate/imageye___-_financing_1.png);
+  background-size: cover;
+  object-position: left;
+  background-position: center;
+}
+
+.treasure{
+  background-size: cover;
+  object-position: left;
+  background-position: center;
+  background-image: url(../Multimedia/images/Corporate/imageye___-_treasury.png);
+}
+
+
+.products-service{
+  background-color: #ededed;
+  height: 500px;
+}
+
+.product-ser-cont{
+  padding-top: 90px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+}
+
 
 .latetest-news-bx{
   position: relative;
@@ -2679,3 +3071,395 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .main-nav-links.mobile-show {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* directly below the nav bar */
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  /* Show only the first five list items */
+  .main-nav-links.mobile-show li:nth-child(-n+5) {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  /* Hide the remaining items (Ways to Bank, Contact Us, I am...) */
+  .main-nav-links.mobile-show li:nth-child(n+6) {
+    display: none;
+  }
+
+  /* Adjust link appearance for mobile */
+  .main-nav-links.mobile-show a {
+    font-size: 1rem;
+    padding: 0.5rem 0;
+    display: block;
+    color: #333;
+    text-decoration: none;
+  }
+
+  .main-nav-links.mobile-show a:hover {
+    color: #ed8200;
+  }
+
+  /* Remove the orange hover line effect on mobile */
+  .main-nav-links.mobile-show a::before {
+    display: none;
+  }
+}
+
+/* Responsive refinements for tablet and small screens */
+@media (max-width: 1024px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  .flow-container {
+    width: 92%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .flow-1 {
+    width: 100%;
+    height: 300px;
+  }
+
+  .flow-arrow {
+    font-size: 5rem;
+    left: auto;
+    right: 12px;
+  }
+
+  form {
+    height: auto;
+    padding: 80px 0 40px;
+  }
+
+  .form-arrow {
+    display: none;
+  }
+
+  .get-in-touch {
+    width: 92%;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 24px;
+  }
+
+  .get-in-txt {
+    padding-top: 0;
+  }
+
+  .contact-box {
+    width: 100%;
+    max-width: none;
+    height: auto;
+  }
+
+  .name-num-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .email,
+  .number {
+    width: 100%;
+    margin: 0;
+  }
+
+  .comment {
+    width: 100%;
+    margin: 10px 0 0;
+  }
+
+  .form-sub-btn {
+    margin-top: 18px;
+  }
+
+  .why-access-bank {
+    width: 92%;
+    padding-top: 48px;
+  }
+
+  .deep {
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    cursor: default;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.687)), url(../Multimedia/images/Corporate/imageye___-_bg-1.png);
+  }
+
+  .divide,
+  .divide-two,
+  .divide-three {
+    display: none;
+  }
+
+  .dep {
+    width: 100%;
+    min-height: 240px;
+    padding: 22px 18px;
+    padding-top: 120px;
+    border-right: 2px solid #eb7623;
+  }
+
+  .dep-text {
+    max-height: none;
+  }
+
+  .deep:has(.dep:hover) .dep:not(:hover) {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .dep:hover .dep-text {
+    padding-bottom: 0;
+    max-height: none;
+  }
+
+  .deep:has(.pg1:hover),
+  .deep:has(.pg2:hover),
+  .deep:has(.pg3:hover),
+  .deep:has(.pg4:hover) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.687)), url(../Multimedia/images/Corporate/imageye___-_bg-1.png);
+  }
+
+  .products-service {
+    height: auto;
+    padding-bottom: 40px;
+  }
+
+  .product-ser-cont {
+    width: 92%;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 130px;
+    padding-top: 56px;
+  }
+
+  .more-prod {
+    width: 100%;
+    max-width: 680px;
+  }
+
+  .more-prod h1 {
+    width: 100%;
+  }
+
+  .pdoduction-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px 16px;
+    align-items: start;
+  }
+
+  .prod-card {
+    width: 100%;
+    min-height: 330px;
+    height: auto;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  .card-mini {
+    position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 100%;
+    height: auto;
+    min-height: 130px;
+  }
+
+  .explore-more {
+    width: 92%;
+    margin-bottom: 70px;
+  }
+
+  .explore-more-main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .card-ft {
+    width: 100%;
+    max-width: none;
+  }
+
+  .tb-content,
+  .extra-info {
+    width: 92%;
+  }
+
+  .licensed {
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 12px 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .flow-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 12px;
+    padding-top: 24px;
+  }
+
+  .flow-1 {
+    flex: 0 0 82vw;
+    max-width: 320px;
+    height: 260px;
+  }
+
+  .flow-txt {
+    top: auto;
+    bottom: 10px;
+    max-height: none;
+  }
+
+  form {
+    padding: 56px 0 28px;
+  }
+
+  .name-num-form {
+    grid-template-columns: 1fr;
+  }
+
+  .get-in-txt p {
+    width: 100% !important;
+  }
+
+  .contact-box {
+    padding: 16px;
+  }
+
+  .why-access-bank p {
+    width: 100% !important;
+  }
+
+  .deep {
+    grid-template-columns: 1fr;
+  }
+
+  .dep {
+    min-height: 220px;
+    padding-top: 100px;
+    border-right: none;
+    border-bottom: 2px solid #eb7623;
+  }
+
+  .dep:last-child {
+    border-bottom: none;
+  }
+
+  .pdoduction-cards {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .prod-card {
+    max-width: 360px;
+    margin: 0 auto;
+    min-height: 320px;
+  }
+
+  .card-mini {
+    height: auto;
+    min-height: 130px;
+  }
+
+  .news-headlines {
+    height: auto;
+    min-height: 36px;
+    padding: 6px 0;
+  }
+
+  .latetest-news-bx {
+    width: 150px;
+  }
+
+  .la-s-bx {
+    left: 90%;
+  }
+
+  .main-content {
+    padding-bottom: 40px;
+  }
+
+  .product-ser-cont {
+    gap: 100px;
+  }
+
+  .xtra-bx-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    padding: 14px;
+    gap: 12px;
+  }
+
+  .ft-more-than-banking {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .flow-1 {
+    flex-basis: 86vw;
+    height: 240px;
+  }
+
+  .flow-arrow {
+    font-size: 4rem;
+    right: 8px;
+  }
+
+  .get-in-txt h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .form-warpper {
+    width: 100%;
+  }
+
+  .submit-btn {
+    padding: 8px 22px;
+  }
+
+  .dep {
+    min-height: 200px;
+    padding-top: 92px;
+  }
+
+  .product-ser-cont {
+    gap: 90px;
+    padding-top: 44px;
+  }
+
+  .more-prod h1 {
+    font-size: 1.45rem !important;
+  }
+
+  .news-headlines marquee p {
+    font-size: 0.78rem;
+  }
+
+  .xtra-bx-content a,
+  .xtra-bx-content p {
+    font-size: 0.78rem;
+  }
+}
