@@ -2585,3 +2585,96 @@ footer {
     font-size: 0.9rem;
   }
 }
+
+/* Personal footer responsive overflow fix */
+footer {
+  overflow-x: hidden;
+}
+
+.tb-content {
+  width: min(92%, 1200px);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.tb-content .abt {
+  min-width: 0;
+}
+
+.extra-info {
+  width: min(92%, 1200px);
+}
+
+.xtra-bx-content {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px 20px;
+}
+
+.xtra-bx-content p,
+.xtra-bx-content a {
+  min-width: 0;
+  word-break: break-word;
+}
+
+.xtra-bx-content p {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.licensed {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px 16px;
+}
+
+.lin-1 {
+  flex: 1 1 420px;
+  min-width: 260px;
+}
+
+.terms-policy {
+  flex: 1 1 auto;
+  min-width: 260px;
+}
+
+.terms-policy ul {
+  flex-wrap: wrap;
+  row-gap: 8px;
+}
+
+.ft-more-than-banking {
+  flex: 0 1 auto;
+}
+
+@media (max-width: 1150px) {
+  .tb-content {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .tb-content {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .extra-bx {
+    height: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .tb-content {
+    grid-template-columns: 1fr;
+  }
+
+  .lin-1,
+  .terms-policy {
+    min-width: 100%;
+  }
+}
